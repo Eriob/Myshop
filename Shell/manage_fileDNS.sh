@@ -1,10 +1,10 @@
 #! /bin/bash
 
-#-------------------------------------------------------------
+#------------------------------------------------------------
 # Auteur : Alababa
 # Nom : Script automatisation transfert fichier de zone
 # Role : Automatiser le transfert du fichier de zone vers le domaine itinet.fr
-#-------------------------------------------------------------
+#------------------------------------------------------------
 
 #On prendra aucune entrée
 
