@@ -1,10 +1,10 @@
 #! /bin/bash
 
-#------------------------------------------------------------
-# Auteur : Alababa
+#-------------------------------------------------------------
+# Auteur : Alababa 
 # Nom : Script automatisation des virtualshosts
 # Role : Automatiser la creation de virtualhosts
-#------------------------------------------------------------
+#-------------------------------------------------------------
 
 #On prendra en entrée
 #$1 : le nom de Document root de l'utilisateur
