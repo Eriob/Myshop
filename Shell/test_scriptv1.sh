@@ -6,8 +6,29 @@
 # Role : Automatiser le transfert du fichier de zone vers le domaine itinet.fr
 #------------------------------------------------------------
 
+
+while true; do
+	echo "Choisissez un test : dns, mail ou documentroot"
+	read choice
+
+	echo "<-------------------------------------------->"
+			echo " Vous souhaitez testez le " $choice
+	echo "<-------------------------------------------->"
+
+	case $choice in
+		dns* | DNS*) test_fileDNS
+				 break;;
+		mail* | MAIL*) test_mail
+				 break;;
+		documentRoot* | DOCUMENTROOT*) test_documentRoot
+				 break;;
+		q*) exit;;
+		*) echo "Mauvaise réponse (dns, mail ou documentroot).";;
+	esac
+done
+
 function test_fileDNS() {
-	source (/var/www/Myshop/Shell/manage_fileDNS.sh)
+	source /var/www/Myshop/Shell/manage_fileDNS.sh
 
 while true; do
 	echo "Faites un choix : creer, renommer ou supprimer"
