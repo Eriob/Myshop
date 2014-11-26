@@ -10,6 +10,10 @@ function test_fileDNS() {
 	source /var/www/Myshop/Shell/manage_fileDNS.sh
 
 while true; do
+	echo "Ce test inclue :"
+	echo "- Ajout d'une adresse dans le fichier DNS"
+	echo "- Renommer une adresse dans le fichier DNS"
+	echo "- Supprimer une adresse dans le fichier DNS"
 	echo "Faites un choix : creer, renommer ou supprimer"
 	read choice
 
@@ -40,10 +44,14 @@ done
 }
 
 function test_documentRoot() {
-	source (/var/www/Myshop/Shell/create_documentRoot.sh)
+	source /var/www/Myshop/Shell/create_documentRoot.sh
 
 while true; do
-	echo "Faites un choix : creer, renommer ou supprimer"
+	echo "Ce test inclue :"
+	echo "- Création du documentroot/virtualhost"
+	echo "- Renommer son documentroot/virtualhost"
+	echo "- Désactiver le virtualhost"
+	echo "Faites un choix : creer, renommer ou desactiver"
 	read choice
 
 	echo "<-------------------------------------------->"
@@ -61,7 +69,7 @@ while true; do
 							   read arg2
 							   manage_documentRoot 1 $arg1 $arg2
 				 break;;
-		supprimer* | SUPPRIMER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
+		desactiver* | DESACTIVER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
 								 read arg1
 								 manage_documentRoot 2 $arg1
 				 break;;
@@ -73,8 +81,12 @@ done
 }
 
 function test_mail() {
-	source (/var/www/Myshop/Shell/mail_directory.sh)
+	source /var/www/Myshop/Shell/mail_directory.sh
 	
+	echo "Ce test inclue :"
+	echo "- Création du répertoire utilisateur dans /var/mail, envoi mail de bienvenue"
+
+
 	echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
 	read arg1
 	echo "Entrez l'argument 2 : (le mot de passe de l'utilisateur)"
