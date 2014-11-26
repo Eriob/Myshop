@@ -6,13 +6,15 @@
 # Role : Automatiser la création d'une boite mail
 #------------------------------------------------------------
 
-cd /var/mail
+
 
 function create_MailDirectory() {
 
 #On prendra en entrée :
 #$1 : le nom de l'utilisateur
+#$2 : le password de l'utilisateur
 
+		cd /var/mail
 
 		if [[ test -e $1 ]]; then
 			echo "Ce repertoire existe déjà"
@@ -20,6 +22,17 @@ function create_MailDirectory() {
 			mkdir $1
 			cd ./$1
 			maildirmake -f ./Maildir
+			chown -R vmail.vmail /var/mail/$1
+
+			cd /etc/postfix/
+			echo "$1@myshop.itinet.fr $1" >> ./vmailbox
+			postmap vmailbox
+
+			userdb $1@myshop.itinet.fr set uid=vmail gid=vmail home=/var/mail/$1 mail=/var/mail/$1/Maildir
+			echo "$2" | userdbpw -md5 | userdb $1@myshop.itinet.fr set systempw
+			makeuserdb
+
+			/etc/init.d/postfix restart && /etc/init.d/courier-imap restart
 		fi
 
 }

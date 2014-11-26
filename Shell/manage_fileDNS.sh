@@ -34,7 +34,7 @@ function manage_fileDNS {
 }
 
 #On mettra a jour a chaque nouvel utilisateur
-function compile_fileDNS() {
+function addline_fileDNS() {
 
 	echo "+$1.myshop.itinet.fr:88.177.168.133:1800" >> ./data
 
