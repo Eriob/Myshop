@@ -1,10 +1,10 @@
 #! /bin/bash
 
-#------------------------------------------------------------
+#-------------------------------------------------------------
 # Auteur : Alababa
 # Nom : Script automatisation création mail directory + envoi mail
 # Role : Automatiser la création d'une boite mail
-#------------------------------------------------------------
+#-------------------------------------------------------------
 
 
 function create_mailDirectory() {
