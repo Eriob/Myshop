@@ -51,7 +51,8 @@ while true; do
 	echo "- Création du documentroot/virtualhost"
 	echo "- Renommer son documentroot/virtualhost"
 	echo "- Désactiver le virtualhost"
-	echo "Faites un choix : creer, renommer ou desactiver"
+	echo "- Réactiver son virtualhost (si désactiver)"
+	echo "Faites un choix : creer, renommer, desactiver ou reactiver"
 	read choice
 
 	echo "<-------------------------------------------->"
@@ -69,12 +70,15 @@ while true; do
 							   read arg2
 							   manage_documentRoot 1 $arg1 $arg2
 				 break;;
-		desactiver* | DESACTIVER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
+		desactiver* | DESACTIVER*) echo "Entrez l'argument 1 : (le nom du site)"
 								 read arg1
 								 manage_documentRoot 2 $arg1
 				 break;;
+		reactiver* | REACTIVER*) echo "Entrez l'argument 1 : (le nom du site)"
+								 read arg1
+								 manage_documentRoot 3 $arg1
 		q*) exit;;
-		*) echo "Mauvaise réponse (creer, renommer ou desactiver).";;
+		*) echo "Mauvaise réponse (creer, renommer, desactiver ou reactiver).";;
 	esac
 done
 
