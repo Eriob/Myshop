@@ -11,10 +11,10 @@ function test_fileDNS() {
 
 while true; do
 	echo "Ce test inclue :"
-	echo "- Ajout d'une adresse dans le fichier DNS"
+	echo "- Ajouter d'une adresse dans le fichier DNS"
 	echo "- Renommer une adresse dans le fichier DNS"
 	echo "- Supprimer une adresse dans le fichier DNS"
-	echo "Faites un choix : creer, renommer ou supprimer"
+	echo "Faites un choix : ajouter, renommer ou supprimer"
 	read choice
 
 	echo "<-------------------------------------------->"
