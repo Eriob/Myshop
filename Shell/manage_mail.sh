@@ -18,18 +18,18 @@ variable = /var/mail/$1
 		if [[ -d $variable ]]; then
 			echo "Ce repertoire existe déjà"
 		else
-			echo "On crée le répertoire /var/mail/$1"
+			echo "Création du répertoire /var/mail/$1 en cours..."
 			mkdir /var/mail/$1
 			echo "Création [OK]"
 
 			#PAS BESOIN CAR ON ENVOI UN MAIL
-			#maildirmake -f ./Maildir
+			maildirmake -f ./Maildir
 
-			echo "Modification des droits sur /var/mail/$1"
+			echo "Modification des droits sur /var/mail/$1 en cours..."
 			chown -R vmail.vmail /var/mail/$1
 			echo "Modification [OK]"
 
-			echo "Mise à jour vmailbox : ajout de $1@myshop.itinet.fr $1/Maildir"
+			echo "Mise à jour vmailbox : ajout de $1@myshop.itinet.fr $1/Maildir en cours..."
 			echo "$1@myshop.itinet.fr $1/Maildir/" >> /etc/postfix/vmailbox
 			echo "Mise à jour [OK]"
 			echo "Postmap en cours..."
@@ -42,13 +42,13 @@ variable = /var/mail/$1
 			makeuserdb
 			echo "UserDB [OK]"
 
-			echo "Redemarrage des services postfix et imap"
+			echo "Redemarrage des services postfix et imap en cours..."
 			/etc/init.d/postfix restart && /etc/init.d/courier-imap restart
 
 			echo "On envoi un mail de bienvenue"
-			echo "Bienvenue sur MySHOP, vous pouvez des maintenant vous connectez sur http://myshop.itinet.fr et créer votre boutique en ligne en quelques minutes. 
-L'équipe MySHOP (Ne pas répondre)" | mailx -s "Bienvenue sur MySHOP" $1@myshop.itinet.fr
-			echo "Envoi [OK]"
+			#echo "Bienvenue sur MySHOP, vous pouvez des maintenant vous connectez sur http://myshop.itinet.fr et créer votre boutique en ligne en quelques minutes. 
+			#L'équipe MySHOP (Ne pas répondre)" | mailx -s "Bienvenue sur MySHOP" $1@myshop.itinet.fr
+			echo "Envoi [FAIL]"
 			echo "[FIN]"
 		fi
 

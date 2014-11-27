@@ -22,7 +22,7 @@ while true; do
 	echo "<-------------------------------------------->"
 
 	case $choice in
-		ajout* | AJOUT*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
+		ajouter* | AJOUTER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
 						 read arg1
 						 addline_fileDNS $arg1
 				 break;;
@@ -37,7 +37,7 @@ while true; do
 								 manage_fileDNS 2 $arg1
 				 break;;
 		q*) exit;;
-		*) echo "Mauvaise réponse (creer, renommer ou supprimer).";;
+		*) echo "Mauvaise réponse (ajouter, renommer ou supprimer).";;
 	esac
 done
 
@@ -74,7 +74,7 @@ while true; do
 								 manage_documentRoot 2 $arg1
 				 break;;
 		q*) exit;;
-		*) echo "Mauvaise réponse (creer, renommer ou supprimer).";;
+		*) echo "Mauvaise réponse (creer, renommer ou desactiver).";;
 	esac
 done
 
