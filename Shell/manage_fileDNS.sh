@@ -8,8 +8,8 @@
 
 #On mettra a jour a chaque nouvel utilisateur
 function addline_fileDNS() {
-
-	if [[ grep "^+$1." /etc/tinydns/root/data ]]; then
+	grep "^+$2." /etc/tinydns/root/data
+	if [[ $? -eq 0 ]]; then
 		echo "Cette enregistrement existe déjà [ECHEC]"
 	else
 		echo "Ajout de +$1.myshop.itinet.fr:88.177.168.133:1800 en cours..."
@@ -31,7 +31,8 @@ function manage_fileDNS {
 #$3 : le nouveau fqdn affilié a l'utilisateur
 
 	if [[ $1 = 1 ]]; then
-		if [[ grep "^+$2." /etc/tinydns/root/data ]]; then
+		grep "^+$2." /etc/tinydns/root/data
+		if [[ $? -eq 0 ]]; then
 			#On renomme $2 en $3
 			echo "Renommage de $2 en $3 en cours..."
 			sed -i -e "s/$2/$3/g" /etc/tinydns/root/data

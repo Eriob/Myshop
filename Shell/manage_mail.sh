@@ -76,7 +76,7 @@ function manage_mailDirectory() {
 		echo "Suppression de $1@myshop.itinet.fr dans UserDB en cours..."
 		sed "/^$1/d" /etc/courier/userdb >> /etc/courier/sauv.userdb
 		cp /etc/courier/sauv.userdb /etc/courier/userdb
-		rm /etc/postfix/sauv.userdb
+		rm /etc/courier/sauv.userdb
 		makeuserdb
 		echo "UserDB [OK]"
 
