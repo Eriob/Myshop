@@ -8,7 +8,7 @@
 
 #On mettra a jour a chaque nouvel utilisateur
 function addline_fileDNS() {
-	if [[ grep -q ^+$2. /etc/tinydns/root/data ]]; then
+	if [[ grep "^+$1." /etc/tinydns/root/data ]]; then
 		echo "Cette enregistrement existe déjà [ECHEC]"
 	else
 		echo "Ajout de +$1.myshop.itinet.fr:88.177.168.133:1800 en cours..."
@@ -30,7 +30,7 @@ function manage_fileDNS {
 #$3 : le nouveau fqdn affilié a l'utilisateur
 
 	if [[ $1 = 1 ]]; then
-		if [[ grep -q ^+$2. /etc/tinydns/root/data ]]; then
+		if [[ grep "^+$2." /etc/tinydns/root/data ]]; then
 			#On renomme $2 en $3
 			echo "Renommage de $2 en $3 en cours..."
 			sed -i -e "s/$2/$3/g" /etc/tinydns/root/data
@@ -42,7 +42,7 @@ function manage_fileDNS {
 			echo "Cet enregistrement n'existe pas ! [ECHEC]"
 		fi
 	elif [[ $1 = 2 ]]; then
-		if [[ grep -q ^+$2. /etc/tinydns/root/data ]]; then
+		if [[ grep "^+$2." /etc/tinydns/root/data ]]; then
 			#On supprime la ligne dans le fichier DNS
 			echo "Suppression de $2 du fichier de zone DNS en cours..."
 			sed "/^+$2/d" /etc/tinydns/root/data >> /etc/tinydns/root/data2
