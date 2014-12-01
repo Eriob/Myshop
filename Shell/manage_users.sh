@@ -13,7 +13,9 @@ function create_userUnix() {
 #$2 : le mot de passe de l'utilisateur
 
 
-	if [[ grep "^$1:" /etc/passwd > /dev/null ]]; then
+	if grep "^$1:" /etc/passwd; then
+		echo "Cet utilisateur UNIX existe déjà ! [ECHEC]"
+	else
 		echo "Cryptage du mot de passe en cours..."
 		$2 = mkpasswd -H md5 $2
 		echo "Cryptage [OK]"
@@ -33,8 +35,6 @@ function create_userUnix() {
 			echo "Modification des droits sur le dossier utilisateur /var/sftp/$1"
 			chown -R $1:sftp /var/sftp/$1
 			echo "Modification des droits [OK]"
-	else
-		echo "Cet utilisateur UNIX existe déjà ! [ECHEC]"
 	fi
 }
 
@@ -47,7 +47,7 @@ function manage_userUnix() {
 
 
 	if [[ $1 = 1 ]]; then
-		if [[ grep "^$1:" /etc/passwd > /dev/null ]]; then
+		if grep "^$1:" /etc/passwd; then
 			#On renomme $2 en $3
 			echo "Renommage de $2 en $3 en cours..."
 			sed -i -e "s/$2/$3/g" /etc/passwd
@@ -56,7 +56,7 @@ function manage_userUnix() {
 			echo "Cet utilisateur n'existe pas ! [ECHEC]"
 		fi
 	elif [[ $1 = 2 ]]; then
-		if [[ grep "^$1:" /etc/passwd > /dev/null ]]; then
+		if grep "^$1:" /etc/passwd; then
 			#On supprime la ligne dans le fichier DNS
 			echo "Suppression de l'utilisateur UNIX en cours..."
 			sed "/^$2:/d" /etc/passwd >> /etc/sauv_passwd
