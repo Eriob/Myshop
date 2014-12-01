@@ -12,20 +12,20 @@ function create_documentRoot() {
 #On prendra en entrée :
 #$1 : le nom du Document root de l'utilisateur 
 	
-	echo "STEP 1 : Création du répertoire /var/sftp/$1 en cours..."
-	mkdir /var/sftp/$1
-	echo "STEP 1 : Création [OK]"
-	echo "STEP 2 : Création du virtualhost dans sites-available/$1 en cours..."
+	echo "Création du répertoire /var/sftp/$1/www en cours..."
+	mkdir /var/sftp/$1/www
+	echo "Création [OK]"
+	echo "Création du virtualhost dans sites-available/$1 en cours..."
 	echo "<VirtualHost *:80>
 		ServerName $1.myshop.itinet.fr
-		DocumentRoot /var/sftp/myshop/$1
+		DocumentRoot /var/sftp/myshop/$1/www
 		Errorlog /var/log/apache2/$1.myshop.itinet.fr-error_log
 		CustomLog /var/log/apache2/$1.myshop.itinet.fr-access_log
 		</VirtualHost>" > /etc/apache2/sites-available/$1
-	echo "STEP 2 : Création [OK]"
-	echo "STEP 3 : Création d'un lien symbolique vers sites-enabled en cours..."
+	echo "Création [OK]"
+	echo "Création d'un lien symbolique vers sites-enabled en cours..."
 	ln -s /etc/apache2/sites-available/$1 /etc/apache2/sites-enabled/
-	echo "STEP 3 : Création [OK]"
+	echo "Création [OK]"
 
 }
 
@@ -40,13 +40,16 @@ function manage_documentRoot() {
 #Pour désactiver son site
 #$2 : le nom du site a désactiver
 
+#Pour supprimer son site
+#$2 : le nom du site a supprimer
+
 #Pour réactiver son site
 #$2 : le nom du site à réactiver
 
 	if [[ $1 = 1 ]]; then
 		# On renomme $2 en $3 ($2 = ancien nom / $3 = nouveau nom)
 		echo "Renommage de /var/sftp/$2 en /var/sftp/$3 en cours..."
-		mv /var/sftp/$2 /var/sftp/$3
+		mv /var/sftp/$2/ /var/sftp/$3
 		echo "Renommage [OK]"
 		echo "Mise à jour du virtualhost dans sites-available/$3 en cours..."
 		rm /etc/apache2/sites-available/$2
@@ -58,13 +61,24 @@ function manage_documentRoot() {
 		</VirtualHost>" > /etc/apache2/sites-available/$3
 		rm /etc/apache2/sites-enabled/$2
 		ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
-	echo "Mise à jour VirtualHost [OK]"
+		echo "Mise à jour VirtualHost [OK]"
 	elif [[ $1 = 2 ]]; then
 		# On desactive le site $2 ($2 = nom du repertoire)
-		echo "Suppression du lien symbolique de sites-available/$2 en cours..."
-		unlink /etc/apache2/sites-available/$2
+		echo "Suppression du lien symbolique de sites-enabled/$2 en cours..."
+		unlink /etc/apache2/sites-enabled/$2
 		echo "Suppression [OK]"
 	elif [[ $1 = 3 ]]; then
+		# On supprime le site $2
+		echo "Suppression de /var/sftp/$2/www en cours..."
+		rm /var/sftp/$2/www
+		echo "Suppression [OK]"
+		echo "Suppression du lien symbolique de sites-enabled/$2 en cours..."
+		unlink /etc/apache2/sites-enabled/$2
+		echo "Suppression [OK]"
+		echo "Suppression du virtualhost dans site-available"
+		rm /etc/apache2/sites-available/$2
+		echo "Suppression [OK]"
+	elif [[ $1 = 4 ]]; then
 		# On réactive le site
 		echo "Réactivation du lien symbolique de /sites-available/$2 en cours..."
 		ln -s /etc/apache2/sites-available/$2 /etc/apache2/sites-enabled/
@@ -73,4 +87,7 @@ function manage_documentRoot() {
 		echo "Cette action n'est pas possible, veuillez checker votre script :)"
 	fi
 	
+	echo "Redémarrage du service apache2 en cours..."
+	/etc/init.d/apache2 restart
+	echo "Redémarrage [OK]"
 }

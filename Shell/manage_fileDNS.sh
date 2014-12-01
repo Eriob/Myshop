@@ -14,7 +14,7 @@ function addline_fileDNS() {
 	echo "Ajout [OK]"
 	
 	rm /etc/tinydns/root/data.cdb
-	make
+	/usr/local/bin/tinydns-data
 	
 	ssh root@dedibox.itinet.fr
 }
@@ -43,7 +43,7 @@ function manage_fileDNS {
 	fi
 
 	rm /etc/tinydns/root/data.cdb
-	make
+	/usr/local/bin/tinydns-data
 
 	ssh root@dedibox.itinet.fr
 }

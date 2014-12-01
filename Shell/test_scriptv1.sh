@@ -51,6 +51,7 @@ while true; do
 	echo "- Création du documentroot/virtualhost"
 	echo "- Renommer son documentroot/virtualhost"
 	echo "- Désactiver le virtualhost"
+	echo "- Supprimer le site de l'utilisateur"
 	echo "- Réactiver son virtualhost (si désactiver)"
 	echo "Faites un choix : creer, renommer, desactiver ou reactiver"
 	read choice
@@ -74,11 +75,16 @@ while true; do
 								 read arg1
 								 manage_documentRoot 2 $arg1
 				 break;;
-		reactiver* | REACTIVER*) echo "Entrez l'argument 1 : (le nom du site)"
+		supprimer* | SUPPRIMER*) echo "Entrez l'argument 1 : (le nom du site)"
 								 read arg1
 								 manage_documentRoot 3 $arg1
+				 break;;
+		reactiver* | REACTIVER*) echo "Entrez l'argument 1 : (le nom du site)"
+								 read arg1
+								 manage_documentRoot 4 $arg1
+				 break;;
 		q*) exit;;
-		*) echo "Mauvaise réponse (creer, renommer, desactiver ou reactiver).";;
+		*) echo "Mauvaise réponse (creer, renommer, desactiver, supprimer ou reactiver).";;
 	esac
 done
 
@@ -87,16 +93,33 @@ done
 function test_mail() {
 	source /var/www/Myshop/Shell/manage_mail.sh
 	
+	while true; do
 	echo "Ce test inclue :"
 	echo "- Création du répertoire utilisateur dans /var/mail, envoi mail de bienvenue"
+	echo "- Supprimer le compte mail d'un utilisateur"
+	echo "Faites un choix : creer ou supprimer"
+	read choice
 
+	echo "<-------------------------------------------->"
+			echo " Vous souhaitez :" $choice
+	echo "<-------------------------------------------->"
 
-	echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
-	read arg1
-	echo "Entrez l'argument 2 : (le mot de passe de l'utilisateur)"
-	read arg2
+	case $choice in
+		creer* | CREER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
+						 read arg1
+						 echo "Entrez l'argument 2 : (le mot de passe de l'utilisateur)"
+						 read arg2
+						 create_mailDirectory $arg1 $arg2
+				 break;;
+		supprimer* | SUPPRIMER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
+								 read arg1
+								 manage_mailDirectory $arg1
+				 break;;
+		q*) exit;;
+		*) echo "Mauvaise réponse (creer ou supprimer).";;
+	esac
+done
 
-	create_mailDirectory $arg1 $arg2
 }
 
 while true; do
@@ -104,7 +127,7 @@ while true; do
 	read choice
 
 	echo "<-------------------------------------------->"
-			echo " Vous souhaitez testez le " $choice
+			echo " Vous souhaitez testez le" $choice
 	echo "<-------------------------------------------->"
 
 	case $choice in
@@ -112,7 +135,7 @@ while true; do
 				 break;;
 		mail* | MAIL*) test_mail
 				 break;;
-		documentRoot* | DOCUMENTROOT*) test_documentRoot
+		documentroot* | DOCUMENTROOT*) test_documentRoot
 				 break;;
 		q*) exit;;
 		*) echo "Mauvaise réponse (dns, mail ou documentroot).";;
