@@ -29,14 +29,11 @@ function create_documentRoot() {
 		echo "Virtualhost déjà crée [OK]"
 	else
 		echo "Création des fichiers errorlog et customlog"
-		touch /var/log/apache2/$1.myshop.itinet.fr-error_log
-		touch /var/log/apache2/$1.myshop.itinet.fr-access_log
 		echo "Création du virtualhost dans sites-available/$1 en cours..."
 		echo "<VirtualHost *:80>
 		ServerName $1.myshop.itinet.fr
 		DocumentRoot /var/sftp/$1/www
 		Errorlog /var/log/apache2/$1.myshop.itinet.fr-error_log
-		CustomLog /var/log/apache2/$1.myshop.itinet.fr-access_log
 		</VirtualHost>" > /etc/apache2/sites-available/$1
 		echo "Création [OK]"
 		echo "Création d'un lien symbolique vers sites-enabled en cours..."
@@ -80,7 +77,6 @@ function manage_documentRoot() {
 			ServerName $3.myshop.itinet.fr
 			DocumentRoot /var/sftp/$3/www
 			Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
-			CustomLog /var/log/apache2/$3.myshop.itinet.fr-access_log
 			</VirtualHost>" > /etc/apache2/sites-available/$3
 			ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
 			echo "Mise à jour VirtualHost [OK]"
