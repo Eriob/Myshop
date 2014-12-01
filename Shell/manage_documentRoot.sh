@@ -31,7 +31,7 @@ function create_documentRoot() {
 		echo "Création du virtualhost dans sites-available/$1 en cours..."
 		echo "<VirtualHost *:80>
 		ServerName $1.myshop.itinet.fr
-		DocumentRoot /var/sftp/myshop/$1/www
+		DocumentRoot /var/sftp/$1/www
 		Errorlog /var/log/apache2/$1.myshop.itinet.fr-error_log
 		CustomLog /var/log/apache2/$1.myshop.itinet.fr-access_log
 		</VirtualHost>" > /etc/apache2/sites-available/$1
