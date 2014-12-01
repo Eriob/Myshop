@@ -15,10 +15,11 @@ function create_userUnix() {
 $2 = mkpasswd -H md5 $2
 
 	echo "Création du nouvel utilisateur UNIX en cours..."
+	#gid 5001 = group SFTP
 	useradd $1 --gid 5001 --groups 5001 --home /var/sftp/$1 --shell /bin/MySecureShell
 	echo "Création [OK]"
 
-	if [[ !test -e /var/sftp/$1 ]]; then
+	if [[ !test -d /var/sftp/$1 ]]; then
 		echo "Création du répertoire /var/sftp/$1/www en cours..."
 		mkdir /var/sftp/$1/www
 		echo "Création [OK]"
@@ -54,7 +55,3 @@ function manage_userUnix() {
 	else
 		echo "Cette action n'est pas possible, veuillez revoir votre script :)"
 	fi
-
-
-
-}

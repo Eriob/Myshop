@@ -53,7 +53,7 @@ while true; do
 	echo "- Désactiver le virtualhost"
 	echo "- Supprimer le site de l'utilisateur"
 	echo "- Réactiver son virtualhost (si désactiver)"
-	echo "Faites un choix : creer, renommer, desactiver ou reactiver"
+	echo "Faites un choix : creer, renommer, supprimer, desactiver ou reactiver"
 	read choice
 
 	echo "<-------------------------------------------->"
