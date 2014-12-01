@@ -44,7 +44,8 @@ function manage_fileDNS {
 			echo "Cet enregistrement n'existe pas ! [ECHEC]"
 		fi
 	elif [[ $1 = 2 ]]; then
-		if [[ grep "^+$2." /etc/tinydns/root/data ]]; then
+		grep "^+$2." /etc/tinydns/root/data
+		if [[ $? -eq 0 ]]; then
 			#On supprime la ligne dans le fichier DNS
 			echo "Suppression de $2 du fichier de zone DNS en cours..."
 			sed "/^+$2/d" /etc/tinydns/root/data >> /etc/tinydns/root/data2
