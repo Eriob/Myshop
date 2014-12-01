@@ -55,7 +55,7 @@ function manage_documentRoot() {
 		rm /etc/apache2/sites-available/$2
 		echo "<VirtualHost *:80>
 		ServerName $3.myshop.itinet.fr
-		DocumentRoot /var/sftp/myshop/$3
+		DocumentRoot /var/sftp/$3
 		Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
 		CustomLog /var/log/apache2/$3.myshop.itinet.fr-access_log
 		</VirtualHost>" > /etc/apache2/sites-available/$3
