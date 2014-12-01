@@ -14,7 +14,7 @@ function create_mailDirectory() {
 #$2 : le password de l'utilisateur
 
 		if [[ -d "/var/mail/$1" ]]; then
-			echo "Ce repertoire existe déjà"
+			echo "Ce repertoire existe déjà [ECHEC]"
 		else
 			echo "Création du répertoire /var/mail/$1 en cours..."
 			mkdir /var/mail/$1
