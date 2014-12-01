@@ -120,6 +120,8 @@ function test_mail() {
 	esac
 done
 
+}
+
 function test_userUnix() {
 	source /var/www/Myshop/Shell/manage_users.sh
 	
