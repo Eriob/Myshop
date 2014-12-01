@@ -20,6 +20,9 @@ function create_documentRoot() {
 		mkdir /var/sftp/$1/
 		mkdir /var/sftp/$1/www
 		echo "Création [OK]"
+		echo "Modification des droits sur le dossier utilisateur /var/sftp/$1"
+		chown -R $1:sftp /var/sftp/$1
+		echo "Modification des droits [OK]"
 	fi
 
 	echo "Création du virtualhost dans sites-available/$1 en cours..."
@@ -68,7 +71,7 @@ function manage_documentRoot() {
 			rm /etc/apache2/sites-available/$2
 			echo "<VirtualHost *:80>
 			ServerName $3.myshop.itinet.fr
-			DocumentRoot /var/sftp/$3
+			DocumentRoot /var/sftp/$3/www
 			Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
 			CustomLog /var/log/apache2/$3.myshop.itinet.fr-access_log
 			</VirtualHost>" > /etc/apache2/sites-available/$3
@@ -76,7 +79,7 @@ function manage_documentRoot() {
 			ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
 			echo "Mise à jour VirtualHost [OK]"
 		else
-			echo "Impossible de renommer, cet utilisateur n'existe pas =O !"
+			echo "Impossible de renommer, cet utilisateur n'existe pas ! [ECHEC]"
 		fi
 	elif [[ $1 = 2 ]]; then
 		if [[ -f "/etc/apache2/sites-enabled/$2" ]]; then
@@ -85,7 +88,7 @@ function manage_documentRoot() {
 			unlink /etc/apache2/sites-enabled/$2
 			echo "Suppression [OK]"
 		else
-			echo "Impossible de désactiver, ce site n'existe pas =O !"
+			echo "Impossible de désactiver, ce site n'existe pas ! [ECHEC]"
 		fi
 	elif [[ $1 = 3 ]]; then
 		if [[ -d /var/sftp/$2 && -f "/etc/apache2/sites-enabled/$2" ]]; then
@@ -100,7 +103,7 @@ function manage_documentRoot() {
 			rm /etc/apache2/sites-available/$2
 			echo "Suppression [OK]"
 		else
-			echo "Impossible de supprimer, cet utilisateur n'existe pas"
+			echo "Impossible de supprimer, cet utilisateur n'existe pas [ECHEC]"
 		fi
 	elif [[ $1 = 4 ]]; then
 		if [[ -f "/etc/apache2/sites-available/$2" ]]; then
@@ -109,7 +112,7 @@ function manage_documentRoot() {
 			ln -s /etc/apache2/sites-available/$2 /etc/apache2/sites-enabled/
 			echo "Réactivation [OK]"
 		else
-			echo "Impossible de réactiver, cet utilisateur n'existe pas"
+			echo "Impossible de réactiver, cet utilisateur n'existe pas [ECHEC]"
 		fi
 	else
 		echo "Cette action n'est pas possible, veuillez checker votre script :)"

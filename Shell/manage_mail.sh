@@ -13,9 +13,7 @@ function create_mailDirectory() {
 #$1 : le nom de l'utilisateur
 #$2 : le password de l'utilisateur
 
-variable = /var/mail/$1
-
-		if [[ -d $variable ]]; then
+		if [[ -d "/var/mail/$1" ]]; then
 			echo "Ce repertoire existe déjà"
 		else
 			echo "Création du répertoire /var/mail/$1 en cours..."
@@ -59,6 +57,7 @@ function manage_mailDirectory() {
 #$1 : le nom de l'utilisateur
 #$2 : le password de l'utilisateur
 
+	if [[ -d "/var/mail/$1" ]]; then
 		#On supprime le répertoire mail
 		echo "Suppression de /var/mail/$1 en cours..."
 		rm -r /var/mail/$1
@@ -83,9 +82,8 @@ function manage_mailDirectory() {
 
 		echo "Redemarrage des service postfix en cours..."
 		/etc/init.d/postfix restart
-
 	else
-		echo "Cette action n'est pas possible, veuillez revoir votre script :)"
+		echo "Ce répertoire mail n'existe pas [ECHEC]"
 	fi
 
 }
