@@ -28,6 +28,9 @@ function create_documentRoot() {
 	if [[ -d "/etc/apache2/sites-available/$1" ]]; then
 		echo "Virtualhost déjà crée [OK]"
 	else
+		echo "Création des fichiers errorlog et customlog"
+		touch /var/log/apache2/$1.myshop.itinet.fr-error_log
+		touch /var/log/apache2/$1.myshop.itinet.fr-access_log
 		echo "Création du virtualhost dans sites-available/$1 en cours..."
 		echo "<VirtualHost *:80>
 		ServerName $1.myshop.itinet.fr
