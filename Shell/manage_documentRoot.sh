@@ -39,6 +39,10 @@ function create_documentRoot() {
 		echo "Création d'un lien symbolique vers sites-enabled en cours..."
 		ln -s /etc/apache2/sites-available/$1 /etc/apache2/sites-enabled/
 		echo "Création [OK]"
+
+		echo "Redémarrage du service apache2 en cours..."
+		/etc/init.d/apache2 restart
+		echo "Redémarrage [OK]"
 	fi
 
 }
