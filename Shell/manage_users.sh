@@ -19,10 +19,11 @@ $2 = mkpasswd -H md5 $2
 	useradd $1 --gid 5001 --groups 5001 --home /var/sftp/$1 --shell /bin/MySecureShell
 	echo "Création [OK]"
 
-	if [[ test -d /var/sftp/$1 ]]; then
+	if [[ -d "/var/sftp/$1" ]]; then
 		echo "Répertoire /Var/sftp/$1 déja crée [OK]"
 	else
 		echo "Création du répertoire /var/sftp/$1/www en cours..."
+		mkdir /var/sftp/$1/
 		mkdir /var/sftp/$1/www
 		echo "Création [OK]"
 	fi
@@ -58,3 +59,4 @@ function manage_userUnix() {
 	else
 		echo "Cette action n'est pas possible, veuillez revoir votre script :)"
 	fi
+}

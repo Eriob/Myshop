@@ -13,6 +13,7 @@ function create_documentRoot() {
 #$1 : le nom du Document root de l'utilisateur 
 	
 	echo "Création du répertoire /var/sftp/$1/www en cours..."
+	mkdir /var/sftp/$1
 	mkdir /var/sftp/$1/www
 	echo "Création [OK]"
 	echo "Création du virtualhost dans sites-available/$1 en cours..."
