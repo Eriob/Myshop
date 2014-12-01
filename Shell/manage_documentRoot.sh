@@ -24,11 +24,11 @@ function create_documentRoot() {
 		chown -R $1:sftp /var/sftp/$1
 		echo "Modification des droits [OK]"
 	fi
-
-	echo "Création du virtualhost dans sites-available/$1 en cours..."
+	
 	if [[ -d "/etc/apache2/sites-available/$1" ]]; then
 		echo "Virtualhost déjà crée [OK]"
 	else
+		echo "Création du virtualhost dans sites-available/$1 en cours..."
 		echo "<VirtualHost *:80>
 		ServerName $1.myshop.itinet.fr
 		DocumentRoot /var/sftp/myshop/$1/www
@@ -36,11 +36,10 @@ function create_documentRoot() {
 		CustomLog /var/log/apache2/$1.myshop.itinet.fr-access_log
 		</VirtualHost>" > /etc/apache2/sites-available/$1
 		echo "Création [OK]"
+		echo "Création d'un lien symbolique vers sites-enabled en cours..."
+		ln -s /etc/apache2/sites-available/$1 /etc/apache2/sites-enabled/
+		echo "Création [OK]"
 	fi
-
-	echo "Création d'un lien symbolique vers sites-enabled en cours..."
-	ln -s /etc/apache2/sites-available/$1 /etc/apache2/sites-enabled/
-	echo "Création [OK]"
 
 }
 
@@ -68,6 +67,7 @@ function manage_documentRoot() {
 			mv /var/sftp/$2/ /var/sftp/$3
 			echo "Renommage [OK]"
 			echo "Mise à jour du virtualhost dans sites-available/$3 en cours..."
+			rm /etc/apache2/sites-enabled/$2
 			rm /etc/apache2/sites-available/$2
 			echo "<VirtualHost *:80>
 			ServerName $3.myshop.itinet.fr
@@ -75,7 +75,6 @@ function manage_documentRoot() {
 			Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
 			CustomLog /var/log/apache2/$3.myshop.itinet.fr-access_log
 			</VirtualHost>" > /etc/apache2/sites-available/$3
-			rm /etc/apache2/sites-enabled/$2
 			ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
 			echo "Mise à jour VirtualHost [OK]"
 		else
