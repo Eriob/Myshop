@@ -32,8 +32,6 @@ $2 = mkpasswd -H md5 $2
 	echo "Modification des droits sur le dossier utilisateur /var/sftp/$1"
 	chown -R $1:sftp /var/sftp/$1
 	echo "Modification des droits [OK]"
-
-
 }
 
 function manage_userUnix() {
