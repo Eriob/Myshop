@@ -120,10 +120,48 @@ function test_mail() {
 	esac
 done
 
+function test_userUnix() {
+	source /var/www/Myshop/Shell/manage_users.sh
+	
+	while true; do
+	echo "Ce test inclue :"
+	echo "- Création d'un utilisateur UNIX"
+	echo "- Renommage d'un utilisateur UNIX"
+	echo "- Suppression d'un utilisateur UNIX"
+	echo "Faites un choix : creer, renommer ou supprimer"
+	read choice
+
+	echo "<-------------------------------------------->"
+			echo " Vous souhaitez :" $choice
+	echo "<-------------------------------------------->"
+
+	case $choice in
+		creer* | CREER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
+						 read arg1
+						 echo "Entrez l'argument 2 : (le mot de passe de l'utilisateur)"
+						 read arg2
+						 create_userUnix $arg1 $arg2
+				 break;;
+		renommer* | RENOMMER*) echo "Entrez l'argument 1 : (l'ancien nom)"
+							   read arg1
+							   echo "Entrez l'argument 2 : (le nouveau nom)"
+							   read arg2
+							   manage_userUnix 1 $arg1 $arg2
+				 break;;
+		supprimer* | SUPPRIMER*) echo "Entrez l'argument 1 : (le nom de l'utilisateur)"
+								 read arg1
+								 manage_userUnix 2 $arg1
+				 break;;
+		q*) exit;;
+		*) echo "Mauvaise réponse (creer, renommer ou supprimer).";;
+	esac
+done
+
+
 }
 
 while true; do
-	echo "Choisissez un test : dns, mail ou documentroot"
+	echo "Choisissez un test : dns, mail, documentroot ou userunix"
 	read choice
 
 	echo "<-------------------------------------------->"
@@ -137,7 +175,9 @@ while true; do
 				 break;;
 		documentroot* | DOCUMENTROOT*) test_documentRoot
 				 break;;
+		userunix* | USERUNIX*) test_userUnix
+				 break;;
 		q*) exit;;
-		*) echo "Mauvaise réponse (dns, mail ou documentroot).";;
+		*) echo "Mauvaise réponse (dns, mail, documentroot ou userunix).";;
 	esac
 done
