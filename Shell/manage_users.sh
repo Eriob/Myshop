@@ -16,21 +16,9 @@ function create_userUnix() {
 	if grep "^$1:" /etc/passwd ; then
 		echo "Cet utilisateur UNIX existe déjà ! [ECHEC]"
 	else
-		echo "Cryptage du mot de passe en cours..."
-		
-		M="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" #chaine de caractère pour la création du SALT
-        
-        while [ "${n:=1}" -le "8" ]                                        #Boucle pour la création du Salt
-        do  pass="$pass${M:$(($RANDOM%${#M})):1}"                          #concaténation d'un caractère dans pass pioché aléatoirement dans la chaine M
-        	let n+=1                                                       #incrémentation de 1
-        done                                                            
-        
-        mdpOK=$(mkpasswd $2 -S $pass -m SHA-512) #cryptage du mot depasse avec la commande mkpasswd avec le Salt crée (-S) et la méthode SHA-512 86 bit
-		
-		echo "Cryptage [OK]"
 		echo "Création du nouvel utilisateur UNIX en cours..."
 		#gid 5001 = group SFTP
-		useradd --home /var/sftp/$1 --gid 5001 --groups 5001 --password $mdpOK --shell /bin/MySecureShell $1
+		useradd --home /var/sftp/$1 --gid 5001 --groups 5001 --password $2 --shell /bin/MySecureShell $1
 		echo "Création [OK]"
 		
 		if [[ -d "/var/sftp/$1" ]]; then
