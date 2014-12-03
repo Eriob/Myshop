@@ -17,7 +17,16 @@ function create_userUnix() {
 		echo "Cet utilisateur UNIX existe déjà ! [ECHEC]"
 	else
 		echo "Cryptage du mot de passe en cours..."
-		$2 = mkpasswd -H md5 $2
+		
+		M="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" #chaine de caractère pour la création du SALT
+        
+        while [ "${n:=1}" -le "8" ]                                        #Boucle pour la création du Salt
+        do  pass="$pass${M:$(($RANDOM%${#M})):1}"                          #concaténation d'un caractère dans pass pioché aléatoirement dans la chaine M
+        	let n+=1                                                           #incrémentation de 1
+        done                                                            
+        
+        mdpOK=$(mkpasswd $2 -S $pass -m SHA-512) #cryptage du mot depasse avec la commande mkpasswd avec le Salt crée (-S) et la méthode SHA-512 86 bit
+		
 		echo "Cryptage [OK]"
 		echo "Création du nouvel utilisateur UNIX en cours..."
 		#gid 5001 = group SFTP
