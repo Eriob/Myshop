@@ -18,9 +18,10 @@ function create_userUnix() {
 	else
 		echo "Création du nouvel utilisateur UNIX en cours..."
 		#gid 5001 = group SFTP
-		useradd --home /var/sftp/$1 --gid 5001 --groups 5001 --password $2 --shell /bin/MySecureShell $1
+		useradd --home /var/sftp/$1 --gid 5001 --groups 5001 --password "$(mkpasswd "$2")" --shell /bin/MySecureShell $1
 		echo "Création [OK]"
 		
+
 		if [[ -d "/var/sftp/$1" ]]; then
 			echo "Répertoire /Var/sftp/$1 déja crée [OK]"
 		else
