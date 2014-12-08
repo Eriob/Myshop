@@ -23,16 +23,20 @@ function create_userUnix() {
 		
 
 		if [[ -d "/var/sftp/$1" ]]; then
-			echo "Répertoire /Var/sftp/$1 déja crée [OK]"
+			echo "Répertoire /var/sftp/$1 déja crée [OK]"
 		else
 			echo "Création du répertoire /var/sftp/$1/www en cours..."
 			mkdir /var/sftp/$1/
-			mkdir /var/sftp/$1/www
+			mkdir /var/sftp/$1/www 
 			echo "Création [OK]"
-
+ 
 			echo "Modification des droits sur le dossier utilisateur /var/sftp/$1"
 			chown -R $1:sftp /var/sftp/$1
 			echo "Modification des droits [OK]"
+
+			echo "Application des Quotas en cours..."
+			edquota -p test $1
+			echo "Applications des Quotas [OK]"
 		fi
 	fi
 }
