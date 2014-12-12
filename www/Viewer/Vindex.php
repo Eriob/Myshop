@@ -1,47 +1,103 @@
-       <div class="jumbotron">
-            <h1>Créer ta boutique en ligne !</h1>
 
-            <p class="lead">E-shop vous propose de créer votre boutique en ligne en quelques minutes et gratuitement</p>
-            <a class="btn btn-large btn-success" href="index.php?index=subscribe">Inscris toi dès maintenant</a>
-        </div>
-        <hr>
-        <div class="row-fluid marketing">
-            <div class="span6">
-                <p class="lead">Nos sites les plus populaires</p>
-                <h4>Titre site A</h4>
-                <p>Description site A blahblahblahblahblahblahblah
-                </p>
-                <h4>Titre site B</h4>
-                <p>Description site B blahblahblahblahblahblahblah
-                </p>
-                <h4>Titre site C</h4>
-                <p>Description site C blahblahblahblahblahblahblah
-                </p>
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="./Viewer/Images/background.png" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <form class="form-inline" method="POST" action="index.php?index=subscribe">
+                  <h1>Créer ta boutique en ligne facilement et rapidement</h1>
+                  <div class="input-group">
+                    <input type="text" class="form-control" style="text-align:right" name="nom" placeholder="Nom de votre boutique">
+                    <span class="input-group-addon">.myshop.itinet.fr</span> 
+                  </div>
+                  <div class="form-group">
+                  <button type="submit" name="subscribe" class="btn btn-primary pull-right">Essayer !</button>
+                </form>
+              </div>
             </div>
-            <div class="span6">
-                <br><br><br>
-                <h4>Titre site D</h4>
-                <p>Description site D blahblahblahblahblahblahblah
-                </p>
-                <h4>Titre site E</h4>
-                <p>Description site E blahblahblahblahblahblahblah
-                </p>
-                <h4>Titre site F</h4>
-                <p>Description site F blahblahblahblahblahblahblah
-                </p>
-            </div>
+          </div>
         </div>
-        <hr>
-        <div class="footer">
-            <p>&copy; IN'TECH INFO 2014 | design by <strong>Alababa</strong></p>
-        </div>
-    </div>
-    <!-- /container -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-    </script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src='main.js'></script>
-</body>
+      </div>
+    </div><!-- /.carousel -->
 
-</html>
+<section class="para_large">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mt32 mb16">
+              <h2 class="text-center">E-commerce aux fonctionnalités complètes</h2>
+              <h3 class="text-muted text-center">Optimisez vos ventes avec une superbe boutique en ligne</h3>
+            </div>
+            <div class="col-md-6 mb48">
+              <div class="oe_demo img img-responsive shadow">
+                <iframe allowfullscreen="allowfullscreen" frameborder="0" height="300" src="//www.youtube.com/embed/dKwzZZKIbUs" width="500"></iframe>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p class="mt32"><h4>Le logiciel e-commerce est différent de tout ce que vous avez pu voir auparavant. Élaborer un catalogue de produits exceptionnel et de magnifiques fiches descriptives pour vos produits n'a jamais été aussi simple.</h4></p>
+              <p><h4>Complet et entièrement personnalisable le module ecommerce s'intègre parfaitement dans votre logiciel de gestion</p></h4>
+            </div>
+          </div>
+        </div>
+</section>
+<br>
+<br>
+<br>
+<section class="para_large oe_dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center mt32 mb16">
+              <h2>Créez de superbes pages produit</h2>
+              <h3 class="text-muted">Oubliez les anciens éditeurs fastidieux</h3>
+            </div>
+            <div class="col-md-6 mt32 mb92">
+              <p><h4>MySHOP rend la création de pages de produit extrêmement facile.</h4></p>
+              <p><h4>Un site bien conçus pour créer de belles pages produit. Vos clients vont adorer.</h4></p>
+            </div>
+            <div class="mt16 col-md-6 mb48">
+              <img class="featurette-image img-responsive" data-src="holder.js/500x400/auto" alt="Generic placeholder image">
+            </div>
+          </div>
+        </div>
+</section>
+<br><br><br><br>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Modèle 1</h2>
+          <p>Description du modèle 1</p>
+          <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Modèle 2</h2>
+          <p>Description du modèle 2</p>
+          <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Modèle 3</h2>
+          <p>Description du modèle 3</p>
+          <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+

@@ -22,27 +22,6 @@ if(isset($_SESSION['pseudo'])){
             case "disconnect":
                 include('/Controller/Cdisconnect.php');
                 break;
-            case "contact":
-                include('/Controller/Ccontact.php');
-                break;
-            case "requestContact":
-                include('/Controller/CrequestContact.php');
-                break;
-            case "searchWebsite":
-                include('/Controller/CsearchWebsite.php');
-                break;
-            case "myProfil":
-                include('/Controller/CmyProfil.php');
-                break;
-            case "modifyProfil":
-                include('/Controller/CmyProfil.php');
-                break;
-            case "myShop":
-                include('/Controller/CmyShop.php');
-                break;
-            case "modifyShop":
-                include('/Controller/CmyShop.php');
-                break;
             default:
                 include_once('/Controller/Cindex.php');
                 break;
@@ -50,5 +29,7 @@ if(isset($_SESSION['pseudo'])){
     }else{
         include_once('/Controller/Cindex.php');
     }
+
+        include_once('/Viewer/Vfooter.php');
 
 ?>

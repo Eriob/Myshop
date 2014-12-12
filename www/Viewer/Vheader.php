@@ -1,95 +1,69 @@
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>E-Shop - Accueil</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- TODO: make sure bootstrap.min.css points to BootTheme generated file
-        -->
-    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        body {
-            padding-top: 20px;
-            padding-bottom: 40px;
-        }
-        /* Custom container */
-        .container-narrow {
-            margin: 0 auto;
-            max-width: 700px;
-        }
-        .container-narrow > hr {
-            margin: 30px 0;
-        }
-        /* Main marketing message and sign up button */
-        .jumbotron {
-            margin: 60px 0;
-            text-align: center;
-        }
-        .jumbotron h1 {
-            font-size: 72px;
-            line-height: 1;
-        }
-        .jumbotron .btn {
-            font-size: 21px;
-            padding: 14px 24px;
-        }
-        /* Supporting marketing content */
-        .marketing {
-            margin: 60px 0;
-        }
-        .marketing p + h4 {
-            margin-top: 28px;
-        }
-    </style>
-    <!-- TODO: make sure bootstrap-responsive.min.css points to BootTheme
-        generated file -->
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-<link href='main.css' rel='stylesheet'>
-</head>
 
-<body>
-    <div class="container-narrow">
-        <div class="masthead">
-            <ul class="nav nav-pills pull-right">
-                <li>
-                    <a href="index.php?index=index">Accueil</a>
-                </li>
-                <li>
-                    <a href="index.php?index=contact">Contact</a>
-                </li>
-                <li>
-                    <a href="index.php?index=searchWebsite">Sites E-Shop</a>
-                </li>
-                <li>
-                    <!-- Button trigger modal -->
-                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Connexion
-                    </button>
+    <title>MySHOP</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./bootstrap/main.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.php?index=index">MySHOP</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav pull-right">
+                <?php if($_GET['index'] == "websites") {
+                        echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
+                        echo "<li class=\"active\"><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                        echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
+                      }else if($_GET['index'] == "contact") {
+                        echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
+                        echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                        echo "<li class=\"active\"><a href=\"index.php?index=contact\">Contact</a></li>";
+                      }else{
+                        echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
+                        echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                        echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
+                      }
+                ?>
+                <li><a data-toggle="modal" data-target="#myModal">Connexion</a>
                     <!-- Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
-                            Identifiez-vous
+                            <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+                            <h4> Identifiez-vous</h4>
                           </div>
+
                           <div class="modal-body">
                             <form action="index.php?index=connect" method="POST">
                                 <input type="text" name="pseudo" placeholder="Pseudo"><br>
+                                <br>
                                 <input type="password" name="password" placeholder="Password"><br>
                                 <br>
                                 <input type='submit' name="connect" value="Se connecter"/><br>
@@ -98,9 +72,10 @@
                         </div>
                       </div>
                     </div>
-                </li>
-            </ul>
-            <h3 class="muted"><a href="index.php?index=index">E-Shop</h3></a>
-
-        </div>
-        <hr>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
