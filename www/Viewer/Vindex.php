@@ -4,7 +4,7 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="./Viewer/Images/background.png" alt="First slide">
+          <img src="/var/www/Myshop/www/Viewer/Images/background.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <form class="form-inline" method="POST" action="index.php?index=subscribe">

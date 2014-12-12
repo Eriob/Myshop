@@ -11,10 +11,10 @@
     <title>MySHOP</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/var/www/Myshop/www/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./bootstrap/main.css" rel="stylesheet">
+    <link href="/var/www/Myshop/www/bootstrap/main.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
