@@ -1,20 +1,20 @@
-
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="etudiant, projet, e-commerce, hebergement">
+    <meta name="author" content="IN'TECH INFO">
 
     <title>MySHOP</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/var/www/Myshop/www/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/var/www/Myshop/www/bootstrap/main.css" rel="stylesheet">
+    <link href="./bootstrap/main.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->

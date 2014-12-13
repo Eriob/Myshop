@@ -10,9 +10,14 @@
                 <input type="text" name="name" id="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" required="required"/>
             </div>
 
-            <div class="form-group login">
-                <label for="login" class="control-label">Adresse Email</label>
-                <input type="email" name="email" id="email" class="form-control" autofocus="autofocus" required="required"/>
+            <div class="form-group pseudo">
+                <label for="pseudo" class="control-label">Votre pseudo</label>
+                <input type="text" name="pseudo" id="pseudo" class="form-control" autofocus="autofocus" required="required"/>
+            </div>
+
+            <div class="form-group email">
+                <label for="email" class="control-label">Adresse Email</label>
+                <input type="email" name="email" id="email" class="form-control" required="required"/>
             </div>
 
             <div class="form-group firstname">

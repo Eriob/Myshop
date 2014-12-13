@@ -1,10 +1,9 @@
-
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="/var/www/Myshop/www/Viewer/Images/background.png" alt="First slide">
+          <img src="./Viewer/Images/background.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <form class="form-inline" method="POST" action="index.php?index=subscribe">
@@ -21,9 +20,10 @@
           </div>
         </div>
       </div>
-    </div><!-- /.carousel -->
+    </div>
+    <!-- /.carousel -->
 
-<section class="para_large">
+    <section class="para_large">
         <div class="container">
           <div class="row">
             <div class="col-md-12 mt32 mb16">
@@ -41,11 +41,10 @@
             </div>
           </div>
         </div>
-</section>
-<br>
-<br>
-<br>
-<section class="para_large oe_dark">
+    </section>
+    <br><br><br>
+
+    <section class="para_large oe_dark">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center mt32 mb16">
@@ -61,16 +60,14 @@
             </div>
           </div>
         </div>
-</section>
-<br><br><br><br>
+    </section>
+    <br><br><br><br>
 
 
-    <!-- Marketing messaging and featurettes
+    <!-- <map></map>rketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
-
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
@@ -92,7 +89,6 @@
           <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-
 
       <!-- START THE FEATURETTES -->
 

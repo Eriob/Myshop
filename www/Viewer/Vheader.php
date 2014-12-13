@@ -1,27 +1,28 @@
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="etudiant, projet, e-commerce, hebergement">
+    <meta name="author" content="IN'TECH INFO">
 
     <title>MySHOP</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/var/www/Myshop/www/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/var/www/Myshop/www/bootstrap/main.css" rel="stylesheet">
+    <link href="./bootstrap/main.css" rel="stylesheet">
   </head>
-<!-- NAVBAR
-================================================== -->
+
+  <!-- NAVBAR
+  ================================================== -->
   <body>
     <div class="navbar-wrapper">
       <div class="container">
-
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,6 +34,7 @@
               </button>
               <a class="navbar-brand" href="index.php?index=index">MySHOP</a>
             </div>
+            
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav pull-right">
                 <?php if($_GET['index'] == "websites") {
@@ -49,6 +51,7 @@
                         echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
                       }
                 ?>
+                
                 <li><a data-toggle="modal" data-target="#myModal">Connexion</a>
                     <!-- Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
