@@ -58,7 +58,7 @@
               </select>
             </div>
 
-            <button type="submit" href="index.php?index=valid_subscribe " class="btn btn-primary pull-left">Démarrer ma boutique en ligne</button>
+            <button type="submit" class="btn btn-primary pull-left">Démarrer ma boutique en ligne</button>
             </form>
         </div>
         </div>
