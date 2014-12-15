@@ -40,7 +40,6 @@ include ('./Model/MconnectBDD.php');
 				echo "Erreur d'inscription";
 			}
 		}else{
-			include('./Viewer/Vsubscribe.php');
 			echo "Erreur de redirection";
 		}
 ?>

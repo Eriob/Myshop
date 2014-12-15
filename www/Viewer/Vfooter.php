@@ -1,6 +1,6 @@
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Revenir en haut</a></p>
+        <p class="pull-right"><a href="index.php?index=index">Revenir en haut</a></p>
         <p>&copy; 2014  <a href="http://www.intechinfo.fr">IN'TECH INFO</a> &middot;Design by Alababa &middot;</p>
       </footer>
 
