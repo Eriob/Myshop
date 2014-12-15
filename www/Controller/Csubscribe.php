@@ -9,7 +9,6 @@ include ('./Model/MconnectBDD.php');
 		}elseif ($_GET['index'] == "valid_subscribe") {
 			if(isset($_POST['name']) || isset($_POST['pseudo']) || isset($_POST['email']) || isset($_POST['firstname']) || isset($_POST['lastname']) || isset($_POST['password']) ||
  			isset($_POST['password2']) || isset($_POST['phone']) || isset($_POST['plan'])){
- 
 				if(!empty ($_POST['name']) && !empty ($_POST['pseudo']) && !empty ($_POST['email']) && !empty($_POST['firstname']) && !empty ($_POST['lastname']) && !empty($_POST['password']) &&
 				!empty ($_POST['password2']) && !empty($_POST['phone']) && !empty($_POST['plan'])){
 			
