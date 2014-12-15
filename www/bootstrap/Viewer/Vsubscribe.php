@@ -3,7 +3,7 @@
     <div class="row">
         <h2> Inscription </h2>
         <br>
-        <form class="signup_form" role="form" method="POST">
+        <form class="valid_subscribe" role="form" method="POST">
             
             <div class="form-group name">
                 <label for="name" class="control-label">Nom de votre site</label>
@@ -58,7 +58,7 @@
               </select>
             </div>
 
-            <button type="submit" href="index.php?index=valid_subscribe " class="btn btn-primary pull-left">Démarrer ma boutique en ligne</button>
+            <button type="submit" href="index.php?index=valid_subscribe" class="btn btn-primary pull-left">Démarrer ma boutique en ligne</button>
             </form>
         </div>
         </div>
