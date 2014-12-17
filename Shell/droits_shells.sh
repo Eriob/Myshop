@@ -6,7 +6,8 @@
 # Role : Applique les droits d'execution aux scripts shell
 #------------------------------------------------------------
 
-chmod +x /var/www/Myshop/Shell/manage_documentRoot.sh
-chmod +x /var/www/Myshop/Shell/manage_fileDNS.sh
-chmod +x /var/www/Myshop/Shell/manage_mail.sh
-chmod +x /var/www/Myshop/Shell/manage_users.sh
+/bin/chmod +x /var/www/Myshop/Shell/manage_documentRoot.sh
+/bin/chmod +x /var/www/Myshop/Shell/manage_fileDNS.sh
+/bin/chmod +x /var/www/Myshop/Shell/manage_mail.sh
+/bin/chmod +x /var/www/Myshop/Shell/manage_users.sh
+
