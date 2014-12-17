@@ -20,7 +20,7 @@ function create_mailDirectory() {
 			mkdir /var/mail/$1
 			echo "Création [OK]"
 
-			#PAS BESOIN CAR ON ENVOI UN MAIL
+			#PAS BESOIN SI ON ENVOI UN MAIL
 			maildirmake -f ./Maildir
 
 			echo "Modification des droits sur /var/mail/$1 en cours..."

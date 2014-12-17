@@ -2,7 +2,6 @@
 
 include ('./Model/MconnectBDD.php');
 
-	if (isset($_GET['index'])) {
 		if ($_GET['index'] == "subscribe") {
 			$_POST['name'] = $_POST['nom'];
 			include('./Viewer/Vsubscribe.php');
@@ -38,7 +37,5 @@ include ('./Model/MconnectBDD.php');
 			}else{
 				echo "Erreur d'inscription";
 			}
-		}else{
-			echo "Erreur de redirection";
-		}
+
 ?>

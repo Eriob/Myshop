@@ -17,7 +17,7 @@ if(isset($_SESSION['pseudo'])){
                 include_once('./Controller/Csubscribe.php');
                 break;
             case "valid_subscribe":
-                include_once('./Controller/Csubscribe.php')
+                include_once('./Controller/Csubscribe.php');
                 break;
             case "connect":
                 include_once('./Controller/Cconnect.php');
