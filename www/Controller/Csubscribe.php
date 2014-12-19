@@ -31,9 +31,9 @@ if ($_GET['index'] == "subscribe") {
 				$pass = escapeshellarg($_POST['password']);
 
 
-				$user = shell_exec("./Server/add_fileDNS.sh $name");
-				$user = shell_exec("./Server/add_mailDirectory.sh $pseudo $pass");
-				$user = shell_exec("./Server/add_webUser.sh $pseudo $pass $name");
+				$user = shell_exec('/www/Myshop/www/Server/add_fileDNS.sh '.$name.);
+				$user = shell_exec('/www/Myshop/www/Server/add_mailDirectory.sh' .$pseudo.' '.$pass.);
+				$user = shell_exec('/www/Myshop/www/Server/add_webUser.sh' .$pseudo.'' .$pass.'' .$name.);
 				
 				include ('./Controller/Cindex.php');
 			}
