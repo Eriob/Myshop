@@ -26,7 +26,7 @@ if ($_GET['index'] == "subscribe") {
 				$mdp=md5($_POST['password']);
 				
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
-				$user = create_user($_POST['pseudo'], $mdp, $_POST['mail'], $_POST['nom'], $_POST['prenom'], $_POST['daten'], $_POST['adresse'], $_POST['ville'], $_POST['cp'], $_POST['question'], $_POST['reponse'], $_POST['telephone']);
+				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 				$user = add_webUser($_POST['pseudo'], $_POST['password'], $_POST['name']);

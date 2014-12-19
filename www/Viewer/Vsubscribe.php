@@ -3,48 +3,48 @@
     <div class="row">
         <h2> Inscription </h2>
         <br>
-        <form class="signup_form" role="form" method="POST" action="index.php?index=valid_subscribe">
+        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=valid_subscribe">
             
-            <div class="form-group name">
+            <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site</label>
                 <input type="text" name="name" id="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" required="required"/>
             </div>
 
-            <div class="form-group pseudo">
+            <div class="form-group">
                 <label for="pseudo" class="control-label">Votre pseudo</label>
                 <input type="text" name="pseudo" id="pseudo" class="form-control" autofocus="autofocus" required="required"/>
             </div>
 
-            <div class="form-group email">
+            <div class="form-group">
                 <label for="email" class="control-label">Adresse Email</label>
                 <input type="email" name="email" id="email" class="form-control" required="required"/>
             </div>
 
-            <div class="form-group firstname">
+            <div class="form-group">
                 <label for="firstname" class="control-label">Prénom</label>
                 <input type="text" name="firstname" id="firstname" class="form-control" required="required"/>
             </div>
             
-            <div class="form-group lastname">
+            <div class="form-group">
                 <label for="lastname" class="control-label">Nom</label>
                 <input type="text" name="lastname" id="lastname" class="form-control" required="required"/>
             </div>
             
-            <div class="form-group password">
+            <div class="form-group">
                 <label for="password" class="control-label">Password</label>
                 <div class="input-group">
                     <input type="password" name="password" id="password" class="form-control" required="required"/>
                 </div>
             </div>
 
-            <div class="form-group password2">
+            <div class="form-group">
                 <label for="password" class="control-label">Confirmation du Password</label>
                 <div class="input-group">
                     <input type="password" name="password2" id="password2" class="form-control" required="required"/>
                 </div>
             </div>
         
-            <div class="form-group phone">
+            <div class="form-group">
               <label for="phone" class="control-label">Numéro de téléphone</label>
               <input class="form-control" type="tel" name="phone" id="phone" value="+33 "/>
             </div>
@@ -58,7 +58,7 @@
               </select>
             </div>
 
-            <button type="submit" class="btn btn-primary pull-left">Démarrer ma boutique en ligne</button>
+            <button type="submit" href="index.php?index=valid_subscribe" class="btn btn-primary pull-left">Démarrer ma boutique en ligne</button>
             </form>
         </div>
         </div>
