@@ -14,19 +14,19 @@ if(isset($_SESSION['pseudo'])){
     if (isset ($_GET['index'])) {
         switch ($_GET['index']) {
             case "subscribe":
-                include_once('./Controller/Csubscribe.php');
+                include('./Controller/Csubscribe.php');
                 break;
             case "valid_subscribe":
-                include_once('./Controller/Csubscribe.php');
+                include('./Controller/Csubscribe.php');
                 break;
             case "connect":
-                include_once('./Controller/Cconnect.php');
+                include('./Controller/Cconnect.php');
                 break;
             case "disconnect":
-                include_once('./Controller/Cdisconnect.php');
+                include('./Controller/Cdisconnect.php');
                 break;
             default:
-                include_once('./Controller/Cindex.php');
+                include('./Controller/Cindex.php');
                 break;
         }   
     }else{

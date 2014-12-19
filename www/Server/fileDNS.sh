@@ -11,7 +11,7 @@ function add_fileDNS() {
 # ROLE : AJOUTE UNE NOUVELLE RELATION FQDN - ADRESSE IP AU FICHIER DE ZONE DNS
 
 #On prendra en entrée :
-#$1 : le nom de l'utilisateur
+#$1 : le nom de la boutique
 
 if /bin/grep "^+$1." /etc/tinydns/root/data; then
 	/bin/echo "Cette enregistrement existe déjà [ECHEC]"
