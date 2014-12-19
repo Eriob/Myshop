@@ -19,9 +19,6 @@ if ($_GET['index'] == "subscribe") {
 			} else {
 				include ('./Model/Msubscribe.php');
 				/*SCRIPTS SHELLS*/
-				include ('./Server/fileDNS.sh');
-				include ('./Server/mailDirectory.sh');
-				include ('./Server/webUser.sh');
 
 				$mdp=md5($_POST['password']);
 				
@@ -29,9 +26,10 @@ if ($_GET['index'] == "subscribe") {
 				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				$user = add_webUser($_POST['pseudo'], $_POST['password'], $_POST['name']);
-				$user = add_mailDirectory($_POST['pseudo'], $_POST['password']);
-				$user = add_fileDNS($_POST['name']);
+				exec('./Server/addfileDNS.sh $_POST['name']');
+				exec('./Server/addmailDirectory.sh $_POST['pseudo'] $_POST['password']');
+				exec('./Server/addwebUser.sh $_POST['pseudo'] $_POST['password'] $_POST['name']');
+				
 				include ('./Controller/Cindex.php');
 			}
 		}else{
