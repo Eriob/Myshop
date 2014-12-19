@@ -3,7 +3,7 @@
 include ('./Model/MconnectBDD.php');
 
 if ($_GET['index'] == "subscribe") {
-	$_POST['name'] = $_POST['nom'];
+
 	include('./Viewer/Vsubscribe.php');
 
 }elseif ($_GET['index'] == "valid_subscribe") {
@@ -26,9 +26,9 @@ if ($_GET['index'] == "subscribe") {
 				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				shell_exec('../Server/add_fileDNS.sh $_POST[\'name\']');
-				shell_exec('../Server/add_mailDirectory.sh $_POST[\'pseudo\'] $_POST[\'password\']');
-				shell_exec('../Server/add_webUser.sh $_POST[\'pseudo\'] $_POST[\'password\'] $_POST[\'name\']');
+				shell_exec('./Server/add_fileDNS.sh $_POST[\'name\']');
+				shell_exec('./Server/add_mailDirectory.sh $_POST[\'pseudo\'] $_POST[\'password\']');
+				shell_exec('./Server/add_webUser.sh $_POST[\'pseudo\'] $_POST[\'password\'] $_POST[\'name\']');
 				
 				include ('./Controller/Cindex.php');
 			}
