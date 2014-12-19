@@ -26,10 +26,14 @@ if ($_GET['index'] == "subscribe") {
 				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				php ./Server/add_fileDNS.sh $_POST['name'];
-				//exec('./Server/add_fileDNS.sh $_POST[\'name\']');
-				//exec('./Server/add_mailDirectory.sh $_POST[\'pseudo\'] $_POST[\'password\']');
-				//exec('./Server/add_webUser.sh $_POST[\'pseudo\'] $_POST[\'password\'] $_POST[\'name\']');
+				$name = escapeshellarg($_POST['name']);
+				$pseudo = escapeshellarg($_POST['pseudo']);
+				$pass = escapeshellarg($_POST['password']);
+
+
+				$user = shell_exec("./Server/add_fileDNS.sh $name");
+				$user = shell_exec("./Server/add_mailDirectory.sh $pseudo $pass");
+				$user = shell_exec("./Server/add_webUser.sh $pseudo $pass $name");
 				
 				include ('./Controller/Cindex.php');
 			}
