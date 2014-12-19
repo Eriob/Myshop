@@ -6,10 +6,10 @@
           <img src="./Viewer/Images/background.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <form class="form-inline" method="POST" action="index.php?index=subscribe">
+              <form class="form-inline" method="POST" name="subscribe" action="index.php?index=subscribe">
                   <h1>Créer ta boutique en ligne facilement et rapidement</h1>
                   <div class="input-group">
-                    <input type="text" class="form-control" style="text-align:right" name="nom" placeholder="Nom de votre boutique">
+                    <input type="text" class="form-control" style="text-align:right" name="name" placeholder="Nom de votre boutique">
                     <span class="input-group-addon">.myshop.itinet.fr</span> 
                   </div>
                   <div class="form-group">
