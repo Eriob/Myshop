@@ -13,18 +13,16 @@
 
 if /bin/grep "^+$1." /etc/tinydns/root/data; then
 	#On supprime la ligne dans le fichier DNS
-	/bin/sed "/^+$1/d" /etc/tinydns/root/data >> /etc/tinydns/root/data2
-	/bin/cp /etc/tinydns/root/data2 /etc/tinydns/root/data
-	/bin/rm /etc/tinydns/root/data2
+	sudo /bin/sed -i "/^+$1/d" /etc/tinydns/root/data
 	
-	if -e /etc/tinydns/root/data.cdb; then
-		/bin/rm /etc/tinydns/root/data.cdb
-		/usr/local/bin/tinydns-data
+	if test -e /etc/tinydns/root/data.cdb; then
+		sudo /bin/rm /etc/tinydns/root/data.cdb
+		sudo /usr/local/bin/tinydns-data
 	else
-		/bin/echo "Le fichier data.cdb n'existe pas dans /etc/tinydns/root"
+		sudo /bin/echo "Le fichier data.cdb n'existe pas dans /etc/tinydns/root"
 	fi
 			
-	/usr/bin/ssh root@dedibox.itinet.fr
+	/usr/bin/ssh -i /var/www/Myshop/www/Server/key_dedibox root@dedibox.itinet.frsudo /usr/bin/ssh root@dedibox.itinet.fr
 else
-	/bin/echo "Cet enregistrement n'existe pas ! [ECHEC]"
+	sudo /bin/echo "Cet enregistrement n'existe pas ! [ECHEC]"
 fi

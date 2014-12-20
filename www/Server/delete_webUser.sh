@@ -12,22 +12,20 @@
 #$1 : le nom de la boutique
 #$2 : le nom de l'utilisateur
 
-if [[ -d /var/sftp/$1 && -f "/etc/apache2/sites-enabled/$1" ]]; then
+if test -d /var/sftp/$1 && test -f "/etc/apache2/sites-enabled/$1"; then
 	# On supprime le site $1
-	/bin/rm /var/sftp/$1/www
-	/usr/bin/unlink /etc/apache2/sites-enabled/$1
-	/bin/rm /etc/apache2/sites-available/$1
+	sudo /bin/rm /var/sftp/$1/www
+	sudo /usr/bin/unlink /etc/apache2/sites-enabled/$1
+	sudo /bin/rm /etc/apache2/sites-available/$1
 else
-	/bin/echo "Impossible de supprimer, cet utilisateur n'existe pas [ECHEC]"
+	sudo /bin/echo "Impossible de supprimer, cet utilisateur n'existe pas [ECHEC]"
 fi
 
 if /bin/grep "^$2:" /etc/passwd; then
 	#On supprime la ligne dans le fichier DNS
-	/bin/sed "/^$2:/d" /etc/passwd >> /etc/sauv_passwd
-	/bin/cp /etc/sauv_passwd /etc/passwd
-	/bin/rm /etc/sauv_passwd
+	sudo /bin/sed -i "/^$2:/d" /etc/passwd
 else
-	/bin/echo "Cet utilisateur n'existe pas ! [ECHEC]"
+	sudo /bin/echo "Cet utilisateur n'existe pas ! [ECHEC]"
 fi
 
 #REDEMARRAGE DU SERVICE APACHE2

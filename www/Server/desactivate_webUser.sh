@@ -11,11 +11,11 @@
 #On prendra en entrée :
 #$1 : le nom de la boutique
 
-if [[ -f "/etc/apache2/sites-enabled/$1" ]]; then
+if test -f "/etc/apache2/sites-enabled/$1"; then
 	# On desactive le site $1 ($1 = nom du repertoire)
-	/usr/bin/unlink /etc/apache2/sites-enabled/$1
+	sudo /usr/bin/unlink /etc/apache2/sites-enabled/$1
 else
-	/bin/echo "Impossible de désactiver, ce site n'existe pas ! [ECHEC]"
+	sudo /bin/echo "Impossible de désactiver, ce site n'existe pas ! [ECHEC]"
 fi
 
 #REDEMARRAGE DU SERVICE APACHE2

@@ -11,11 +11,11 @@
 #On prendra en entrée :
 #$1 : le nom de la boutique
 
-if [[ -f "/etc/apache2/sites-available/$1" ]]; then
+if test -f "/etc/apache2/sites-available/$1"; then
 	# On réactive le site
-	/bin/ln -s /etc/apache2/sites-available/$1 /etc/apache2/sites-enabled/
+	sudo /bin/ln -s /etc/apache2/sites-available/$1 /etc/apache2/sites-enabled/
 else
-	/bin/echo "Impossible de réactiver, cet utilisateur n'existe pas [ECHEC]"
+	sudo /bin/echo "Impossible de réactiver, cet utilisateur n'existe pas [ECHEC]"
 fi
 
 #REDEMARRAGE DU SERVICE APACHE2
