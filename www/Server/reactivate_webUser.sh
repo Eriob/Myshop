@@ -6,8 +6,6 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-reactivate_webUser()
-{
 # ROLE : REACTIVE LE VIRTUALHOST D'UNE BOUTIQUE
 
 #On prendra en entrée :
@@ -24,4 +22,3 @@ fi
 #---------------------------------------------------------------
 /etc/init.d/apache2 restart
 #---------------------------------------------------------------
-}

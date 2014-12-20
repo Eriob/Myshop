@@ -6,8 +6,6 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-rename_webUser()
-{
 # ROLE : MET A JOUR LE VIRTUALHOST D'UNE BOUTIQUE
 
 #On prendra en entrée :
@@ -34,4 +32,3 @@ fi
 #---------------------------------------------------------------
 /etc/init.d/apache2 restart
 #---------------------------------------------------------------
-}

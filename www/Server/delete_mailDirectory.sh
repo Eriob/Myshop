@@ -6,9 +6,6 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-
-delete_mailDirectory()
-{
 #ROLE : SUPPRIME UNE BOITE DE MESSAGERIE PERSONNEL
 
 #On prendra en entrée :
@@ -35,4 +32,3 @@ delete_mailDirectory()
 	fi
 
 /etc/init.d/postfix restart
-}
