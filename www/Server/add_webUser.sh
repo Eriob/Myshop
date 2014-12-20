@@ -14,12 +14,12 @@
 #$3 : le nom de la boutique
 
 if /bin/grep "^$1:" /etc/passwd; then
-	/bin/echo "Cet utilisateur UNIX existe déjà ! [ECHEC]"
+	sudo /bin/echo "Cet utilisateur UNIX existe déjà ! [ECHEC]"
 else
 	sudo /usr/sbin/useradd --home /var/sftp/$1 --gid 5001 --groups 5001 --password "$(mkpasswd "$2")" --shell /bin/MySecureShell $1
 		
 	if test -d "/var/sftp/$1"; then
-		/bin/echo "Répertoire /var/sftp/$1 déja crée [OK]"
+		sudo /bin/echo "Répertoire /var/sftp/$1 déja crée [OK]"
 	else
 		sudo /bin/mkdir /var/sftp/$1/
 		sudo /bin/mkdir /var/sftp/$1/www 
@@ -30,9 +30,9 @@ else
 	fi
 
 	if test -d "/etc/apache2/sites-available/$3"; then
-		/bin/echo "Virtualhost déjà crée [OK]"
+		sudo /bin/echo "Virtualhost déjà crée [OK]"
 	else
-		/bin/echo "<VirtualHost *:80>
+		sudo /bin/echo "<VirtualHost *:80>
 				ServerName $3.myshop.itinet.fr
 				DocumentRoot /var/sftp/$1/www
 				Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
