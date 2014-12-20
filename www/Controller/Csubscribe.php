@@ -30,6 +30,9 @@ if ($_GET['index'] == "subscribe") {
 				$pseudo = escapeshellarg($_POST['pseudo']);
 				$pass = escapeshellarg($_POST['password']);
 
+				$exec_cmd = sprintf('sudo /var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
+				// Execution de la commande
+				exec($exec_cmd);
 
 				$user = shell_exec('/var/www/Myshop/www/Server/add_fileDNS.sh "'.$name.'"');
 				$user = shell_exec('/var/www/Myshop/www/Server/add_mailDirectory.sh "'.$pseudo.'" "'.$pass.'"');
