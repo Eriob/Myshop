@@ -6,8 +6,8 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-function delete_fileDNS() {
-
+delete_fileDNS()
+{
 #ROLE : SUPPRIME LE FQDN D'UNE BOUTIQUE DANS LE FICHIER DE ZONE DNS
 
 #On prendra en entrée :
@@ -30,5 +30,4 @@ if /bin/grep "^+$1." /etc/tinydns/root/data; then
 else
 	/bin/echo "Cet enregistrement n'existe pas ! [ECHEC]"
 fi
-
 }

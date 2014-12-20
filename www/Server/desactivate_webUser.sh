@@ -6,8 +6,8 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-function desactivate_webUser {
-
+desactivate_webUser()
+{
 # ROLE : DESACTIVE LE VIRTUALHOST D'UNE BOUTIQUE
 
 #On prendra en entrée :
@@ -24,5 +24,4 @@ fi
 #---------------------------------------------------------------
 /etc/init.d/apache2 restart
 #---------------------------------------------------------------
-
 }

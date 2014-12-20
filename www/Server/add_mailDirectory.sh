@@ -6,8 +6,8 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-function add_mailDirectory {
-
+add_mailDirectory()
+{
 # ROLE : CREER UNE BOITE DE MESSAGERIE PERSONNEL
 
 #On prendra en entrée :
@@ -34,5 +34,4 @@ else
 	#echo "Bienvenue sur MySHOP, vous pouvez des maintenant vous connectez sur http://myshop.itinet.fr et créer votre boutique en ligne en quelques minutes. 
 	#L'équipe MySHOP (Ne pas répondre)" | mailx -s "Bienvenue sur MySHOP" $1@myshop.itinet.fr
 fi
-
 }

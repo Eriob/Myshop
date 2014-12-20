@@ -6,8 +6,8 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-function add_fileDNS() {
-
+add_fileDNS()
+{
 # ROLE : AJOUTE UNE NOUVELLE RELATION FQDN - ADRESSE IP AU FICHIER DE ZONE DNS
 
 #On prendra en entrée :
@@ -19,5 +19,4 @@ else
 	/bin/echo "+$1.myshop.itinet.fr:88.177.168.133:1800" >> /etc/tinydns/root/data
 	/usr/bin/ssh root@dedibox.itinet.fr
 fi
-
 }

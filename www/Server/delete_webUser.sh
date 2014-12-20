@@ -6,8 +6,8 @@
 # Role : Automatiser la creation des boite mails
 #------------------------------------------------------------
 
-function delete_webUSser {
-
+delete_webUSser()
+{
 # ROLE : SUPPRIME UN UTILISATEUR ET SA BOUTIQUE
 
 #On prendra en entrée :
@@ -36,5 +36,4 @@ fi
 #---------------------------------------------------------------
 /etc/init.d/apache2 restart
 #---------------------------------------------------------------
-
 }

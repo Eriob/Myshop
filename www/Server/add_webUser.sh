@@ -6,8 +6,8 @@
 # Role : Automatiser la creation des webUsers
 #------------------------------------------------------------
 
-function add_webUser {
-
+add_webUser()
+{
 # ROLE : CREER UN UTILISATEUR UNIX, SON REPERTOIRE PERSONNEL ET SON VIRTUALHOST
 
 #On prendra en entrée :
@@ -47,5 +47,4 @@ fi
 #---------------------------------------------------------------
 /etc/init.d/apache2 restart
 #---------------------------------------------------------------
-
 }

@@ -7,8 +7,8 @@
 #------------------------------------------------------------
 
 
-function delete_mailDirectory() {
-
+delete_mailDirectory()
+{
 #ROLE : SUPPRIME UNE BOITE DE MESSAGERIE PERSONNEL
 
 #On prendra en entrée :
@@ -35,5 +35,4 @@ function delete_mailDirectory() {
 	fi
 
 /etc/init.d/postfix restart
-
 }
