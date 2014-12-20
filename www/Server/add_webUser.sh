@@ -36,7 +36,7 @@ else
 				ServerName $3.myshop.itinet.fr
 				DocumentRoot /var/sftp/$1/www
 				Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
-				</VirtualHost>" | sudo tee -a /etc/apache2/sites-available/$3
+				</VirtualHost>" > /etc/apache2/sites-available/$3
 		sudo /bin/ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
 	fi
 fi
