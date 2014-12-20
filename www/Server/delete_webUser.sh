@@ -17,6 +17,7 @@ if test -d /var/sftp/$1 && test -f "/etc/apache2/sites-enabled/$1"; then
 	sudo /bin/rm /var/sftp/$1/www
 	sudo /usr/bin/unlink /etc/apache2/sites-enabled/$1
 	sudo /bin/rm /etc/apache2/sites-available/$1
+	sudo /etc/init.d/apache2 restart
 else
 	sudo /bin/echo "Impossible de supprimer, cet utilisateur n'existe pas [ECHEC]"
 fi
@@ -27,8 +28,3 @@ if /bin/grep "^$2:" /etc/passwd; then
 else
 	sudo /bin/echo "Cet utilisateur n'existe pas ! [ECHEC]"
 fi
-
-#REDEMARRAGE DU SERVICE APACHE2
-#---------------------------------------------------------------
-/etc/init.d/apache2 restart
-#---------------------------------------------------------------

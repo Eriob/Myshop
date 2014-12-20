@@ -25,5 +25,3 @@
 	else
 		sudo /bin/echo "Ce répertoire mail n'existe pas [ECHEC]"
 	fi
-
-/etc/init.d/postfix restart

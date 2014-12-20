@@ -14,11 +14,7 @@
 if test -f "/etc/apache2/sites-available/$1"; then
 	# On réactive le site
 	sudo /bin/ln -s /etc/apache2/sites-available/$1 /etc/apache2/sites-enabled/
+	sudo /etc/init.d/apache2 restart
 else
 	sudo /bin/echo "Impossible de réactiver, cet utilisateur n'existe pas [ECHEC]"
 fi
-
-#REDEMARRAGE DU SERVICE APACHE2
-#---------------------------------------------------------------
-/etc/init.d/apache2 restart
-#---------------------------------------------------------------

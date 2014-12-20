@@ -14,7 +14,7 @@
 if /bin/grep "^+$1." /etc/tinydns/root/data; then
 	#On supprime la ligne dans le fichier DNS
 	sudo /bin/sed -i "/^+$1/d" /etc/tinydns/root/data	
-	/usr/bin/ssh -i /var/www/Myshop/www/Server/key_dedibox root@dedibox.itinet.frsudo /usr/bin/ssh root@dedibox.itinet.fr
+	/usr/bin/ssh -i /var/www/Myshop/www/Server/key_dedibox root@dedibox.itinet.fr
 else
 	sudo /bin/echo "Cet enregistrement n'existe pas ! [ECHEC]"
 fi

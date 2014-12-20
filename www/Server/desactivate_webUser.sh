@@ -14,11 +14,7 @@
 if test -f "/etc/apache2/sites-enabled/$1"; then
 	# On desactive le site $1 ($1 = nom du repertoire)
 	sudo /usr/bin/unlink /etc/apache2/sites-enabled/$1
+	sudo /etc/init.d/apache2 restart
 else
 	sudo /bin/echo "Impossible de désactiver, ce site n'existe pas ! [ECHEC]"
 fi
-
-#REDEMARRAGE DU SERVICE APACHE2
-#---------------------------------------------------------------
-/etc/init.d/apache2 restart
-#---------------------------------------------------------------

@@ -38,10 +38,6 @@ else
 				Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
 				</VirtualHost>" | sudo tee -a /etc/apache2/sites-available/$3
 		sudo /bin/ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
+		sudo /etc/init.d/apache2 restart
 	fi
 fi
-
-#REDEMARRAGE DU SERVICE APACHE2
-#---------------------------------------------------------------
-/etc/init.d/apache2 restart
-#---------------------------------------------------------------

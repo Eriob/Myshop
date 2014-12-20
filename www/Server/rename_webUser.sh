@@ -24,11 +24,7 @@ if test -f "/etc/apache2/sites-available/$2"; then
 			Errorlog /var/log/apache2/$3.myshop.itinet.fr-error_log
 			</VirtualHost>" | sudo tee -a /etc/apache2/sites-available/$3
 	sudo /bin/ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
+	sudo /etc/init.d/apache2 restart
 else
 	sudo /bin/echo "Impossible de renommer, cet boutique n'existe pas ! [ECHEC]"
 fi
-
-#REDEMARRAGE DU SERVICE APACHE2
-#---------------------------------------------------------------
-/etc/init.d/apache2 restart
-#---------------------------------------------------------------
