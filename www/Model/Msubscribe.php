@@ -9,8 +9,6 @@ $date = "0";
 $sql = 'INSERT INTO users VALUES("", "'.$firstname.'", "'.$lastname.'", "'.$pseudo.'","'.$mdp.'","'.$email.'", "'.$name.'", "", "'.$date.'", "'.$telephone.'", "", "0", "0", "", "", "")';
 	
 $request = mysql_query($sql) or die (mysql_error());
-
-echo "Compte enregistré";
 	
 }	
 

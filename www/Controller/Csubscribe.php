@@ -35,6 +35,7 @@ if ($_GET['index'] == "subscribe") {
 				$user = shell_exec('/var/www/Myshop/www/Server/add_mailDirectory.sh $pseudo $pass');
 				$user = shell_exec('/var/www/Myshop/www/Server/add_webUser.sh $pseudo $pass $name');
 				
+				$msg = "Compte enregistré";
 				include ('./Controller/Cindex.php');
 			}
 		}else{
