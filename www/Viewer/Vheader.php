@@ -33,6 +33,9 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="index.php?index=index">MySHOP</a>
+              <?php if (isset($msg)) {
+                      echo $msg;
+                    }?>
             </div>
             
             <div id="navbar" class="navbar-collapse collapse">
@@ -45,12 +48,6 @@
                         echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
                         echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
                         echo "<li class=\"active\"><a href=\"index.php?index=contact\">Contact</a></li>";
-                      }else if (isset($msg)) {
-                        echo "<li>".$msg."</li>";
-                        echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
-                        echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
-                        echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
-                      }else{
                         echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
                         echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
                         echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
@@ -69,9 +66,9 @@
 
                           <div class="modal-body">
                             <form action="index.php?index=connect" method="POST">
-                                <input type="text" name="pseudo" placeholder="Pseudo"><br>
+                                <input type="text" name="pseudo" placeholder=" Pseudo"><br>
                                 <br>
-                                <input type="password" name="password" placeholder="Password"><br>
+                                <input type="password" name="password" placeholder=" Password"><br>
                                 <br>
                                 <input type='submit' name="connect" value="Se connecter"/><br>
                             </form>
