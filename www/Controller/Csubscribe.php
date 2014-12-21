@@ -30,10 +30,15 @@ if ($_GET['index'] == "subscribe") {
 				$pseudo = escapeshellarg($_POST['pseudo']);
 				$pass = escapeshellarg($_POST['password']);
 
-				$user = shell_exec('/var/www/Myshop/www/Server/add_fileDNS.sh $name');
-				$user = shell_exec('/var/www/Myshop/www/Server/add_mailDirectory.sh $pseudo $pass');
-				$user = shell_exec('/var/www/Myshop/www/Server/add_webUser.sh $pseudo $pass $name');
+				$exec_fileDNS = sprintf('sudo /var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
+				$exec_mailDirectory = sprintf('sudo /var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
+				$exec_webUser = sprintf('sudo /var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
 				
+				// Execution des commande
+				exec($exec_fileDNS);
+				exec($exec_mailDirectory);
+				exec($exec_webUser);
+
 				$msg = "Compte enregistré";
 				include ('./Controller/Cindex.php');
 			}
