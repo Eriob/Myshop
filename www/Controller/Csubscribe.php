@@ -1,7 +1,5 @@
 <?php
 
-include ('./Model/MconnectBDD.php');
-
 if ($_GET['index'] == "subscribe") {
 
 	include('./Viewer/Vsubscribe.php');
@@ -24,20 +22,26 @@ if ($_GET['index'] == "subscribe") {
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
-				
+					
+				/*CREATION DATABASE USER*/
+				$database = install_prestashop($_POST['name'], $_POST['password']);
+
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 				$name = escapeshellarg($_POST['name']);
 				$pseudo = escapeshellarg($_POST['pseudo']);
 				$pass = escapeshellarg($_POST['password']);
+				$mail = escapeshellarg($_POST['email']);
 
 				$exec_fileDNS = sprintf('sudo /var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
 				$exec_mailDirectory = sprintf('sudo /var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
 				$exec_webUser = sprintf('sudo /var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
-				
+				$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
+
 				// Execution des commande
 				exec($exec_fileDNS);
 				exec($exec_mailDirectory);
 				exec($exec_webUser);
+				exec($exec_prestashop);
 
 				$msg = "Compte enregistré";
 				include ('./Controller/Cindex.php');
