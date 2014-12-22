@@ -6,8 +6,7 @@
         <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=valid_subscribe">
             
             <div class="form-group">
-                <label for="name" class="control-label">Nom de votre site</label> : 
-                <strong><?php echo " " . $_POST['name']?>.myshop.itinet.fr</strong>
+                <label for="name" class="control-label">Nom de votre site : <strong><?php echo " " . $_POST['name']?>.myshop.itinet.fr</strong></label> 
             </div>
 
             <div class="form-group">
