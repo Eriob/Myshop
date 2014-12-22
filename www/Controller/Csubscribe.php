@@ -19,25 +19,32 @@ if ($_GET['index'] == "subscribe") {
 				/*SCRIPTS SHELLS*/
 
 				$mdp=md5($_POST['password']);
-				$nom = explode(".", $_POST['name']);
-				$nom = $nom[0];
 				
+				$name = explode(".", $_POST['name']);
+				$name = $name[0];
+
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
-				$user = create_user($nom, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
+				$user = create_user($name, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 					
 				/*CREATION DATABASE USER*/
-				$database = install_prestashop($nom, $_POST['password']);
+				$database = install_prestashop($name, $_POST['password']);
+
+				echo "TEST 0";
 
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				$name = escapeshellarg($nom);
+				$name = escapeshellarg($name);
 				$pseudo = escapeshellarg($_POST['pseudo']);
 				$pass = escapeshellarg($_POST['password']);
 				$mail = escapeshellarg($_POST['email']);
+
+				echo "TEST 1";
 
 				$exec_fileDNS = sprintf('sudo /var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
 				$exec_mailDirectory = sprintf('sudo /var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
 				$exec_webUser = sprintf('sudo /var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
 				$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
+
+				echo "TEST 2";
 
 				// Execution des commande
 				exec($exec_fileDNS);
@@ -45,6 +52,8 @@ if ($_GET['index'] == "subscribe") {
 				exec($exec_webUser);
 				exec($exec_prestashop);
 
+				echo "TEST 3";
+				
 				$msg = "Compte enregistré";
 				include ('./Controller/Cindex.php');
 			}
