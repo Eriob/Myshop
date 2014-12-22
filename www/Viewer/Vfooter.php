@@ -1,3 +1,4 @@
+  <div class="container-marketing">
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="index.php?index=index">Revenir en haut</a></p>
@@ -13,5 +14,6 @@
     <script src="./bootstrap/jquery.min.js"></script>
     <script src="./bootstrap/bootstrap.min.js"></script>
     <script src="./bootstrap/docs.min.js"></script>
+  </div>
   </body>
 </html>
