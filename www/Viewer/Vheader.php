@@ -33,6 +33,9 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="index.php?index=index">MySHOP</a>
+              <?php if (isset($msg)) {
+                      echo $msg;
+                    }?>
             </div>
             
             <div id="navbar" class="navbar-collapse collapse">
@@ -45,6 +48,7 @@
                         echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
                         echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
                         echo "<li class=\"active\"><a href=\"index.php?index=contact\">Contact</a></li>";
+                      }else{
                         echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
                         echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
                         echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
