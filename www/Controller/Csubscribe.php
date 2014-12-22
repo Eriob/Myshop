@@ -21,6 +21,7 @@ if ($_GET['index'] == "subscribe") {
 				$mdp=md5($_POST['password']);
 				$nom = explode(".", $_POST['name']);
 				$nom = $nom[0];
+				
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($nom, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 					
