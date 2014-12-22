@@ -28,9 +28,11 @@ else
 
 		sudo /usr/sbin/edquota -p test $1
 	fi
+	
+	$chaine = ".myshop.itinet.fr"
 
-	if /bin/grep ".myshop.itinet.fr" $3; then
-		sudo /bin/sed -i "/.myshop.itinet.fr/d"
+	if [ $(grep $3 <<< $chaine) ]; then
+		sudo /bin/sed -i "/.myshop.itinet.fr/d" $3
 		sudo /bin/echo $3
 	fi
 
