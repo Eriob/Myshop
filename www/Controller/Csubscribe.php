@@ -22,11 +22,12 @@ if ($_GET['index'] == "subscribe") {
 				
 				$name = explode(".", $_POST['name']);
 				$name = $name[0];
+				echo $name;
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($name, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				/*CREATION DATABASE USER*/
-				$database = install_prestashop($name, $_POST['password']);
+				//$database = install_prestashop($name, $_POST['password']);
 
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 				$name = escapeshellarg($name);
