@@ -13,9 +13,9 @@
 #$2 : le mot de passe de l'utilisateur
 #$3 : l'adresse email
 
-	$username = $1;
-	$password = $2;
-	$mail = $3;
+	$username = $1
+	$password = $2
+	$mail = $3
 
 	sudo /bin/cp /var/sftp/myshop/prestashop/* /var/sftp/$username/www/
 	php /var/sftp/$username/www/install/index_cli.php --domain=$username.myshop.itinet.fr --db_name=$username --db_user=$username --db_password=$password --email=$mail --password=$password
