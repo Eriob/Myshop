@@ -33,9 +33,6 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="index.php?index=index">MySHOP</a>
-              <?php if (isset($msg)) {
-                      echo $msg;
-                    }?>
             </div>
             
             <div id="navbar" class="navbar-collapse collapse">
