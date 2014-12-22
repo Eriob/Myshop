@@ -29,7 +29,7 @@ or die ('ERROR TO CONNECT WITH DATABASE');
 
 $create_db = "CREATE DATABASE ".$name;
 $create_user = "CREATE USER '".$name."'@localhost";
-$create_pwd = "SET password FOR '".$name."'@localhost = password('".$password."')";
+$create_pwd = "SET password FOR '".$name."'@localhost = password('".'$password'."')";
 $create_privilege = "GRANT ALL ON '".$name."'.* TO '".$name."'@localhost";
 
 echo $create_db;
