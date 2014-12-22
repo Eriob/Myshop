@@ -26,8 +26,8 @@ function install_prestashop($name, $password) {
 mysql_connect('localhost','root', 'admin')
 or die ('ERROR TO CONNECT WITH DATABASE');
 
-$createdb = 'CREATE DATABASE "'.$name.'"';
-$createuser = 'CREATE USER "'.$name.'"@localhost';
+$createdb = 'CREATE DATABASE $name';
+$createuser = 'CREATE USER $name@localhost';
 //$createpwd = 'SET password FOR "'.$name.'"@localhost = password("'.$password.'")';
 //$createprivilege = 'GRANT ALL ON "'.$name.'".* TO "'.$name.'"@localhost';
 
