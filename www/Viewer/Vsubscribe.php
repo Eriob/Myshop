@@ -7,7 +7,7 @@
             
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
-                <strong><center><h2><?php echo " " . $_POST['name']?>.myshop.itinet.fr</h2></center></strong>
+                <input type="text" name="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" readonly>
             </div>
 
             <div class="form-group">
