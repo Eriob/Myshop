@@ -27,23 +27,17 @@ mysql_connect('localhost','root', 'admin')
 or die ('ERROR TO CONNECT WITH DATABASE');
 
 
-//$create_db = "CREATE SCHEMA ".$name;
-//$create_user = "CREATE USER '".$name."'@localhost";
+$create_db = "CREATE SCHEMA ".$name;
+$create_user = "CREATE USER '".$name."'@localhost IDENTIFIED BY '".$password;
 //$create_pwd = "SET PASSWORD FOR '".$name."'@localhost = PASSWORD('".$password."')";
-//$create_privilege = "GRANT ALL ON '".$name."'.* TO '".$name."'@localhost IDENTIFIED BY '".$password;
+$create_privilege = "GRANT ALL ON '".$name."'.* TO '".$name."'@localhost";
 
-//$modif_pwd = "UPDATE mysql.user SET password=PASSWORD('".$password."') where user='".$name;
+echo $create_user;
 
-
-//echo $create_pwd;
-
-//$request_db = mysql_query($create_db);
-//$request_user = mysql_query($create_user);
+$request_db = mysql_query($create_db);
+$request_user = mysql_query($create_user);
 //$request_pwd = mysql_query($created_pwd);
-//$request_privilege = mysql_query($create_privilege);
-
-//echo $password;
-//$request_mpwd = mysql_query($modif_pwd);
+$request_privilege = mysql_query($create_privilege);
 
 }
 
