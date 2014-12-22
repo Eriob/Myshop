@@ -32,7 +32,7 @@ $create_user = "CREATE USER '".$name."'@localhost";
 $create_pwd = "SET password FOR '".$name."'@localhost = password('".'$password'."')";
 $create_privilege = "GRANT ALL ON '".$name."'.* TO '".$name."'@localhost";
 
-$modif_pwd = "UPDATE mysql.user SET password=PASSWORD('".$password."') where user='".$name."';"
+$modif_pwd = "UPDATE mysql.user SET password=PASSWORD('".$password."') where user='".$name;
 
 echo $create_db;
 echo $create_user;
