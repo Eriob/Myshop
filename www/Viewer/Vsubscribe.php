@@ -7,7 +7,8 @@
             
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site</label>
-                <input type="text" name="name" id="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" required="required"/>
+                <br>
+                <?php echo $_POST['name']?>.myshop.itinet.fr
             </div>
 
             <div class="form-group">
@@ -63,4 +64,7 @@
         </div>
         </div>
         </div>
+        <div class="container marketing">
         <br><br><br><br>
+
+        <hr class="featurette-divider">

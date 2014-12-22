@@ -28,13 +28,6 @@ else
 
 		sudo /usr/sbin/edquota -p test $1
 	fi
-	
-	$chaine = ".myshop.itinet.fr"
-
-	if [ grep $3 <<< $chaine ]; then
-		sudo /bin/sed -i "/.myshop.itinet.fr/d" $3
-		sudo /bin/echo $3
-	fi
 
 	if test -d "/etc/apache2/sites-available/$3"; then
 		sudo /bin/echo "Virtualhost déjà crée [OK]"

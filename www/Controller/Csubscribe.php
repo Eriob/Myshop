@@ -21,7 +21,7 @@ if ($_GET['index'] == "subscribe") {
 				/*SCRIPTS SHELLS*/
 
 				$mdp=md5($_POST['password']);
-				
+
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				

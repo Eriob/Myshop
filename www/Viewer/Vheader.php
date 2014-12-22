@@ -48,6 +48,7 @@
                         echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
                         echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
                         echo "<li class=\"active\"><a href=\"index.php?index=contact\">Contact</a></li>";
+                      }else{
                         echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
                         echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
                         echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
