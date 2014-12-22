@@ -29,8 +29,8 @@ or die ('ERROR TO CONNECT WITH DATABASE');
 
 $create_db = "CREATE DATABASE ".$name;
 $create_user = "CREATE USER '".$name."'@localhost";
-$create_pwd = "SET PASSWORD FOR '".$name."'@localhost = PASSWORD('".$password."')";
-//$create_privilege = "GRANT ALL ON '".$name."'.* TO '".$name."'@localhost";
+//$create_pwd = "SET PASSWORD FOR '".$name."'@localhost = PASSWORD('".$password."')";
+$create_privilege = "GRANT ALL ON '".$name."'.* TO '".$name."'@localhost IDENTIFIED BY '".$password;
 
 //$modif_pwd = "UPDATE mysql.user SET password=PASSWORD('".$password."') where user='".$name;
 
@@ -39,9 +39,9 @@ echo $create_pwd;
 
 $request_db = mysql_query($create_db);
 $request_user = mysql_query($create_user);
-$request_pwd = mysql_query($created_pwd);
+//$request_pwd = mysql_query($created_pwd);
 $request_privilege = mysql_query($create_privilege);
-$request_mpwd = mysql_query($modif_pwd);
+//$request_mpwd = mysql_query($modif_pwd);
 
 }
 
