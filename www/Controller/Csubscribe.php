@@ -19,16 +19,16 @@ if ($_GET['index'] == "subscribe") {
 				/*SCRIPTS SHELLS*/
 
 				$mdp=md5($_POST['password']);
-				$nom = $_POST['name'];
-
+				$nom = explode(".", $_POST['name']);
+				$nom = $nom[0];
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
-				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
+				$user = create_user($nom, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 					
 				/*CREATION DATABASE USER*/
 				$database = install_prestashop($nom, $_POST['password']);
 
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				$name = escapeshellarg($_POST['name']);
+				$name = escapeshellarg($nom);
 				$pseudo = escapeshellarg($_POST['pseudo']);
 				$pass = escapeshellarg($_POST['password']);
 				$mail = escapeshellarg($_POST['email']);
