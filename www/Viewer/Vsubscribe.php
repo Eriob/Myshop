@@ -8,7 +8,7 @@
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site</label>
                 <br>
-                <?php echo $_POST['name']?>.myshop.itinet.fr
+                <strong><?php echo $_POST['name']?>.myshop.itinet.fr</strong>
             </div>
 
             <div class="form-group">
