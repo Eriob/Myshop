@@ -29,6 +29,11 @@ else
 		sudo /usr/sbin/edquota -p test $1
 	fi
 
+	if /bin/grep ".myshop.itinet.fr" $3; then
+		sudo /bin/sed -i "/.myshop.itinet.fr/d"
+		sudo /bin/echo $3
+	fi
+
 	if test -d "/etc/apache2/sites-available/$3"; then
 		sudo /bin/echo "Virtualhost déjà crée [OK]"
 	else

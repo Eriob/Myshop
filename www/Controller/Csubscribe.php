@@ -26,10 +26,6 @@ if ($_GET['index'] == "subscribe") {
 				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				if (strstr($name, '.myshop.itinet.fr')) {
-					$name = strstr($name, '.', true);
-				}
-				
 				$name = escapeshellarg($_POST['name']);
 				$pseudo = escapeshellarg($_POST['pseudo']);
 				$pass = escapeshellarg($_POST['password']);
