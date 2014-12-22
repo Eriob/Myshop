@@ -13,7 +13,7 @@
 #$2 : le mot de passe de l'utilisateur
 #$3 : l'adresse email
 
-	/usr/bin/mysql -u root -padmin -Bse "CREATE DATABASE $1;CREATE USER $1@localhost;SET PASSWORD FOR $1@localhost = PASSWORD('$2');GRANT ALL PRIVILEGES ON $1.* TO $1@localhost IDENTIFIED BY '$2';"
+	sudo /usr/bin/mysql -u root -padmin -Bse "CREATE DATABASE $1;CREATE USER $1@localhost;SET PASSWORD FOR $1@localhost = PASSWORD('$2');GRANT ALL PRIVILEGES ON $1.* TO $1@localhost IDENTIFIED BY '$2';"
 	
 	#COPIER L'INTEGRALITE DE PRESTASHOP
 	sudo /bin/cp -r /var/sftp/myshop/prestashop/* /var/sftp/$1/www/
