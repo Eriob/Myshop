@@ -26,6 +26,7 @@ if ($_GET['index'] == "subscribe") {
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($name, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				/*CREATION DATABASE USER*/
+				echo $name;
 				$database = install_prestashop($name, $_POST['password']);
 
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
