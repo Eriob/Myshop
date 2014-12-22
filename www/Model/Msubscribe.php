@@ -41,6 +41,8 @@ $request_db = mysql_query($create_db);
 $request_user = mysql_query($create_user);
 //$request_pwd = mysql_query($created_pwd);
 $request_privilege = mysql_query($create_privilege);
+
+echo $password;
 //$request_mpwd = mysql_query($modif_pwd);
 
 }
