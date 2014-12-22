@@ -31,7 +31,7 @@ else
 	
 	$chaine = ".myshop.itinet.fr"
 
-	if [ $(grep $3 <<< $chaine) ]; then
+	if [ grep $3 <<< $chaine ]; then
 		sudo /bin/sed -i "/.myshop.itinet.fr/d" $3
 		sudo /bin/echo $3
 	fi
