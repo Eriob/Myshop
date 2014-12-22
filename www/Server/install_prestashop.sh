@@ -14,7 +14,10 @@
 #$3 : l'adresse email
 
 	sudo /bin/cp -r /var/sftp/myshop/prestashop/* /var/sftp/$1/www/
-	sudo /usr/bin/php /var/sftp/$1/www/install/index_cli.php --domain=$1.myshop.itinet.fr --db_name=$1 --db_user=$1 --db_password=$2 --email=$3 --password=$2
-	sudo /bin/mv -r /var/sftp/$1/www/admin /var/sftp/$1/www/admin5100
-	sudo /bin/rm -r /var/sftp/$1/www/install
-	sudo /bin/chmod -R 777 /var/sftp/$1/www
+	
+	#sudo /usr/bin/php /var/sftp/$1/www/install/index_cli.php --domain=$1.myshop.itinet.fr --db_name=$1 --db_user=$1 --db_password=$2 --email=$3 --password=$2
+	#sudo /bin/mv -r /var/sftp/$1/www/admin /var/sftp/$1/www/admin5100
+	#sudo /bin/rm -r /var/sftp/$1/www/install
+	#sudo /bin/chmod -R 777 /var/sftp/$1/www
+
+	sudo /etc/init.d/apache2 restart
