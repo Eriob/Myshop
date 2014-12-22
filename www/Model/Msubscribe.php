@@ -10,6 +10,6 @@ $sql = 'INSERT INTO users VALUES("", "'.$firstname.'", "'.$lastname.'", "'.$pseu
 	
 $request = mysql_query($sql) or die (mysql_error());
 	
-}	
+}
 
 ?>
