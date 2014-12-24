@@ -2,7 +2,7 @@
 
 if ($_GET['index'] == "subscribe") {
 
-	include('./Viewer/Vsubscribe.php');
+	include('./Viewer/Vsubscribe_step1.php');
 
 }elseif ($_GET['index'] == "subscribe_step1") {
 	
@@ -51,7 +51,7 @@ if ($_GET['index'] == "subscribe") {
 	}else{
 		echo "Erreur d'inscription";
 	}
-}else if ($_GET['index'] == "subscrice_step2") {
+}elseif ($_GET['index'] == "subscrice_step2") {
 	
 	//$name = escapeshellarg($name);
 	//$pass = escapeshellarg($_POST['password']);
@@ -62,7 +62,8 @@ if ($_GET['index'] == "subscribe") {
 
 	$msg = "Base de données enregistré";
 	include ('./Viewer/Vsubscribe_step3')
-}else if ($_GET['index'] == "subscribe_step3") {
+
+}elseif ($_GET['index'] == "subscribe_step3") {
 	
 	//CODE
 
