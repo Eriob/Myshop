@@ -65,8 +65,7 @@ if ($_GET['index'] == "subscribe") {
 }else if ($_GET['index'] == "subscribe_step3") {
 	
 	//CODE
-	
-}
+
 }else{
 	echo "Erreur de redirection";
 }
