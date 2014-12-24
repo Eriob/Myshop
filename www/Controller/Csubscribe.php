@@ -2,7 +2,6 @@
 
 if ($_GET['index'] == "subscribe") {
 
-	echo "toto";
 	include('./Viewer/Vsubscribe_step1.php');
 
 }elseif ($_GET['index'] == "subscribe_step1") {
@@ -42,7 +41,6 @@ if ($_GET['index'] == "subscribe") {
 				exec($exec_mailDirectory);
 				exec($exec_webUser);
 
-
 				$msg = "Compte enregistré";
 				include ('./Viewer/Vsubscribe_step2.php');
 			}
@@ -62,7 +60,7 @@ if ($_GET['index'] == "subscribe") {
 	//exec($exec_prestashop);
 
 	$msg = "Base de données enregistré";
-	include ('./Viewer/Vsubscribe_step3')
+	include ('./Viewer/Vsubscribe_step3');
 
 }elseif ($_GET['index'] == "subscribe_step3") {
 	
