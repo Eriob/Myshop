@@ -2,7 +2,7 @@
 
 if ($_GET['index'] == "subscribe") {
 
-	include('./Viewer/Vsubscribe_step1.php');
+	include('/var/www/Myshop/www/Viewer/Vsubscribe_step1.php');
 
 }elseif ($_GET['index'] == "subscribe_step1") {
 	
