@@ -3,7 +3,7 @@
         <br>
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation" class="active"><a href="#">Step 1 : Création utilisateur</a></li>
-          <li role="presentation" class"disabled"><a href="#">Step 2 : Création boutique</a></li>
+          <li role="presentation" class="disabled"><a href="#">Step 2 : Création boutique</a></li>
           <li role="presentation" class="disabled"><a href="#">Step 3 : Vos informations</a></li>
         </ul>
 </div>
