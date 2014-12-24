@@ -1,10 +1,12 @@
-        <h2> Inscription </h2>
+<div class ="subscribe-navtab">
+    <h2> Inscription </h2>
         <br>
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation" class="active">Step 1 : Création utilisateur</li>
           <li role="presentation">Step 2 : Création boutique</li>
           <li role="presentation">Step 3 : Vos informations</li>
         </ul>
+</div>
 
 <div class ="subscribe">
     <div class="container">
