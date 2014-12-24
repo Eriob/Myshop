@@ -1,6 +1,5 @@
 <div class ="subscribe">
     <div class="container">
-    <div class="row">
         <h2> Inscription </h2>
         <br>
         <ul class="nav nav-tabs">
@@ -8,6 +7,7 @@
           <li role="presentation">Step 2 : Création boutique</li>
           <li role="presentation">Step 3 : Vos informations</li>
         </ul>
+    <div class="row">
         <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step1">
             
             <div class="form-group">
