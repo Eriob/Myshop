@@ -18,7 +18,7 @@ else
 	sudo /bin/mkdir /var/mail/$1
 
 	#PAS BESOIN CAR ON ENVOI UN MAIL
-	sudo /usr/bin/maildirmake -f ./Maildir
+	sudo /usr/bin/maildirmake -f /var/mail/$1/Maildir
 
 	sudo /bin/chown -R vmail.vmail /var/mail/$1
 

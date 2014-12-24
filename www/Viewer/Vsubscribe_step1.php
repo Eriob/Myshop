@@ -3,7 +3,12 @@
     <div class="row">
         <h2> Inscription </h2>
         <br>
-        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=valid_subscribe">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active">Step 1 : Création utilisateur</li>
+          <li role="presentation">Step 2 : Création boutique</li>
+          <li role="presentation">Step 3 : Vos informations</li>
+        </ul>
+        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step1">
             
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
@@ -31,14 +36,14 @@
             </div>
             
             <div class="form-group">
-                <label for="password" class="control-label">Password</label>
+                <label for="password" class="control-label">Mot de passe</label>
                 <div class="input-group">
                     <input type="password" name="password" id="password" class="form-control" required="required"/>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="password" class="control-label">Confirmation du Password</label>
+                <label for="password2" class="control-label">Confirmation du mot de passe</label>
                 <div class="input-group">
                     <input type="password" name="password2" id="password2" class="form-control" required="required"/>
                 </div>
@@ -58,7 +63,7 @@
               </select>
             </div>
 
-            <button type="submit" href="index.php?index=valid_subscribe" class="btn btn-primary pull-left">Démarrer ma boutique en ligne</button>
+            <button type="submit" href="index.php?index=subscribe_step1" class="btn btn-primary pull-left">Etape suivante</button>
             </form>
         </div>
         </div>

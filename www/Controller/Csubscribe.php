@@ -4,7 +4,7 @@ if ($_GET['index'] == "subscribe") {
 
 	include('./Viewer/Vsubscribe.php');
 
-}elseif ($_GET['index'] == "valid_subscribe") {
+}elseif ($_GET['index'] == "subscribe_step1") {
 	
 	if(isset($_POST['name']) || isset($_POST['pseudo']) || isset($_POST['email']) || isset($_POST['firstname']) || isset($_POST['lastname']) || isset($_POST['password']) ||
  	isset($_POST['password2']) || isset($_POST['phone']) || isset($_POST['plan'])){
@@ -35,16 +35,15 @@ if ($_GET['index'] == "subscribe") {
 				$exec_fileDNS = sprintf('sudo /var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
 				$exec_mailDirectory = sprintf('sudo /var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
 				$exec_webUser = sprintf('sudo /var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
-				$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
-
+				
 				// Execution des commande
 				exec($exec_fileDNS);
 				exec($exec_mailDirectory);
 				exec($exec_webUser);
-				exec($exec_prestashop);
+
 
 				$msg = "Compte enregistré";
-				include ('./Controller/Cindex.php');
+				include ('./Viewer/Vsubscribe_step2.php');
 			}
 		}else{
 			echo "Vous n'avez pas rempli tous les champs";
@@ -52,6 +51,22 @@ if ($_GET['index'] == "subscribe") {
 	}else{
 		echo "Erreur d'inscription";
 	}
+}else if ($_GET['index'] == "subscrice_step2") {
+	
+	//$name = escapeshellarg($name);
+	//$pass = escapeshellarg($_POST['password']);
+	//$mail = escapeshellarg($_POST['email']);
+
+	//$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
+	//exec($exec_prestashop);
+
+	$msg = "Base de données enregistré";
+	include ('./Viewer/Vsubscribe_step3')
+}else if ($_GET['index'] == "subscribe_step3") {
+	
+	//CODE
+	
+}
 }else{
 	echo "Erreur de redirection";
 }

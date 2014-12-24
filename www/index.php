@@ -15,7 +15,13 @@ if(isset($_SESSION['pseudo'])){
             case "subscribe":
                 include('./Controller/Csubscribe.php');
                 break;
-            case "valid_subscribe":
+            case "subscribe_step1":
+                include('./Controller/Csubscribe.php');
+                break;
+            case "subscribe_step2":
+                include('./Controller/Csubscribe.php');
+                break;
+            case "subscribe_step3":
                 include('./Controller/Csubscribe.php');
                 break;
             case "connect":

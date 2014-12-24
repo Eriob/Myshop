@@ -7,7 +7,7 @@
           <div class="container">
             <div class="carousel-caption">
               <form class="form-inline" method="POST" name="subscribe" action="index.php?index=subscribe">
-                  <h1>Créer ta boutique en ligne facilement et rapidement</h1>
+                  <h1>Crée ta boutique en ligne facilement et rapidement</h1>
                   <div class="input-group">
                     <input type="text" class="form-control" style="text-align:right" name="name" placeholder="Nom de votre boutique">
                     <span class="input-group-addon">.myshop.itinet.fr</span> 

@@ -16,29 +16,7 @@
 	/usr/bin/mysql -u root -padmin -Bse "CREATE DATABASE $1;CREATE USER $1@localhost;SET PASSWORD FOR $1@localhost = PASSWORD('$2');GRANT ALL PRIVILEGES ON $1.* TO $1@localhost IDENTIFIED BY '$2';"
 	
 	#COPIER L'INTEGRALITE DE PRESTASHOP
-	sudo /bin/cp -r /var/sftp/myshop/prestashop/* /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/admin /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/cache /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/classes /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/config /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/controllers /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/css /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/docs /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/download /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/img /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/install /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/js /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/localization /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/log /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/mails /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/modules /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/override /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/pdf /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/themes /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/tools /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/translations /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/upload /var/sftp/$1/www/
-	sudo /bin/cp /var/sftp/myshop/prestashop/webservice /var/sftp/$1/www/
+	sudo /bin/cp -R /var/sftp/myshop/prestashop/* /var/sftp/$1/www/
 
 	sudo /bin/chown -R www-data.www-data /var/sftp/$1/www/*
 	sudo /bin/chmod -R 777 /var/sftp/$1/www/*
