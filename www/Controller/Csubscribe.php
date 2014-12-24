@@ -2,7 +2,8 @@
 
 if ($_GET['index'] == "subscribe") {
 
-	include('/var/www/Myshop/www/Viewer/Vsubscribe_step1.php');
+	echo "toto";
+	include('./Viewer/Vsubscribe_step1.php');
 
 }elseif ($_GET['index'] == "subscribe_step1") {
 	
