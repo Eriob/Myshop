@@ -28,7 +28,7 @@ if ($_GET['index'] == "subscribe") {
 				$user = create_user($name, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				$msg = "Compte enregistré";
-				include ('./Viewer/Vsubscribe_step2.php');
+				include_once('./Viewer/Vsubscribe_step2.php');
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 				$name = escapeshellarg($name);
@@ -55,7 +55,7 @@ if ($_GET['index'] == "subscribe") {
 	
 	$msg = "Base de données enregistré";
 	include ('./Viewer/Vsubscribe_step3');
-	
+
 	$name = escapeshellarg($name);
 	$pass = escapeshellarg($_POST['password']);
 	$mail = escapeshellarg($_POST['email']);
@@ -65,7 +65,15 @@ if ($_GET['index'] == "subscribe") {
 
 }elseif ($_GET['index'] == "subscribe_step3") {
 	
-	//CODE
+	// Le message
+	$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\nVos identifiants sont : Pseudo : ".$_POST['pseudo']."Mot de pase : ". $_POST['password'];
+
+	// Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
+	$message = wordwrap($message, 70, "\r\n");
+
+	// Envoi du mail
+	mail($_POST['email'], 'Bienvenue sur MySHOP', $message);
+	mail($_POST['pseudo'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
 
 }else{
 	echo "Erreur de redirection";
