@@ -66,7 +66,7 @@
               </select>
             </div>
 
-            <button type="submit" href="index.php?index=subscribe_step1" class="btn btn-primary pull-left">Etape suivante</button>
+            <button type="submit" class="btn btn-primary pull-left">Etape suivante</button>
             </form>
         </div>
         </div>
