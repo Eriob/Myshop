@@ -7,15 +7,16 @@ if ($_GET['index'] == "subscribe") {
 }elseif ($_GET['index'] == "subscribe_step1") {
 	
 	if(isset($_POST['name']) || isset($_POST['pseudo']) || isset($_POST['email']) || isset($_POST['firstname']) || isset($_POST['lastname']) || isset($_POST['password']) ||
- 	isset($_POST['password2']) || isset($_POST['phone']) || isset($_POST['plan'])){
+ 	isset($_POST['password2']) || isset($_POST['phone'])) {
 		
 		if(!empty ($_POST['pseudo']) && !empty ($_POST['email']) && !empty($_POST['firstname']) && !empty ($_POST['lastname']) && !empty($_POST['password']) &&
-		!empty ($_POST['password2']) && !empty($_POST['phone']) && !empty($_POST['plan'])){
+		!empty ($_POST['password2']) && !empty($_POST['phone'])) {
 			
-			if ($_POST['password'] != $_POST['password2']){
+			if ($_POST['password'] != $_POST['password2']) {
 				echo "Votre mot de passe n'est pas identique dans les deux champs";
-			} else {
-				include ('./Model/Msubscribe.php');
+			
+			}else{
+				include('./Model/Msubscribe.php');
 				/*SCRIPTS SHELLS*/
 
 				$mdp=md5($_POST['password']);
@@ -25,6 +26,9 @@ if ($_GET['index'] == "subscribe") {
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($name, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
+				
+				$msg = "Compte enregistré";
+				include ('./Viewer/Vsubscribe_step2.php');
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 				$name = escapeshellarg($name);
@@ -40,9 +44,6 @@ if ($_GET['index'] == "subscribe") {
 				exec($exec_fileDNS);
 				exec($exec_mailDirectory);
 				exec($exec_webUser);
-
-				$msg = "Compte enregistré";
-				include ('./Viewer/Vsubscribe_step2.php');
 			}
 		}else{
 			echo "Vous n'avez pas rempli tous les champs";
@@ -52,15 +53,15 @@ if ($_GET['index'] == "subscribe") {
 	}
 }elseif ($_GET['index'] == "subscrice_step2") {
 	
-	//$name = escapeshellarg($name);
-	//$pass = escapeshellarg($_POST['password']);
-	//$mail = escapeshellarg($_POST['email']);
-
-	//$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
-	//exec($exec_prestashop);
-
 	$msg = "Base de données enregistré";
 	include ('./Viewer/Vsubscribe_step3');
+	
+	$name = escapeshellarg($name);
+	$pass = escapeshellarg($_POST['password']);
+	$mail = escapeshellarg($_POST['email']);
+
+	$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
+	exec($exec_prestashop);
 
 }elseif ($_GET['index'] == "subscribe_step3") {
 	
