@@ -1,5 +1,3 @@
-<meta http-equiv="refresh" content="5">
-
 <div class ="subscribe-navtab">
     <h2> Inscription </h2>
         <br>
