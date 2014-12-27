@@ -51,7 +51,7 @@ if ($_GET['index'] == "subscribe") {
 	}else{
 		echo "Erreur d'inscription";
 	}
-}elseif ($_GET['index'] == "subscrice_step2") {
+}elseif ($_GET['index'] == "subscribe_step2") {
 	
 	$msg = "Base de données enregistré";
 	include ('./Viewer/Vsubscribe_step3');
