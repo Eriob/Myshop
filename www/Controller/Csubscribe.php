@@ -23,6 +23,7 @@ if ($_GET['index'] == "subscribe") {
 				
 				$name = explode(".", $_POST['name']);
 				$_POST['name'] = $name[0];
+				$_POST['email'] = $_POST['email'];
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
