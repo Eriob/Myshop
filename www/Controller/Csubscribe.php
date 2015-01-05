@@ -54,14 +54,14 @@ if ($_GET['index'] == "subscribe") {
 }elseif ($_GET['index'] == "subscribe_step2") {
 	
 	$msg = "Base de données enregistré";
-	include('./Viewer/Vsubscribe_step3');
+	include('./Viewer/Vsubscribe_step3.php');
 
-	$name = escapeshellarg($name);
-	$pass = escapeshellarg($_POST['password']);
-	$mail = escapeshellarg($_POST['email']);
+	//$name = escapeshellarg($name);
+	//$pass = escapeshellarg($_POST['password']);
+	//$mail = escapeshellarg($_POST['email']);
 
-	$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
-	exec($exec_prestashop);
+	//$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
+	//exec($exec_prestashop);
 
 }elseif ($_GET['index'] == "subscribe_step3") {
 	
