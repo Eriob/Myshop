@@ -24,18 +24,18 @@
         <br>
             <div class="form-group">
                 <label for="dbname" class="control-label">Nom de votre base de données</label>
-                <input type="text" name="dbname" id="dbname" value="<?php echo $_POST['dbname']?>" class="form-control" required="required"/>
+                <input type="text" name="dbname" id="dbname" value="<?php echo $_POST['dbname']?>" class="form-control" readonly>
             </div>
 
             <div class="form-group">
                 <label for="dbuser" class="control-label">Nom d'utilisateur</label>
-                <input type="text" name="dbuser" id="dbuser" value="<?php echo $_POST['dbuser']?>" class="form-control" required="required"/>
+                <input type="text" name="dbuser" id="dbuser" value="<?php echo $_POST['dbuser']?>" class="form-control" readonly>
             </div>
             
             <div class="form-group">
                 <label for="dbpassword" class="control-label">Mot de passe</label>
                 <div class="input-group">
-                    <input type="password" name="dbpassword" id="dbpassword" value="<?php echo $_POST['dbpassword']?>" class="form-control" required="required"/>
+                    <input type="password" name="dbpassword" id="dbpassword" value="<?php echo $_POST['dbpassword']?>" class="form-control" readonly>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
         <h3> Prestashop (optionnel) </h3>
         <br>
             <h4 class="text-center"> Vous pouvez installer prestashop sur votre page <?php echo $_POST['name']; ?>.myshop.itinet.fr<br>
-            <a href="http://www.prestashop.com/fr/"><h4 class="text-center">Installer Prestashop</a><br>
+            <a href="http://www.prestashop.com/fr/"><h4>Installer Prestashop</a><br></h4>
 
             <hr class="featurette-divider">
 

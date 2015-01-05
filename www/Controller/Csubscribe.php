@@ -22,10 +22,10 @@ if ($_GET['index'] == "subscribe") {
 				$mdp=md5($_POST['password']);
 				
 				$name = explode(".", $_POST['name']);
-				$name = $name[0];
+				$_POST['name'] = $name[0];
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
-				$user = create_user($name, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
+				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				$msg = "Compte enregistré";
 				include('./Viewer/Vsubscribe_step2.php');
