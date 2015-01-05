@@ -80,7 +80,6 @@ if ($_GET['index'] == "subscribe") {
 	mail($_POST['pseudo'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
 
 	include('./Viewer/Vsubscribe_final.php');
-
 }else{
 	echo "Erreur de redirection";
 }

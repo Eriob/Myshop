@@ -11,7 +11,7 @@
 <div class ="subscribe">
     <div class="container">
     <div class="row">
-        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_final">
+        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step3">
             
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
@@ -51,7 +51,7 @@
 
             <hr class="featurette-divider">
 
-            <button type="submit" href="index.php?index=subscribe_final" class="btn btn-primary pull-left">Valider</button>
+            <button type="submit" href="index.php?index=subscribe_step3" class="btn btn-primary pull-left">Valider</button>
             </form>
         </div>
         </div>
