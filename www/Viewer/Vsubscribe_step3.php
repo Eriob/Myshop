@@ -47,7 +47,7 @@
         <h3> Prestashop (optionnel) </h3>
         <br>
             <h4> Vous pouvez installer prestashop sur votre page <?php echo $_POST['name']; ?>.myshop.itinet.fr<br>
-            <a href="http://www.prestashop.com/fr/"><h4>Installer Prestashop</a><br></h4>
+            <a href="http://www.prestashop.com/fr/" TARGET=_BLANK><h4>Installer Prestashop</a><br></h4>
 
             <hr class="featurette-divider">
 

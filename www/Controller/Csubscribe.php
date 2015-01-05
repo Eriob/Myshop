@@ -54,6 +54,10 @@ if ($_GET['index'] == "subscribe") {
 }elseif ($_GET['index'] == "subscribe_step2") {
 	
 	$msg = "Base de données enregistré";
+
+	$name = explode(".", $_POST['name']);
+	$_POST['name'] = $name[0];
+
 	include('./Viewer/Vsubscribe_step3.php');
 
 	//$name = escapeshellarg($name);
