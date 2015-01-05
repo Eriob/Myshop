@@ -20,5 +20,6 @@
         <br><br><br><br>
 
         <hr class="featurette-divider">
+        </div>
     </div>
     </section>
