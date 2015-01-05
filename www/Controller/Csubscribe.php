@@ -57,6 +57,7 @@ if ($_GET['index'] == "subscribe") {
 
 	$name = explode(".", $_POST['name']);
 	$_POST['name'] = $name[0];
+	$_POST['email'] = $_POST['email'];
 
 	include('./Viewer/Vsubscribe_step3.php');
 

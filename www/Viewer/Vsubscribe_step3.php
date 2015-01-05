@@ -17,6 +17,11 @@
                 <label for="name" class="control-label">Nom de votre site :</label> 
                 <input type="text" name="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" readonly>
             </div>
+
+            <div class="form-group">
+                <label for="email" class="control-label">Adresse Email</label>
+                <input type="email" name="email" class="form-control" value="<?php echo $_POST['email']?>" readonly>
+            </div>
         
         <hr class="featurette-divider">
 
