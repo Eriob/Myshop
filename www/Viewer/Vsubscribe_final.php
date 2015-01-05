@@ -3,6 +3,9 @@
     <div class="row">
         <br>
         <br>
+        <br>
+        <br>
+        <br>
         <div class="col-md-12 mt32 mb16">
         <h4> Votre site <?php echo $_POST['name'];?> a été créé.
         <h5> Vous allez reçevoir un mail à <?php echo $_POST['email'];?>
@@ -17,4 +20,5 @@
         <br><br><br><br>
 
         <hr class="featurette-divider">
+    </div>
     </section>
