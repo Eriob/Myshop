@@ -15,7 +15,7 @@
             
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
-                <input type="text" name="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" readonly>
+                <input type="text" name="name" class="form-control" value="<?php echo $_POST['name']?>" readonly>
             </div>
 
         <h3> Base de données </h3>

@@ -28,7 +28,7 @@ if ($_GET['index'] == "subscribe") {
 				$user = create_user($name, $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
 				
 				$msg = "Compte enregistré";
-				include_once('./Viewer/Vsubscribe_step2.php');
+				include('./Viewer/Vsubscribe_step2.php');
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 				$name = escapeshellarg($name);
@@ -54,7 +54,7 @@ if ($_GET['index'] == "subscribe") {
 }elseif ($_GET['index'] == "subscribe_step2") {
 	
 	$msg = "Base de données enregistré";
-	include ('./Viewer/Vsubscribe_step3');
+	include('./Viewer/Vsubscribe_step3');
 
 	$name = escapeshellarg($name);
 	$pass = escapeshellarg($_POST['password']);
