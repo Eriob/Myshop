@@ -1,8 +1,17 @@
 <?php
 
 if ($_GET['index'] == "subscribe") {
+	include("./Model/Msubscribe.php");
 
-	include('./Viewer/Vsubscribe.php');
+	if (isset($_POST['name'])) {
+		if ($_POST['name'] = find_shop($_POST['name'])) {
+			echo "boutique déjà prise";
+		}else{
+			include("./Viewer/Vsubscribe.php");
+		}
+	}else{
+		echo "Erreur de redirection";
+	}
 
 }elseif ($_GET['index'] == "subscribe_step1") {
 	if(isset($_POST['name']) || isset($_POST['pseudo']) || isset($_POST['email']) || isset($_POST['firstname']) || isset($_POST['lastname']) || isset($_POST['password']) ||

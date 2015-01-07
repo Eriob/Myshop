@@ -20,4 +20,22 @@ $request = mysql_query($sql) or die (mysql_error());
 	
 }
 
+function find_shop($name){
+
+//CONNEXION A MYSQL
+mysql_connect('localhost', 'root', 'admin')
+or die ('ERROR TO CONNECT WITH DATABASE');
+
+//SELECTION DE LA BDD
+mysql_select_db('myshop')
+or die ('ERROR NAME DATABASE');
+
+$sql = 'SELECT name FROM users WHERE name ='. $name;
+$request = mysql_query($sql) or die (mysql_error());
+
+$result = mysql_fetch_array($request);
+return $result;
+
+}
+
 ?>
