@@ -30,7 +30,6 @@
         <hr class="featurette-divider">
 
         <h3> Base de données </h3>
-        <br>
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre base de données</label>
                 <input type="text" name="name" id="name" value="<?php echo $_POST['name']?>" class="form-control" readonly>
@@ -52,15 +51,14 @@
                 <button type="button" action="index.php?index=subscribe_step2" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
             </div>
 
-            <hr class="featurette-divider">
+        <hr class="featurette-divider">
         <h3> Prestashop (optionnel) </h3>
-        <br>
             <h4> Vous pouvez installer prestashop sur votre page <?php echo $_POST['name']; ?>.myshop.itinet.fr<br>
             <a href="http://www.prestashop.com/fr/" TARGET=_BLANK><h4>Installer Prestashop</a><br></h4>
 
             <hr class="featurette-divider">
 
-            <button type="submit" href="index.php?index=subscribe_step3" class="btn btn-primary pull-left">Valider</button>
+            <button type="submit" href="index.php?index=subscribe_step2" class="btn btn-primary pull-left">Valider</button>
             </form>
         </div>
         </div>
