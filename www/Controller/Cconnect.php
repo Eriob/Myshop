@@ -12,7 +12,7 @@
 		$_SESSION['id'] = $connect['id'];
 			
 			sleep(1);
-			header('location: index.php');
+			/* header('location: index.php');*/
 			
 	/*LIGNES DE TEST*/
 	echo $_SESSION['pseudo'];
@@ -25,7 +25,7 @@
 	{
 		echo Mauvais mot de passe;
 		sleep(1);
-		header('location: index.php');		
+		/*header('location: index.php');*/		
 	}
 	
 	}
