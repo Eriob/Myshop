@@ -30,7 +30,7 @@ or die ('ERROR TO CONNECT WITH DATABASE');
 mysql_select_db('myshop')
 or die ('ERROR NAME DATABASE');
 
-$sql = 'SELECT shop FROM users WHERE shop ='. $name;
+$sql = "SELECT shop FROM users WHERE shop ='$name'";
 $request = mysql_query($sql) or die (mysql_error());
 
 $result = mysql_fetch_assoc($request);
