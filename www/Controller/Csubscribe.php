@@ -99,7 +99,6 @@ if ($_GET['index'] == "subscribe") {
 		sleep(1);
 		header('location: index.php');
 	}
-}
 }else{
 	echo "Erreur de redirection";
 }
