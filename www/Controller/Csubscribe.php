@@ -32,14 +32,14 @@ if ($_GET['index'] == "subscribe") {
 				include('./Viewer/Vsubscribe_step2.php');
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				$name = escapeshellarg($name);
-				$pseudo = escapeshellarg($_POST['pseudo']);
-				$pass = escapeshellarg($_POST['password']);
-				$mail = escapeshellarg($_POST['email']);
+				$name = escapeshellcmd($name);
+				$pseudo = escapeshellcmd($_POST['pseudo']);
+				$pass = escapeshellcmd($_POST['password']);
+				$mail = escapeshellcmd($_POST['email']);
 
-				$exec_fileDNS = sprintf('sudo /var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
-				$exec_mailDirectory = sprintf('sudo /var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
-				$exec_webUser = sprintf('sudo /var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
+				$exec_fileDNS = sprintf('/var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
+				$exec_mailDirectory = sprintf('/var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
+				$exec_webUser = sprintf('/var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
 				
 				// Execution des commande
 				exec($exec_fileDNS);
@@ -62,12 +62,12 @@ if ($_GET['index'] == "subscribe") {
 
 	include('./Viewer/Vsubscribe_step3.php');
 
-	$name = escapeshellarg($name);
-	$pass = escapeshellarg($_POST['password']);
-	$mail = escapeshellarg($_POST['email']);
+	$name = escapeshellcmd($name);
+	$pass = escapeshellcmd($_POST['password']);
+	$mail = escapeshellcmd($_POST['email']);
 
-	$exec_prestashop = sprintf('sudo /var/www/Myshop/www/Server/install_prestashop.sh %s %s %s', $name, $pass, $mail);
-	exec($exec_prestashop);
+	$exec_BDD = sprintf('/var/www/Myshop/www/Server/add_BDD.sh %s %s %s', $name, $pass, $mail);
+	exec($exec_BDD);
 
 }elseif ($_GET['index'] == "subscribe_step3") {
 	
