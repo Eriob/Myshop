@@ -26,7 +26,7 @@ if ($_GET['index'] == "subscribe") {
 				$_POST['email'] = $_POST['email'];
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
-				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['telephone']);
+				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
 				
 				$msg = "Compte enregistré";
 				include('./Viewer/Vsubscribe_step2.php');
@@ -72,7 +72,7 @@ if ($_GET['index'] == "subscribe") {
 }elseif ($_GET['index'] == "subscribe_step3") {
 	
 	// Le message
-	$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\nVos identifiants sont : Pseudo : ".$_POST['pseudo']."Mot de pase : ". $_POST['password'];
+	$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\n";
 
 	// Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
 	$message = wordwrap($message, 70, "\r\n");
