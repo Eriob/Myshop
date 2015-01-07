@@ -93,21 +93,25 @@ if ($_GET['index'] == "subscribe") {
 
 }elseif ($_GET['index'] == "valid_subscribe") {
 	include ("./Model/Mconnect.php");
-
+	
+	if (isset($_POST['pseudo'],$_POST['password'])) {
 	$password = md5($_POST['password']);
 	$pseudo = $_POST['pseudo'];
-	$connect = connect($pseudo, $password);
-	
-	if ($password == $connect['password']) {
-		$_SESSION['pseudo'] = $connect['pseudo'];
-		$_SESSION['id'] = $connect['id'];
-
-		sleep(1);
+	$connect = connect($_POST['pseudo'],$password);
+			
+		if ($password == $connect['password']) {
+			$_SESSION['pseudo'] = $connect['pseudo'];
+			$_SESSION['id'] = $connect['id'];
+				
+			sleep(1);
 		header('location: index.php');
 	}else{
 		$msg = "Mauvais mot de passe";
 		sleep(1);
 		header('location: index.php');
+	}
+	}else{
+		echo "ERREUR//";
 	}
 }else{
 	$msg = "Erreur de redirection";
