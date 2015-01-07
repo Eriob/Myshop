@@ -52,6 +52,8 @@
 
             <hr class="featurette-divider">
 
+            <input type="hidden" name="pseudo" value="<?php echo $_POST['pseudo'];?>">
+            <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
             <button type="submit" href="index.php?index=subscribe_step2" class="btn btn-primary pull-left">Valider</button>
             </form>
         </div>
