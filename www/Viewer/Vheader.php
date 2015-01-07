@@ -38,6 +38,7 @@
                     }?>
             </div>
             
+
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav pull-right">
                 <?php if(isset($_GET['index'])){
