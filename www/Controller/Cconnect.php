@@ -15,19 +15,24 @@
 			/* header('location: index.php');*/
 			
 	/*LIGNES DE TEST*/
-	echo $_SESSION['pseudo'];
-	echo $_SESSION['id'];
+	print "rentre bien dans la boucle
+	 $_SESSION['pseudo']
+	$_SESSION['id']";
 	
 	}
 
 
 	else
 	{
-		echo Mauvais mot de passe;
+		print "Mauvais mot de passe";
 		sleep(1);
 		/*header('location: index.php');*/		
 	}
 	
 	}
+	
+	else
+	{
+		print "pseudo password pas set";
 
 ?>
