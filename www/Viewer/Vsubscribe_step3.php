@@ -22,6 +22,10 @@
                 <label for="email" class="control-label">Adresse Email</label>
                 <input type="email" name="email" class="form-control" value="<?php echo $_POST['email']?>" readonly>
             </div>
+
+            <input type="hidden" name="pseudo" value="<?php echo $_POST['pseudo'];?>">
+            <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
+            <input type="hidden" name="email" value="<?php echo $_POST['email'];?>">
         
         <hr class="featurette-divider">
 

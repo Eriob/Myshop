@@ -17,6 +17,8 @@
                 <label for="name" class="control-label">Nom de votre site :</label> 
                 <input type="text" name="name" class="form-control" value="<?php echo $_POST['name']?>" readonly>
             </div>
+                <input type="hidden" name="pseudo" value="<?php echo $_POST['pseudo'];?>">
+                <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
                 <input type="hidden" name="email" value="<?php echo $_POST['email'];?>">
 
         <h3> Base de données </h3>
