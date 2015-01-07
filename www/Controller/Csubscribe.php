@@ -32,7 +32,7 @@ if ($_GET['index'] == "subscribe") {
 				include('./Viewer/Vsubscribe_step2.php');
 				
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				$name = escapeshellcmd($name);
+				$name = escapeshellcmd($_POST['name']);
 				$pseudo = escapeshellcmd($_POST['pseudo']);
 				$pass = escapeshellcmd($_POST['password']);
 				$mail = escapeshellcmd($_POST['email']);
@@ -62,7 +62,7 @@ if ($_GET['index'] == "subscribe") {
 
 	include('./Viewer/Vsubscribe_step3.php');
 
-	$name = escapeshellcmd($name);
+	$name = escapeshellcmd($_POST['name']);
 	$pass = escapeshellcmd($_POST['password']);
 	$mail = escapeshellcmd($_POST['email']);
 
