@@ -26,6 +26,7 @@ else
 
 		sudo /bin/chown -R $1:sftp /var/sftp/$1
 		sudo /bin/chown -R www-data:www-data /var/sftp/$1/www
+		sudo /bin/cp /var/sftp/myshop/index.php /var/sftp/$1/www/
 
 		sudo /usr/sbin/edquota -p test $1
 	fi

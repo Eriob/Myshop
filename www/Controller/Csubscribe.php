@@ -69,8 +69,6 @@ if ($_GET['index'] == "subscribe") {
 	$exec_BDD = sprintf('/var/www/Myshop/www/Server/add_BDD.sh %s %s %s', $name, $pass, $mail);
 	exec($exec_BDD);
 
-}elseif ($_GET['index'] == "subscribe_step3") {
-	
 	// Le message
 	$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\n";
 
@@ -81,11 +79,6 @@ if ($_GET['index'] == "subscribe") {
 	mail($_POST['email'], 'Bienvenue sur MySHOP', $message);
 	mail($_POST['pseudo'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
 
-	//PARTIE DYNAMIQUE DE LA PAGE
-	$_POST['name'] = $_POST['name'];
-	$_POST['email'] = $_POST['email'];
-
-	include('./Viewer/Vsubscribe_final.php');
 }else{
 	echo "Erreur de redirection";
 }

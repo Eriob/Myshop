@@ -2,71 +2,37 @@
     <h2> Inscription </h2>
         <br>
         <ul class="nav nav-tabs nav-justified">
-          <li role="presentation" class="disabled"><a href="#">Etape 1 : Création utilisateur</a></li>
-          <li role="presentation" class="disabled"><a href="#">Etape 2 : Création boutique</a></li>
-          <li role="presentation" class="active"><a href="#">Etape 3 : Vos informations</a></li>
+          <li role="presentation" class="disabled"><a href="#">Etape 1 : Création de la boutique</a></li>
+          <li role="presentation" class="disabled"><a href="#">Etape 2 : Vos informations</a></li>
+          <li role="presentation" class="active"><a href="#">Etape 3 : Fin de l'inscription</a></li>
         </ul>
 </div>
 
-<div class ="subscribe">
+    <section class="para_large">
     <div class="container">
     <div class="row">
-        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step3">
-            
-            <div class="form-group">
-                <label for="name" class="control-label">Nom de votre site :</label> 
-                <input type="text" name="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" readonly>
-            </div>
-
-            <div class="form-group">
-                <label for="email" class="control-label">Adresse Email</label>
-                <input type="email" name="email" class="form-control" value="<?php echo $_POST['email']?>" readonly>
-            </div>
-
-            <input type="hidden" name="pseudo" value="<?php echo $_POST['pseudo'];?>">
-            <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
-            <input type="hidden" name="email" value="<?php echo $_POST['email'];?>">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-md-12 mt32 mb16">
+        <h4> Votre site <?php echo $_POST['name'];?> a été créé.
+        <h5> Vous allez reçevoir un mail à <?php echo $_POST['email'];?>
+        <br> Vous pouvez dès à présent vous connecter sur votre espace via filezilla (par exemple) avec vos identifiants.
+        <br> Votre site est disponible à l'adresse suivante : <a href="<?php echo $_POST['name'];?>" TARGET=_BLANK><?php echo $_POST['name'];?></a>
+        </div>            
         
+        <button type="submit" href="index.php" class="btn btn-primary pull-left">Se connecter</button>
         <hr class="featurette-divider">
 
-        <h3> Base de données </h3>
-        <br>
-            <div class="form-group">
-                <label for="dbname" class="control-label">Nom de votre base de données</label>
-                <input type="text" name="dbname" id="dbname" value="<?php echo $_POST['dbname']?>" class="form-control" readonly>
-            </div>
-
-            <div class="form-group">
-                <label for="dbuser" class="control-label">Nom d'utilisateur</label>
-                <input type="text" name="dbuser" id="dbuser" value="<?php echo $_POST['dbuser']?>" class="form-control" readonly>
-            </div>
-            
-            <div class="form-group">
-                <label for="dbpassword" class="control-label">Mot de passe</label>
-                <div class="input-group">
-                    <input type="password" name="dbpassword" id="dbpassword" value="<?php echo $_POST['dbpassword']?>" class="form-control" readonly>
-                </div>
-            </div>
-
-            <div class="btn-group">
-                <button type="button" action="index.php?index=subscribe_step2" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
-            </div>
-
-            <hr class="featurette-divider">
-        <h3> Prestashop (optionnel) </h3>
-        <br>
-            <h4> Vous pouvez installer prestashop sur votre page <?php echo $_POST['name']; ?>.myshop.itinet.fr<br>
-            <a href="http://www.prestashop.com/fr/" TARGET=_BLANK><h4>Installer Prestashop</a><br></h4>
-
-            <hr class="featurette-divider">
-
-            <button type="submit" href="index.php?index=subscribe_step3" class="btn btn-primary pull-left">Valider</button>
-            </form>
-        </div>
-        </div>
-        </div>
+        
         <div class="container marketing">
         <br><br><br><br>
 
         <hr class="featurette-divider">
         </div>
+    </section>
+    
+    <hr class="featurette-divider">
+    </div>
