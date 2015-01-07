@@ -89,6 +89,7 @@ if ($_GET['index'] == "subscribe") {
 	include ("./Model/MconnectBDD.php");
 	include ("./Model/Mconnect.php");
 
+	$_POST['password'] = md5($_POST['password']);
 	$connect = connect($_POST['pseudo'], $_POST['password']);
 	
 	if ($_POST['password'] == $connect['password']) {

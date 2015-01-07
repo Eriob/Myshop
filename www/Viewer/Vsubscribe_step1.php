@@ -45,8 +45,6 @@
                 </div>
             </div>
 
-            <a class="btn btn-default" href="index.php?index=subscribe_step1&rewrite=1" role="button"> Modifier les informations </a>
-
         <hr class="featurette-divider">
         <h3> Prestashop (optionnel) </h3>
             <h4> Vous pouvez installer prestashop sur votre page <?php echo $_POST['name']; ?>.myshop.itinet.fr<br>
