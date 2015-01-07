@@ -12,6 +12,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./bootstrap/jquery.min.js"></script>
     <script src="./bootstrap/bootstrap.min.js"></script>
-    <script src="./bootstrap/docs.min.js"></script>
+    <!--<script src="./bootstrap/docs.min.js"></script>-->
   </body>
 </html>
