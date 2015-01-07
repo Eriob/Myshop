@@ -20,7 +20,7 @@ $request = mysql_query($sql) or die (mysql_error());
 	
 }
 
-function find_shop($pseudo){
+function find_shop($name){
 
 //CONNEXION A MYSQL
 mysql_connect('localhost', 'root', 'admin')
@@ -30,7 +30,7 @@ or die ('ERROR TO CONNECT WITH DATABASE');
 mysql_select_db('myshop')
 or die ('ERROR NAME DATABASE');
 
-$sql = "SELECT pseudo FROM users WHERE pseudo ='$pseudo'";
+$sql = "SELECT shop FROM users WHERE shop ='$name'";
 $request = mysql_query($sql) or die (mysql_error());
 
 $result = mysql_fetch_assoc($request);
