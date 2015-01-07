@@ -84,6 +84,22 @@ if ($_GET['index'] == "subscribe") {
 	mail($_POST['email'], 'Bienvenue sur MySHOP', $message);
 	mail($_POST['pseudo'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
 
+}elseif ($_GET['index'] == "valid_subscribe") {
+	
+	$connect = connect($_POST['pseudo'], $_POST['password']);
+	
+	if ($_POST['password'] == $connect['password']) {
+		$_SESSION['pseudo'] = $connect['pseudo'];
+		$_SESSION['id'] = $connect['id'];
+
+		sleep(1);
+		header('location: index.php');
+	}else{
+		$msg = "Mauvais mot de passe";
+		sleep(1);
+		header('location: index.php');
+	}
+}
 }else{
 	echo "Erreur de redirection";
 }
