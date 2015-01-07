@@ -23,7 +23,7 @@
         <br> Votre site est disponible à l'adresse suivante : <a href="<?php echo $_POST['name'];?>" TARGET=_BLANK><?php echo $_POST['name']."myshop.itinet.fr";?></a>
         </div>            
         
-        <button type="submit" href="index.php" class="btn btn-primary pull-left">Se connecter</button>
+        <a href="index.php"><button type="submit" class="btn btn-primary pull-left">Se connecter</a></button>
         <hr class="featurette-divider">
 
         
