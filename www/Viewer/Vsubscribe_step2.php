@@ -20,12 +20,12 @@
         <h4> Votre site <?php echo $_POST['name'];?> a été créé.
         <h5> Vous allez reçevoir un mail à <?php echo $_POST['email'];?>
         <br> Vous pouvez dès à présent vous connecter sur votre espace via filezilla (par exemple) avec vos identifiants.
-        <br> Votre site est disponible à l'adresse suivante : <a href="<?php echo $_POST['name'];?>" TARGET=_BLANK><?php echo $_POST['name']."myshop.itinet.fr";?></a>
+        <br> Votre site est disponible à l'adresse suivante : <a href="<?php echo $_POST['name'];?>" TARGET=_BLANK><?php echo $_POST['name'].".myshop.itinet.fr";?></a>
         </div>            
         
     <form class="form-horizontal" method="POST" action="index.php?index=valid_subscribe">
-        <input type="hidden" name="pseudo" value="<?echo $_POST['pseudo'];?>">
-        <input type="hidden" name="password" value="<?echo $_POST['password'];?>">
+        <input type="text" name="pseudo" value="<?echo $_POST['pseudo'];?>">
+        <input type="text" name="password" value="<?echo $_POST['password'];?>">
         <a class="btn btn-default" href="index.php?index=valid_subscribe" role="submit"> Se connecter </a>
     </form>
 

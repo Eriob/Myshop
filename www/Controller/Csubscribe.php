@@ -8,12 +8,12 @@ if ($_GET['index'] == "subscribe") {
 		$find = find_shop($_POST['name']);
 
 		if ($_POST['name'] == $find) {
-			echo "boutique déjà prise";
+			$msg = "boutique déjà prise";
 		}else{
 			include("./Viewer/Vsubscribe.php");
 		}
 	}else{
-		echo "Erreur de redirection";
+		$msg = "Erreur de redirection";
 	}
 
 }elseif ($_GET['index'] == "subscribe_step1") {
@@ -24,7 +24,7 @@ if ($_GET['index'] == "subscribe") {
 			!empty ($_POST['password2']) && !empty($_POST['phone'])) {
 				
 			if ($_POST['password'] != $_POST['password2']) {
-				echo "Votre mot de passe n'est pas identique dans les deux champs";
+				$msg = "Votre mot de passe n'est pas identique dans les deux champs";
 				
 			}else{
 				include('./Model/Msubscribe.php');
@@ -57,10 +57,10 @@ if ($_GET['index'] == "subscribe") {
 				exec($exec_webUser);
 			}
 		}else{
-			echo "Vous n'avez pas rempli tous les champs";
+			$msg = "Vous n'avez pas rempli tous les champs";
 		}
 	}else{
-		echo "Erreur d'inscription";
+		$msg = "Erreur d'inscription";
 	}
 }elseif ($_GET['index'] == "subscribe_step2") {
 	
@@ -110,7 +110,7 @@ if ($_GET['index'] == "subscribe") {
 		header('location: index.php');
 	}
 }else{
-	echo "Erreur de redirection";
+	$msg = "Erreur de redirection";
 }
 
 ?>
