@@ -92,7 +92,7 @@ if ($_GET['index'] == "subscribe") {
 	$password = md5($_POST['password']);
 	$connect = connect($_POST['pseudo'], $password);
 	
-	if ($_POST['password'] == $connect['password']) {
+	if ($password == $connect['password']) {
 		$_SESSION['pseudo'] = $connect['pseudo'];
 		$_SESSION['id'] = $connect['id'];
 
