@@ -26,8 +26,6 @@
             <input type="hidden" name="pseudo" value="<?php echo $_POST['pseudo'];?>">
             <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
             <input type="hidden" name="email" value="<?php echo $_POST['email'];?>">
-        
-        <hr class="featurette-divider">
 
         <h3> Base de données </h3>
             <div class="form-group">
@@ -48,7 +46,7 @@
             </div>
 
             <div class="btn-group">
-                <button type="button" action="index.php?index=subscribe_step1" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
+                <button type="button" action="index.php?index=subscribe_step1&rewrite=1" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
             </div>
 
         <hr class="featurette-divider">

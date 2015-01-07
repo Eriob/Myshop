@@ -21,9 +21,9 @@ if ($_GET['index'] == "subscribe") {
 
 				if (isset($_GET['rewrite'])) {
 					$_POST['name'] = $_POST['name'];
+					$_POST['pseudo'] = $_POST['pseudo']
 					$_POST['email'] = $_POST['email'];
 					$_POST['password'] = $_POST['password'];
-
 				}
 				
 				$mdp=md5($_POST['password']);
