@@ -25,4 +25,4 @@
 	#sudo /bin/rm -r /var/sftp/$1/www/install
 	#sudo /bin/chmod -R 777 /var/sftp/$1/www
 
-	sudo /etc/init.d/apache2 restart
+	sudo /etc/init.d/apache2 reload
