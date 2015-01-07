@@ -26,7 +26,7 @@
         <input type="hidden" name="pseudo" value="<?echo $_POST['pseudo'];?>">
         <input type="hidden" name="password" value="<?echo $_POST['password'];?>">
         
-        <a class="btn btn-default" href="index.php?index=valid_subscribe" role="button"> Se connecter </a>
+        <a class="btn btn-default" href="index.php?index=valid_subscribe" role="submit"> Se connecter </a>
 
         <hr class="featurette-divider">
 
