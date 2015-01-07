@@ -26,7 +26,7 @@
     <form class="form-horizontal" method="POST" action="index.php?index=valid_subscribe">
         <input type="hidden" name="pseudo" value="<?echo $_POST['pseudo'];?>">
         <input type="hidden" name="password" value="<?echo $_POST['password'];?>">
-        <a class="btn btn-default" href="index.php?index=valid_subscribe" role="submit"> Se connecter </a>
+    <button type="submit" href="index.php?index=valid_subscribe" class="btn btn-primary pull-left">Se Connecter</button>
     </form>
 
         <hr class="featurette-divider">
