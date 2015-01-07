@@ -7,7 +7,7 @@ if ($_GET['index'] == "subscribe") {
 
 		$find = find_shop($_POST['name']);
 
-		if ($find == 1) {
+		if ($_POST['name'] == $find) {
 			echo "boutique déjà prise";
 		}else{
 			include("./Viewer/Vsubscribe.php");
