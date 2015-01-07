@@ -45,9 +45,7 @@
                 </div>
             </div>
 
-            <div class="btn-group">
-                <button type="submit" href="index.php?index=subscribe_step1&rewrite=1" class="btn btn-primary"> Modifier ces informations</button>
-            </div>
+            <a class="btn btn-default" href="index.php?index=subscribe_step1&rewrite=1" role="button"> Modifier les informations </a>
 
         <hr class="featurette-divider">
         <h3> Prestashop (optionnel) </h3>
