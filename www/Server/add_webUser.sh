@@ -40,6 +40,6 @@ else
 				</VirtualHost>" | sudo tee -a /etc/apache2/sites-available/$3
 		sudo /bin/ln -s /etc/apache2/sites-available/$3 /etc/apache2/sites-enabled/
 		
-		sudo /etc/init.d/apache2 restart
+		sudo /etc/init.d/apache2 reload
 	fi
 fi
