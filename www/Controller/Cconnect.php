@@ -3,8 +3,9 @@
 
 	// On vérifie si la combinaison pseudo/pwd est correct
 	if (isset($_POST['pseudo'],$_POST['password']))
-	{		$password = md5($_POST['password']);
-			$connect = connect($_POST['pseudo'],$password)
+	{		
+		$password = md5($_POST['password']);
+		$connect = connect($_POST['pseudo'],$password);
 	
 	if ($password == $connect['password'])
 	{
