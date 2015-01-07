@@ -22,11 +22,11 @@
         <br> Vous pouvez dès à présent vous connecter sur votre espace via filezilla (par exemple) avec vos identifiants.
         <br> Votre site est disponible à l'adresse suivante : <a href="<?php echo $_POST['name'];?>" TARGET=_BLANK><?php echo $_POST['name']."myshop.itinet.fr";?></a>
         </div>            
-        
-        <a class="dropdown-toggle" data-toggle="dropdown" href="index.php" role="button">Se Connecter</a>
+        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step1">
+        <button type="button" class="btn btn-primary">Se Connecter</button>
+        </form>
         <hr class="featurette-divider">
 
-        
         <div class="container marketing">
         <br><br><br><br>
 

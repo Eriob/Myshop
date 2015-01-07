@@ -45,9 +45,9 @@
                 </div>
             </div>
 
-            <div class="btn-group">
-                <button type="button" action="index.php?index=subscribe_step1&rewrite=1" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
-            </div>
+            <form class="form-horizontal" name="modif_form" method="POST" action="index.php?index=subscribe_step1&rewrite=1">
+                <button type="button" class="btn btn-primary">Modifier les informations</button>
+            </form>
 
         <hr class="featurette-divider">
         <h3> Prestashop (optionnel) </h3>
