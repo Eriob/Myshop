@@ -85,6 +85,7 @@ if ($_GET['index'] == "subscribe") {
 	mail($_POST['pseudo'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
 
 }elseif ($_GET['index'] == "valid_subscribe") {
+	include ("./Model/Mconnect.php");
 	
 	$connect = connect($_POST['pseudo'], $_POST['password']);
 	

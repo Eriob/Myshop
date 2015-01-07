@@ -46,7 +46,7 @@
             </div>
 
             <div class="btn-group">
-                <button type="button" href="index.php?index=subscribe_step1&rewrite=1" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
+                <button type="submit" href="index.php?index=subscribe_step1&rewrite=1" class="btn btn-primary"> Modifier ces informations</button>
             </div>
 
         <hr class="featurette-divider">

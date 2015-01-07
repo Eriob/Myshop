@@ -33,6 +33,12 @@ if(isset($_SESSION['pseudo'])){
             case "disconnect":
                 include('./Controller/Cdisconnect.php');
                 break;
+            case "update_profile":
+                include('./Controller/Cupdate_profile.php');
+                break;
+            case "get_profile":
+                include('./Controller/Cget_profile.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 break;
