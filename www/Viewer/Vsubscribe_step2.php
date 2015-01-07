@@ -11,7 +11,7 @@
 <div class ="subscribe">
     <div class="container">
     <div class="row">
-        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step3">
+        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step2">
             
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
@@ -48,7 +48,7 @@
             </div>
 
             <div class="btn-group">
-                <button type="button" action="index.php?index=subscribe_step2" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
+                <button type="button" action="index.php?index=subscribe_step1" class="btn btn-primary"  aria-expanded="false"> Modifier ces informations </button>
             </div>
 
         <hr class="featurette-divider">
