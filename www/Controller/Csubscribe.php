@@ -2,7 +2,7 @@
 
 if ($_GET['index'] == "subscribe") {
 
-	include('./Viewer/Vsubscribe_step1.php');
+	include('./Viewer/Vsubscribe.php');
 
 }elseif ($_GET['index'] == "subscribe_step1") {
 	if (isset($_GET['rewrite'])) {
@@ -33,7 +33,7 @@ if ($_GET['index'] == "subscribe") {
 					$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
 					
 					$msg = "Compte enregistré";
-					include('./Viewer/Vsubscribe_step2.php');
+					include('./Viewer/Vsubscribe_step1.php');
 					
 					/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 					$name = escapeshellcmd($_POST['name']);
@@ -65,7 +65,7 @@ if ($_GET['index'] == "subscribe") {
 	$_POST['name'] = $name[0];
 	$_POST['email'] = $_POST['email'];
 
-	include('./Viewer/Vsubscribe_step3.php');
+	include('./Viewer/Vsubscribe_step2.php');
 
 	$name = escapeshellcmd($_POST['name']);
 	$pass = escapeshellcmd($_POST['password']);
@@ -85,6 +85,7 @@ if ($_GET['index'] == "subscribe") {
 	mail($_POST['pseudo'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
 
 }elseif ($_GET['index'] == "valid_subscribe") {
+	
 	include ("./Model/MconnectBDD.php");
 	include ("./Model/Mconnect.php");
 

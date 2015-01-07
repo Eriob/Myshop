@@ -2,8 +2,8 @@
     <h2> Inscription </h2>
         <br>
         <ul class="nav nav-tabs nav-justified">
-          <li role="presentation" class="active"><a href="#">Etape 1 : Création de la boutique</a></li>
-          <li role="presentation" class="disabled"><a href="#">Etape 2 : Vos informations</a></li>
+          <li role="presentation" class="disabled"><a href="#">Etape 1 : Création de la boutique</a></li>
+          <li role="presentation" class="active"><a href="#">Etape 2 : Vos informations</a></li>
           <li role="presentation" class="disabled"><a href="#">Etape 3 : Fin de l'inscription</a></li>
         </ul>
 </div>
@@ -11,7 +11,7 @@
 <div class ="subscribe">
     <div class="container">
     <div class="row">
-        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step1">
+        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step2">
             
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
@@ -19,59 +19,48 @@
             </div>
 
             <div class="form-group">
-                <label for="pseudo" class="control-label">Votre pseudo</label>
-                <input type="text" name="pseudo" id="pseudo" class="form-control" autofocus="autofocus" required="required"/>
-            </div>
-
-            <div class="form-group">
                 <label for="email" class="control-label">Adresse Email</label>
-                <input type="email" name="email" id="email" class="form-control" required="required"/>
+                <input type="email" name="email" class="form-control" value="<?php echo $_POST['email']?>" readonly>
+            </div>
+
+            <input type="hidden" name="pseudo" value="<?php echo $_POST['pseudo'];?>">
+            <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
+            <input type="hidden" name="email" value="<?php echo $_POST['email'];?>">
+
+        <h3> Base de données </h3>
+            <div class="form-group">
+                <label for="name" class="control-label">Nom de votre base de données</label>
+                <input type="text" name="name" id="name" value="<?php echo $_POST['name']?>" class="form-control" readonly>
             </div>
 
             <div class="form-group">
-                <label for="firstname" class="control-label">Prénom</label>
-                <input type="text" name="firstname" id="firstname" class="form-control" required="required"/>
-            </div>
-            
-            <div class="form-group">
-                <label for="lastname" class="control-label">Nom</label>
-                <input type="text" name="lastname" id="lastname" class="form-control" required="required"/>
+                <label for="pseudo" class="control-label">Nom d'utilisateur</label>
+                <input type="text" name="pseudo" id="pseudo" value="<?php echo $_POST['pseudo']?>" class="form-control" readonly>
             </div>
             
             <div class="form-group">
                 <label for="password" class="control-label">Mot de passe</label>
                 <div class="input-group">
-                    <input type="password" name="password" id="password" class="form-control" required="required"/>
+                    <input type="password" name="password" id="password" value="<?php echo $_POST['password']?>" class="form-control" readonly>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="password2" class="control-label">Confirmation du mot de passe</label>
-                <div class="input-group">
-                    <input type="password" name="password2" id="password2" class="form-control" required="required"/>
-                </div>
-            </div>
-        
-            <div class="form-group">
-              <label for="phone" class="control-label">Numéro de téléphone</label>
-              <input class="form-control" type="tel" name="phone" id="phone" value="+33 "/>
-            </div>
+            <a class="btn btn-default" href="index.php?index=subscribe_step1&rewrite=1" role="button"> Modifier les informations </a>
 
-            <div name="primary_interest" class="form-group ">
-              <label class="control-label" for="plan">Intérêt Premier</label>
-              <select class="form-control" name="plan" id="plan">
-                <option value="plan_to_use">Utilisé au sein de ma compagnie</option>
-                <option value="plan_to_sell">Utilisé pour mon intérêt personnel</option>
-                <option value="plan_to_test">Je suis un professeur ou un étudiant</option>
-              </select>
-            </div>
+        <hr class="featurette-divider">
+        <h3> Prestashop (optionnel) </h3>
+            <h4> Vous pouvez installer prestashop sur votre page <?php echo $_POST['name']; ?>.myshop.itinet.fr<br>
+            <a href="http://www.prestashop.com/fr/" TARGET=_BLANK><h4>Installer Prestashop</a><br></h4>
 
-            <button type="submit" class="btn btn-primary pull-left">Etape suivante</button>
+            <hr class="featurette-divider">
+
+            <button type="submit" href="index.php?index=subscribe_step2" class="btn btn-primary pull-left">Valider</button>
             </form>
         </div>
         </div>
         </div>
         <div class="container marketing">
-        <br><br><br>
+        <br><br><br><br>
+
         <hr class="featurette-divider">
         </div>
