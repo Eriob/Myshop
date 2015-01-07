@@ -64,6 +64,8 @@ if ($_GET['index'] == "subscribe") {
 	$name = explode(".", $_POST['name']);
 	$_POST['name'] = $name[0];
 	$_POST['email'] = $_POST['email'];
+	$_POST['pseudo'] = $_POST['pseudo'];
+	$_POST['password'] = $_POST['password'];
 
 	include('./Viewer/Vsubscribe_step2.php');
 
@@ -85,12 +87,10 @@ if ($_GET['index'] == "subscribe") {
 	mail($_POST['pseudo'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
 
 }elseif ($_GET['index'] == "valid_subscribe") {
-	
-	include ("./Model/MconnectBDD.php");
 	include ("./Model/Mconnect.php");
 
-	$_POST['password'] = md5($_POST['password']);
-	$connect = connect($_POST['pseudo'], $_POST['password']);
+	$password = md5($_POST['password']);
+	$connect = connect($_POST['pseudo'], $password);
 	
 	if ($_POST['password'] == $connect['password']) {
 		$_SESSION['pseudo'] = $connect['pseudo'];
