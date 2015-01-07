@@ -6,7 +6,8 @@
 	{		
 			$connect = connect($_POST['pseudo'],$_POST['password'])
 	
-	if{ ($_POST['password'] == $connect['password'];
+	if ($_POST['password'] == $connect['password'])
+	{
 		$_SESSION['pseudo'] = $connect['pseudo'];
 		$_SESSION['id'] = $connect['id'];
 			
