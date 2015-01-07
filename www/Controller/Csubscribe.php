@@ -4,7 +4,10 @@ if ($_GET['index'] == "subscribe") {
 	include("./Model/Msubscribe.php");
 
 	if (isset($_POST['name'])) {
-		if ($_POST['name'] = find_shop($_POST['name'])) {
+
+		$find = find_shop($_POST['name']);
+
+		if ($find == 1) {
 			echo "boutique déjà prise";
 		}else{
 			include("./Viewer/Vsubscribe.php");

@@ -33,8 +33,11 @@ or die ('ERROR NAME DATABASE');
 $sql = 'SELECT shop FROM users WHERE shop ='. $name;
 $request = mysql_query($sql) or die (mysql_error());
 
-$result = mysql_fetch_array($request);
-return $result;
+$result = mysql_fetch_assoc($request);
+
+if (isset($result)){
+	return 1;
+}
 
 }
 
