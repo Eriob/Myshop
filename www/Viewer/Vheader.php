@@ -40,20 +40,20 @@
             
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav pull-right">
-                <?php if(isset($_GET['index']){
-                      if($_GET['index'] == "websites") {
-                        echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
-                        echo "<li class=\"active\"><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
-                        echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
-                      }else if($_GET['index'] == "contact") {
-                        echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
-                        echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
-                        echo "<li class=\"active\"><a href=\"index.php?index=contact\">Contact</a></li>";
-                      }else{
-                        echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
-                        echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
-                        echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
-                      }
+                <?php if(isset($_GET['index'])){
+                        if($_GET['index'] == "websites") {
+                          echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
+                          echo "<li class=\"active\"><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                          echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
+                        }else if($_GET['index'] == "contact") {
+                          echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
+                          echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                          echo "<li class=\"active\"><a href=\"index.php?index=contact\">Contact</a></li>";
+                        }else{
+                          echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
+                          echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                          echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
+                        }
                       }else{
                         echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
                         echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
