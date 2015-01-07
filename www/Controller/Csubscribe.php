@@ -38,12 +38,12 @@ if ($_GET['index'] == "subscribe") {
 				$mail = escapeshellcmd($_POST['email']);
 
 				$exec_fileDNS = sprintf('/var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
-				$exec_mailDirectory = sprintf('/var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
+				//$exec_mailDirectory = sprintf('/var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $pseudo, $pass);
 				$exec_webUser = sprintf('/var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
 				
 				// Execution des commande
 				exec($exec_fileDNS);
-				exec($exec_mailDirectory);
+				//exec($exec_mailDirectory);
 				exec($exec_webUser);
 			}
 		}else{
