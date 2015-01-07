@@ -1,5 +1,5 @@
 <?php
-	include ('/Model/Mconnect.php');
+	include ('../model/Mconnect.php');
 
 	// On vérifie si la combinaison pseudo/pwd est correct
 	if (isset($_POST['pseudo'],$_POST['password']))
@@ -13,25 +13,18 @@
 		$_SESSION['id'] = $connect['id'];
 			
 			sleep(1);
-			/* header('location: index.php');*/
-			
-	/*LIGNES DE TEST*/
-	echo "rentre bien dans la boucle" . $_SESSION['pseudo'] . $_SESSION['id'];
+		header('location: index.php');
 	
 	}
 
 
 	else
 	{
-		echo "Mauvais mot de passe";
+		$msg = "Mauvais mot de passe";
 		sleep(1);
-		/*header('location: index.php');*/		
+		header('location: index.php');		
 	}
 	
 	}
-	
-	else
-	{
-		echo "pseudo password pas set";
 
 ?>
