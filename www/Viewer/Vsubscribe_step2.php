@@ -24,8 +24,8 @@
         </div>            
         
     <form class="form-horizontal" method="POST" action="index.php?index=valid_subscribe">
-        <input type="text" name="pseudo" value="<?echo $_POST['pseudo'];?>">
-        <input type="text" name="password" value="<?echo $_POST['password'];?>">
+        <input type="hidden" name="pseudo" value="<?echo $_POST['pseudo'];?>">
+        <input type="hidden" name="password" value="<?echo $_POST['password'];?>">
         <a class="btn btn-default" href="index.php?index=valid_subscribe" role="submit"> Se connecter </a>
     </form>
 
