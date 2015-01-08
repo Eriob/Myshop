@@ -1,5 +1,7 @@
 <div class ="subscribe-navtab">
-    <h2> Inscription </h2>
+    <div class="subscribe-navtab-title">
+        <h2> Inscription </h2>
+    </div>
         <br>
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation" class="active"><a href="#">Etape 1 : Création de la boutique</a></li>

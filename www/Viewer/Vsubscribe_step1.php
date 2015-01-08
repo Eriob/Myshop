@@ -16,7 +16,7 @@
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
                 <input type="text" name="name" class="form-control" value="<?php echo $_POST['name']?>.myshop.itinet.fr" readonly>
-            </div>
+            </div> 
 
             <div class="form-group">
                 <label for="email" class="control-label">Adresse Email</label>
@@ -44,12 +44,11 @@
                     <input type="password" name="password" id="password" value="<?php echo $_POST['password']?>" class="form-control" readonly>
                 </div>
             </div>
-
-        <hr class="featurette-divider">
+        <div class="subscribe-prestashop">
         <h3> Prestashop (optionnel) </h3>
             <h4> Vous pouvez installer prestashop sur votre page <?php echo $_POST['name']; ?>.myshop.itinet.fr<br>
             <a href="http://www.prestashop.com/fr/" TARGET=_BLANK><h4>Installer Prestashop</a><br></h4>
-
+        </div>
             <hr class="featurette-divider">
 
             <button type="submit" href="index.php?index=subscribe_step2" class="btn btn-primary pull-left">Valider</button>
