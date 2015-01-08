@@ -1,6 +1,6 @@
 <div class ="contact-navtab">
     <div class="contact-navtab-title">
-        <h2> Contact </h2>
+        <h1> Contact </h1>
     </div>
         <br>
 </div>
@@ -12,7 +12,7 @@
             
             <div class="form-group">
                 <label for="name" class="control-label">Votre Pseudo :</label> 
-                <input type="text" name="name" class="form-control" value="<?php echo $_POST['pseudo']?>" readonly>
+                <input type="text" name="name" class="form-control" value="<?php echo $_SESSION['pseudo']?>" readonly>
             </div>
 
             <div class="form-group">

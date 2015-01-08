@@ -1,6 +1,6 @@
 <div class ="subscribe-navtab">
     <div class="subscribe-navtab-title">
-        <h2> Inscription </h2>
+        <h1> Inscription </h1>
     </div>
         <br>
         <ul class="nav nav-tabs nav-justified">
