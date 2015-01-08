@@ -21,7 +21,6 @@
   <body>
     <div class="navbar-wrapper">
       <div class="container">
-
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -31,13 +30,38 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">MySHOP</a>
+              <a class="navbar-brand" href="index.php">MySHOP</a>
+              <div class="msg">
+                    <?php if (isset($msg)) {
+                      print("<h3>".$msg."</h3>");
+                    }?>
+              </div>
             </div>
+            
+
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="#">Accueil</a></li>
-                <li><a href="#Sites MySHOP">Sites MySHOP</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <?php if(isset($_GET['index'])){
+                        if($_GET['index'] == "websites") {
+                          echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
+                          echo "<li class=\"active\"><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                          echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
+                        }else if($_GET['index'] == "contact") {
+                          echo "<li><a href=\"index.php?index=index\">Accueil</a></li>";
+                          echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                          echo "<li class=\"active\"><a href=\"index.php?index=contact\">Contact</a></li>";
+                        }else{
+                          echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
+                          echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                          echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
+                        }
+                      }else{
+                        echo "<li class=\"active\"><a href=\"index.php?index=index\">Accueil</a></li>";
+                        echo "<li><a href=\"index.php?index=websites\">Sites MySHOP</a></li>";
+                        echo "<li><a href=\"index.php?index=contact\">Contact</a></li>";
+                      }
+                ?>
+                
                 <li class="dropdown"> 
                     <a data-toggle="dropdown" href="#"><?php echo $_SESSION['pseudo'];?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
