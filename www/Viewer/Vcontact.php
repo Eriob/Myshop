@@ -12,7 +12,11 @@
             
             <div class="form-group">
                 <label for="name" class="control-label">Votre Pseudo :</label> 
-                <input type="text" name="name" class="form-control" value="<?php echo $_SESSION['pseudo']?>" readonly>
+                <input type="text" name="name" class="form-control" value="<?php if(isset($_SESSION['pseudo'])){
+                                                                                    echo $_SESSION['pseudo'];
+                                                                                }else{
+                                                                                    echo "Non enregistré;"
+                                                                                }?>" readonly>
             </div>
 
             <div class="form-group">
