@@ -11,6 +11,8 @@ if($_GET['index'] == "contact") {
 
 		$msg = "Erreur d'envoi";
 		header('location: index.php');
+	}else{
+		include('./Viewer/Vcontact.php');
 	}
 
 }
