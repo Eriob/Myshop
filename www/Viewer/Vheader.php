@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -33,9 +32,11 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="index.php?index=index">MySHOP</a>
-              <?php if (isset($msg)) {
-                      echo $msg;
+              <div class="msg">
+                    <?php if (isset($msg)) {
+                      echo "<h3>".$msg."</h3>";
                     }?>
+              </div>
             </div>
             
 
