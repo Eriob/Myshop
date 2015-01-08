@@ -36,6 +36,9 @@ if(isset($_SESSION['pseudo'])){
             case "get_profile":
                 include('./Controller/Cget_profile.php');
                 break;
+            case "contact":
+                include('./Controller/Ccontact.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 break;
