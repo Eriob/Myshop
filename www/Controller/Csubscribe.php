@@ -6,14 +6,16 @@ if ($_GET['index'] == "subscribe") {
 	if (isset($_POST['name'])) {
 
 		$find = find_shop($_POST['name']);
-			$msg = $find;
-		if ($_POST['name'] == $find) {
+
+		if ($_POST['name'] == $find['shop']) {
 			$msg = "boutique déjà prise";
+			header('location: index.php');
 		}else{
 			include("./Viewer/Vsubscribe.php");
 		}
 	}else{
 		$msg = "Erreur de redirection";
+		header('location: index.php');
 	}
 
 }elseif ($_GET['index'] == "subscribe_step1") {
@@ -25,7 +27,7 @@ if ($_GET['index'] == "subscribe") {
 				
 			if ($_POST['password'] != $_POST['password2']) {
 				$msg = "Votre mot de passe n'est pas identique dans les deux champs";
-				
+				include('./Viewer/Vsubscribe.php');
 			}else{
 				include('./Model/Msubscribe.php');
 				/*SCRIPTS SHELLS*/
@@ -58,9 +60,11 @@ if ($_GET['index'] == "subscribe") {
 			}
 		}else{
 			$msg = "Vous n'avez pas rempli tous les champs";
+			header('location: index.php');
 		}
 	}else{
 		$msg = "Erreur d'inscription";
+		header('location: index.php');
 	}
 }elseif ($_GET['index'] == "subscribe_step2") {
 	
@@ -103,7 +107,7 @@ if ($_GET['index'] == "subscribe") {
 			$_SESSION['pseudo'] = $connect['pseudo'];
 			$_SESSION['id'] = $connect['id'];
 				
-			sleep(1);
+		sleep(1);
 		header('location: index.php');
 	}else{
 		$msg = "Mauvais mot de passe";
@@ -111,10 +115,13 @@ if ($_GET['index'] == "subscribe") {
 		header('location: index.php');
 	}
 	}else{
-		echo "ERREUR//";
+		$msg = "ERREUR//";
+		header('location: index.php');
 	}
 }else{
 	$msg = "Erreur de redirection";
+	header('location: index.php');
+
 }
 
 ?>

@@ -34,7 +34,7 @@
               <a class="navbar-brand" href="index.php?index=index">MySHOP</a>
               <div class="msg">
                     <?php if (isset($msg)) {
-                      echo "<h3>".$msg."</h3>";
+                      print("<h3>".$msg."</h3>");
                     }?>
               </div>
             </div>
