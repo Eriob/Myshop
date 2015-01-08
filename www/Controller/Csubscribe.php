@@ -27,19 +27,19 @@ if ($_GET['index'] == "subscribe") {
 				$msg = "Votre mot de passe n'est pas identique dans les deux champs";
 				
 			}else{
-				/*include('./Model/Msubscribe.php');*/
+				include('./Model/Msubscribe.php');
 				/*SCRIPTS SHELLS*/
 					
-				/*$mdp=md5($_POST['password']);
+				$mdp=md5($_POST['password']);
 					
 				$name = explode(".", $_POST['name']);
-				$_POST['name'] = $name[0];*/
+				$_POST['name'] = $name[0];
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
-				/*$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
+				$user = create_user($_POST['name'], $_POST['pseudo'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
 					
 				$msg = "Compte enregistré";
-				include('./Viewer/Vsubscribe_step1.php');*/
+				include('./Viewer/Vsubscribe_step1.php');
 					
 				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
 				$name = escapeshellcmd($_POST['name']);
@@ -52,9 +52,9 @@ if ($_GET['index'] == "subscribe") {
 				$exec_webUser = sprintf('/var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $pseudo, $pass, $name);
 					
 				// Execution des commande
-				//exec($exec_fileDNS);
+				exec($exec_fileDNS);
 				//exec($exec_mailDirectory);
-				//exec($exec_webUser);
+				exec($exec_webUser);
 			}
 		}else{
 			$msg = "Vous n'avez pas rempli tous les champs";
