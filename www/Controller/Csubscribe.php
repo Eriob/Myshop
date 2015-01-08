@@ -6,7 +6,7 @@ if ($_GET['index'] == "subscribe") {
 	if (isset($_POST['name'])) {
 
 		$find = find_shop($_POST['name']);
-
+			$msg = $find;
 		if ($_POST['name'] == $find) {
 			$msg = "boutique déjà prise";
 		}else{
