@@ -1,7 +1,7 @@
 <?php
 
 if($_GET['index'] == "contact") {
-	if (isset($_POST['lastname']) || isset($_POST['firstname']) || isset($_POST['email'] || isset($_POST['message'])) {
+	if (isset($_POST['lastname']) || isset($_POST['firstname']) || isset($_POST['email']) || isset($_POST['message'])) {
 		if (!empty($_POST['lastname']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['message'])) {
 			# code...
 		}else{
