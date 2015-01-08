@@ -15,7 +15,7 @@
                 <input type="text" name="name" class="form-control" value="<?php if(isset($_SESSION['pseudo'])){
                                                                                     echo $_SESSION['pseudo'];
                                                                                 }else{
-                                                                                    echo "Non enregistré;"
+                                                                                    echo "Non enregistré";
                                                                                 }?>" readonly>
             </div>
 
