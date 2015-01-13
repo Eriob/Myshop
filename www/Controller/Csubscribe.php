@@ -109,6 +109,7 @@ if ($_GET['index'] == "subscribe") {
 				
 		sleep(1);
 		header('location: index.php');
+		include('./Viewer/Vlobby.php');
 	}else{
 		$msg = "Mauvais mot de passe";
 		sleep(1);
