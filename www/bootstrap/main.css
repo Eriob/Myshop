@@ -154,4 +154,9 @@ body {
 .contact-navtab{margin-top: 120px; margin-left:10px;}
 .contact-navtab-title{margin-top:100px; margin-left:700px;}
 .contact{margin-top: 100px; margin-left:650px;}
-.carousel-lobby h1 {position: absolute; top: -450px; left: 350px;}
+
+.carousel-lobby h1 {position: absolute; top: -350px; left: 350px;}
+
+.informations-navtab{margin-top: 120px; margin-left:10px;}
+.informations-navtab-title{margin-top:100px; margin-left:700px;}
+.informations{margin-top: 100px; margin-left:650px;}
