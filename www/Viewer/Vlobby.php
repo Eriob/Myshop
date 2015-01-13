@@ -6,6 +6,7 @@
           <img src="./Viewer/Images/background.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
+              <h1> Bienvenue <?php echo $_SESSION['pseudo'];?> !</h1>
             </div>
             </div>
           </div>
