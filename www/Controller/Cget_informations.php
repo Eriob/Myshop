@@ -5,7 +5,7 @@ include('./Model/MconnectBDD.php');
 if (isset($_SESSION['pseudo'])) {
 	include('./Model/Mget_informations.php');
 
-	$informations = get_informations($_SESSION('pseudo'));
+	$informations = get_informations($_SESSION['pseudo']);
 
 	include('./Viewer/Vget_informations.php');
 	
