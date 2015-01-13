@@ -3,6 +3,7 @@
 include('./Model/MconnectBDD.php');
 
 if (isset($_SESSION['pseudo'])) {
+	
 	include('./Model/Mget_informations.php');
 
 	$informations = get_informations($_SESSION['pseudo']);

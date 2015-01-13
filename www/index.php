@@ -42,6 +42,9 @@ if(isset($_SESSION['pseudo'])){
             case "get_informations":
                 include('./Controller/Cget_informations.php');
                 break;
+            case "show_mywebsite":
+                include('./Controller/Cshow_mywebsite.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 break;
