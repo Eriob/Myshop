@@ -76,4 +76,3 @@
         <div class="container marketing">
         <br><br><br>
         <hr class="featurette-divider">
-        </div>

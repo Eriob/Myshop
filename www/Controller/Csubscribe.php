@@ -78,12 +78,12 @@ if ($_GET['index'] == "subscribe") {
 
 	include('./Viewer/Vsubscribe_step2.php');
 
-	$name = escapeshellcmd($_POST['name']);
-	$pass = escapeshellcmd($_POST['password']);
-	$mail = escapeshellcmd($_POST['email']);
+	//$name = escapeshellcmd($_POST['name']);
+	//$pass = escapeshellcmd($_POST['password']);
+	//$mail = escapeshellcmd($_POST['email']);
 
-	$exec_BDD = sprintf('/var/www/Myshop/www/Server/add_BDD.sh %s %s %s', $name, $pass, $mail);
-	exec($exec_BDD);
+	//$exec_BDD = sprintf('/var/www/Myshop/www/Server/add_BDD.sh %s %s %s', $name, $pass, $mail);
+	//exec($exec_BDD);
 
 	// Le message
 	$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\n";
