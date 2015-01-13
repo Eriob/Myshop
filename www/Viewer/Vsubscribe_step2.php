@@ -41,4 +41,3 @@
     </section>
     
     <hr class="featurette-divider">
-    </div>
