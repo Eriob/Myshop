@@ -34,7 +34,7 @@
                 <input type="text" name="pseudo" id="pseudo" value="<?php echo $informations['pseudo']?>" class="form-control" readonly>
             </div>
             
-        <div class="subscribe-prestashop">
+        <div class="informations-prestashop">
         <h3> Prestashop (optionnel) </h3>
             <h4> Vous pouvez installer prestashop sur votre page <?php echo $informations['shop']; ?>.myshop.itinet.fr<br>
             <a href="http://www.prestashop.com/fr/" TARGET=_BLANK><h4>Installer Prestashop</a><br></h4>
