@@ -67,7 +67,7 @@
                     <ul class="dropdown-menu">
                       <li><a href="index.php?index=myProfil">Mon Profil</a></li>
                       <li><a href="index.php?index=myWebsites">Mes Sites</a></li>
-                      <li><a href="index.php?index=myInformations">Mes informations</a></li>
+                      <li><a href="index.php?index=get_informations">Mes informations</a></li>
                       <li><a href="index.php?index=myOptions">Mes options</a></li>
                       <li class="divider"></li>
                       <li><a href="index.php?index=disconnect">Deconnexion</a></li>
