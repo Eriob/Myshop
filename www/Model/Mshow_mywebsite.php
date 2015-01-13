@@ -7,7 +7,7 @@ function show_mywebsite($pseudo) {
 
 	$name = mysql_fetch_assoc($request);
 
-	return $name;
+	return $name['shop'];
 }
 
 ?>
