@@ -108,8 +108,7 @@ if ($_GET['index'] == "subscribe") {
 			$_SESSION['id'] = $connect['id'];
 				
 		sleep(1);
-		header('location: index.php');
-		include('./Viewer/Vlobby.php');
+		include('./Controller/Cindex.php');
 	}else{
 		$msg = "Mauvais mot de passe";
 		sleep(1);
