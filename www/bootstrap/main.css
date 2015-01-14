@@ -162,4 +162,4 @@ body {
 .informations-prestashop{position:absolute; top:650px; left:550px;}
 .informations{margin-top: 100px; margin-left:650px;}
 
-.modal-body{margin-left:50px; text-align: center;}
+.modal-content{padding-left:50px; text-align: center;}
