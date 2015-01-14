@@ -41,8 +41,6 @@
         </div>
         <br><br><br>
             <hr class="featurette-divider">
-
-            <button type="submit" href="index.php?index=" class="btn btn-primary pull-left">Modifier des informations</button>
             </form>
         </div>
         </div>
