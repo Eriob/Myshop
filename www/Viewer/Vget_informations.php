@@ -1,6 +1,6 @@
 <div class ="informations-navtab">
     <div class="informations-navtab-title">
-        <h1> Mes informations </h1>
+        <h1> Informations sur ma boutique </h1>
     </div>
     <br>
 </div>
