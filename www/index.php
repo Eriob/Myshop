@@ -48,6 +48,9 @@ if(isset($_SESSION['pseudo'])){
             case "get_options":
                 include('./Controller/Cget_options.php');
                 break;
+			case "myProfil":
+                include('./Viewer/Vprofil.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 break;
