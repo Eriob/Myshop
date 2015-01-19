@@ -24,7 +24,7 @@
             }        
         }
         ?>
-        <input type="hidden" name="pseudo" value="<?php echo $options['pseudo'];?>">
+        <input type="hidden" name="pseudo" value="<?php echo $options['name'];?>">
         
         <br><br>
         
