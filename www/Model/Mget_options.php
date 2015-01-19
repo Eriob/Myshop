@@ -27,7 +27,7 @@ function show_mails($name) {
 		$i++;
 		echo ('<div class="form-group">
                 <label for="email" class="control-label">Adresse Email".$i."</label>
-                <input type="email" name="email" class="form-control" value="<?php echo $mails['mail'];?>" readonly>
+                <input type="email" name="email" class="form-control" value="'.$mails['mail'].'" readonly>
               </div>';
 	}
 }
