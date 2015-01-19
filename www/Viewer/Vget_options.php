@@ -16,8 +16,8 @@
             </div> 
 
         <?php
-        if (isset($nb_mails)) {
-            for ($i=0; $i < $nb_mails ; $i++) { 
+        if (isset($count)) {
+            for ($i=0; $i < $count ; $i++) { 
             echo "<div class=\"form-group\">
                 <label for=\"email\" class=\"control-label\">Adresse Email</label>
                 <input type=\"email\" name=\"email\" class=\"form-control\" value=\"<?php echo $options['email']?>\" readonly>

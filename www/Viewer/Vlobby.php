@@ -7,7 +7,7 @@
           <div class="container">
             <div class="carousel-caption">
               <div class="carousel-lobby">
-              <h1> Bienvenue <?php echo $_SESSION['pseudo'];?> !</h1>
+              <h1> Bienvenue <?php echo $_SESSION['name'];?> !</h1>
               </div>
             </div>
             </div>
