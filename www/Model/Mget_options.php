@@ -2,7 +2,7 @@
 
 function show_mails($name) {
 
-	$sql = "SELECT * FROM mails WHERE name ='$name'";
+	$sql = "SELECT * FROM mails WHERE shop ='$name'";
 	$request = mysql_query($sql) or die(mysql_error());
 
 	$i = 0;
