@@ -6,6 +6,7 @@
           <img src="./Viewer/Images/background.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
+              <div class="inline_accueil">
               <form class="form-inline" method="POST" name="subscribe" action="index.php?index=subscribe">
                   <h1>Crée ta boutique en ligne facilement et rapidement</h1>
                   <div class="input-group">
@@ -15,6 +16,7 @@
                   <div class="form-group">
                   <button type="submit" name="subscribe" class="btn btn-primary pull-right">Essayer !</button>
                 </form>
+              </div>
               </div>
             </div>
           </div>

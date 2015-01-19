@@ -60,11 +60,12 @@ body {
   height: 800px;
 }
 
-.form-inline {
+.inline-accueil {
 	position: absolute;
 	top: -450px;
 	left: 50px;
 }
+
 
 
 /* MARKETING CONTENT
