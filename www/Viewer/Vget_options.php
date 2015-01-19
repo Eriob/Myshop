@@ -5,7 +5,7 @@
 </p>
 <br><br>
                     
-        <div class="form-group">
+        <div class="input-group">
             <label for="addmail" class="control-label">Ajouter une adresse mail : </label> 
             <input type="text" name="addmail" class="form-control" style="text-align:right" placeholder="Nouvelle adresse">
             <span class="input-group-addon">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?></span> 
