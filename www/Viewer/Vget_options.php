@@ -5,12 +5,12 @@
 </p>
 <br>
     <form class="form-horizontal" name="options_form" method="POST" action="index.php?index=get_options">
-        <div class="input-group">
+        <div class="form-group">
             <label for="addmail" class="control-label">Ajouter une adresse mail : </label> 
             <input type="text" name="addmail" style="max-width=100" class="form-control" placeholder="Nouvelle adresse">
             <span class="input-group-addon">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?></span> 
          </div>
-
+<br>
         <button type="submit" href="index.php?index=get_options" class="btn btn-primary pull-left">Valider</button>
         </form>
     </div>
