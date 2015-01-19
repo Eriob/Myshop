@@ -3,7 +3,7 @@
 
 <p>
 </p>
-<br><br>
+<br>
                     
         <div class="input-group">
             <label for="addmail" class="control-label">Ajouter une adresse mail : </label> 
