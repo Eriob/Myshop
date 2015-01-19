@@ -14,9 +14,9 @@ if (isset($_POST['new_email'])&& ($_POST['new_email']!= '')){
 	update_email($_SESSION['id'], $_POST['new_email'], $password);
 	}
 	
-if (isset($_POST['new_address'])&& ($_POST['new_address']!= '')){
+/*if (isset($_POST['new_address'])&& ($_POST['new_address']!= '')){
 	update_address($_SESSION['id'], $_POST['new_address'], $password);
-	}
+	} */
 	
 if (isset($_POST['new_zipcode'])&& ($_POST['new_zipcode']!= '')){
 	update_zipcode($_SESSION['id'], $_POST['new_zipcode'], $password);

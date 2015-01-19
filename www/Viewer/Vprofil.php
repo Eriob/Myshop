@@ -15,11 +15,11 @@ include('./Controller/Cgetprofile.php');
 				<?php if($profile['email'] != NULL){echo "Votre adresse mail actuelle: ".$profile['email'];}?>
             </div>
 
-            <div class="form-group">
+      <!--      <div class="form-group">
                 <label for="pseudo" class="control-label">Nouvelle adresse</label>
                 <input type="text" name="new_address" id="new_address" class="form-control"/>
-				<?php if($profile['address'] != NULL){echo "Votre adresse actuelle: ".$profile['address'];}?>
-            </div>
+				<?php/* if($profile['address'] != NULL){echo "Votre adresse actuelle: ".$profile['address'];}*/?>
+           </div> -->
 
             <div class="form-group">
                 <label for="firstname" class="control-label">Nouveau code postal</label>
