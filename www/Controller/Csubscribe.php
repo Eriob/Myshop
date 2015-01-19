@@ -102,7 +102,7 @@ if ($_GET['index'] == "subscribe") {
 	$connect = connect($_POST['name'],$password);
 			
 		if ($password == $connect['password']) {
-			$_SESSION['name'] = $connect['name'];
+			$_SESSION['name'] = $connect['shop'];
 			$_SESSION['id'] = $connect['id'];
 				
 		sleep(1);

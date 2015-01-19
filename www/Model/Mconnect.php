@@ -10,7 +10,7 @@ function connect($name, $password)
 	mysql_select_db('myshop')
 	or die ('ERROR NAME DATABASE');
 	
-	$sql = 'SELECT id, name, password FROM users WHERE name = \''.$name.'\' AND password = \''.$password.'\';';
+	$sql = 'SELECT id, shop, password FROM users WHERE shop = \''.$name.'\' AND password = \''.$password.'\';';
 	
 	$request = mysql_query($sql) or die (mysql_error());
 	$result = mysql_fetch_array($request);
