@@ -4,7 +4,7 @@ session_start();
 
 header('Content-type: text/html; charset=UTF-8');
 
-if(isset($_SESSION['pseudo'])){
+if(isset($_SESSION['name'])){
     include_once('./Viewer/VheaderUser.php');
 }else{
     include_once('./Viewer/Vheader.php');
