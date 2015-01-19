@@ -15,8 +15,8 @@
                   </div>
                   <div class="form-group">
                   <button type="submit" name="subscribe" class="btn btn-primary pull-right">Essayer !</button>
+                  </div>
                 </form>
-              </div>
               </div>
             </div>
           </div>
