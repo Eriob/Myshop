@@ -1,6 +1,6 @@
 <?php
 
-include('./model/Mupdateprofil.php');
+include('./Model/Mupdateprofil.php');
 $def = '';
 if(isset ($_POST['password']))
 {
