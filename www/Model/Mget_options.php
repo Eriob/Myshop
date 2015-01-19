@@ -34,7 +34,7 @@ function show_mails($name) {
 
 	while($mails = mysql_fetch_array($request)){
 		$i++;
-		echo '<form class="form-inline" name="options_form" method="POST" action="index.php?index=get_options">';
+		echo '<form class="form-horizontal" name="options_form" method="POST" action="index.php?index=get_options">';
 		echo '<div class="form-group">';
         echo '<label for="email" class="control-label">Adresse Email '.$i.'</label>';
         echo '<input type="email" name="email" class="form-control" value="'.$mails['mail'].'" readonly></div>';

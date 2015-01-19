@@ -1,5 +1,5 @@
 
-        <input type="hidden" name="pseudo" value="<?php echo $options['name'];?>">
+        <input type="hidden" name="name" value="<?php echo $options['name'];?>">
 
 <p>
 </p>
