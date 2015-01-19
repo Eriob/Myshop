@@ -2,7 +2,6 @@
         <input type="hidden" name="pseudo" value="<?php echo $options['name'];?>">
 
 <script type="text/javascript">
- 
 var c,c2, ch;
  
 // ajouter un champ avec son "mail" propre;
@@ -15,23 +14,22 @@ ch.setAttribute('type','text');
 ch.setAttribute('mail','ch'+c2.length);
 c.appendChild(ch);
  
-document.getElementById('sup').style.display='inline';
+document.getElementById('mail').style.display='inline';
 }
  
 // supprimer le dernier champ;
 function moins(){
-if(c2.length>0){c.removeChild(c2[c2.length-1])}
+if(c2.length>0){c.removeChild(c2[c2.length-1])};
 if(c2.length==0){document.getElementById('mail').style.display='none'};
 }
- 
 </script>
 
 <div id="cadre" style="margin-left:100px;width:200px">
 </div>
  
 <p>
-<input type="button" value="ajouter un champ" onclick="plus()" />
-<input type="button" style="display:none" id="mail" value="supprimer un champ" onclick="moins()" />
+<input type="submit" value="Ajouter un mail" onclick="plus()" />
+<input type="submit" style="display:none" id="mail" value="Supprimer le dernier mail" onclick="moins()" />
 </p>
 
         <br><br>
