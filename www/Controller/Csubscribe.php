@@ -36,11 +36,12 @@ if ($_GET['index'] == "subscribe") {
 					
 				$name = explode(".", $_POST['name']);
 				$_POST['name'] = $name[0];
+				$create_mailuser = $_POST['name']."@myshop.itinet.fr";
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($_POST['name'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
-				$mail = add_mails($_POST['name'], $_POST['email']);
-				
+				$mail = add_mails($_POST['name'], $create_mailuser);
+
 				$msg = "Compte enregistré";
 				include('./Viewer/Vsubscribe_step1.php');
 					
