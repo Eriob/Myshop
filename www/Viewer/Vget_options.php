@@ -9,7 +9,6 @@
     <div class="container">
     <div class="row">
         <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step2">
-            
             <div class="form-group">
                 <label for="name" class="control-label">Nom de votre site :</label> 
                 <input type="text" name="name" class="form-control" value="<?php echo $options['shop']?>.myshop.itinet.fr" readonly>
