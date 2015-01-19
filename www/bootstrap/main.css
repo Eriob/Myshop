@@ -62,7 +62,7 @@ body {
 
 .inline-accueil {
 	position: absolute;
-	top: 0px;
+	top: -400px;
 	left: 50px;
 }
 
