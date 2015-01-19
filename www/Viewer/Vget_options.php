@@ -3,7 +3,7 @@
 
 <form class="form-inline" method="POST" name="options_form" action="index.php?index=get_options">
                   <div class="input-group">
-                    <input type="text" class="form-control" style="text-align:right" name="name" placeholder="Nom de votre boutique">
+                    <input type="text" class="form-control" style="text-align:right" name="addmail" placeholder="Nouvelle adresse">
                     <span class="input-group-addon"><?php echo "@".$_SESSION['name'].".myshop.itinet.fr";?></span> 
                   </div>
                   <div class="form-group">
