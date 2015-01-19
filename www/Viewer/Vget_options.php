@@ -19,7 +19,7 @@ document.getElementById('mail').style.display='inline';
  
 // supprimer le dernier champ;
 function moins(){
-if(c2.length>0){c.removeChild(c2[c2.length-1])};
+if(c2.length>0){c.removeChild(c2[c2.length-1])}
 if(c2.length==0){document.getElementById('mail').style.display='none'};
 }
 </script>
