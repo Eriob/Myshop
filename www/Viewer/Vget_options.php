@@ -5,12 +5,10 @@
     <div class="form-group">
         <input type="text" class="form-control" style="text-align:right" name="addmail" placeholder="Nouvelle adresse mail">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?>
     </div>
-    
-    <div class="form-group">
-    <br>
+
     <button type="submit" href="index.php?index=get_options" class="btn btn-primary pull-left">Valider</button>
 </form>
-    </div>
+</div>
 </div>
 </div>
 
