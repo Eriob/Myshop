@@ -1,7 +1,7 @@
 <?php
 	include ('./Model/Mconnect.php');
 
-	// On vérifie si la combinaison pseudo/pwd est correct
+	// On vérifie si la combinaison name/pwd est correct
 	if (isset($_POST['name'],$_POST['password'])) {		
 		$password = md5($_POST['password']);
 		$connect = connect($_POST['name'],$password);

@@ -1,21 +1,5 @@
 <?php
 
-function update_pseudo($id, $new_pseudo, $password)
-{
-	
-	//CONNEXION A MYSQL
-	mysql_connect('localhost', 'root', 'admin')
-	or die ('ERROR TO CONNECT WITH DATABASE');
-
-	//SELECTION DE LA BDD
-	mysql_select_db('myshop')
-	or die ('ERROR NAME DATABASE');
-
-	$sql = 'UPDATE users SET pseudo = \''.$new_pseudo.'\' WHERE id = \''.$id.'\'AND password = \''.$password.'\'';
-	
-	$request = mysql_query($sql) or die (mysql_error());
-}
-
 function update_password($id, $new_password, $password)
 {
 	

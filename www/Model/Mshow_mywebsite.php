@@ -1,8 +1,8 @@
 <?php
 
-function show_mywebsite($pseudo) {
+function show_mywebsite($name) {
 
-	$sql = "SELECT shop FROM users WHERE pseudo = '$pseudo'";
+	$sql = "SELECT shop FROM users WHERE name = '$name'";
 	$request = mysql_query($sql) or die(mysql_error());
 
 	$name = mysql_fetch_assoc($request);

@@ -11,7 +11,7 @@ or die ('ERROR NAME DATABASE');
 
 $date = date('Y-m-d');
 
-$sql = 'SELECT shops.id, shops.name, shops.description, user.pseudo, user.email, user.zip_code FROM shops JOIN users ON shops.id = users.shop WHERE name LIKE '.$query.'\'%';
+$sql = 'SELECT shops.id, shops.name, shops.description, user.name, user.email, user.zip_code FROM shops JOIN users ON shops.id = users.shop WHERE name LIKE '.$query.'\'%';
 	
 $request = mysql_query($sql) or die (mysql_error());
 }
