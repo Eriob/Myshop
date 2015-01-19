@@ -75,9 +75,9 @@
 
                           <div class="modal-body">
                             <form action="index.php?index=connect" method="POST">
-                                <input type="text" name="pseudo" placeholder=" Pseudo"><br>
+                                <input type="text" name="name" placeholder="Nom de la boutique"><br>
                                 <br>
-                                <input type="password" name="password" placeholder=" Password"><br>
+                                <input type="password" name="password" placeholder="Mot de passe"><br>
                                 <br>
                                 <input type='submit' name="connect" value="Se connecter"/><br>
                             </form>
