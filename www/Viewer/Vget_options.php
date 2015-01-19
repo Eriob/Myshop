@@ -3,7 +3,7 @@
 
 <form class="form-horizontal" method="POST" name="options_form" action="index.php?index=get_options">
     <div class="form-group">
-        <input type="text" class="form-control" style="text-align:right" name="addmail" placeholder="Nouvelle adresse mail"><?php echo "@".$_SESSION['name'].".myshop.itinet.fr";?>
+        <input type="text" class="form-control" style="text-align:right;margin-left:20px;" name="addmail" placeholder="Nouvelle adresse mail"><?php echo "@".$_SESSION['name'].".myshop.itinet.fr";?>
     </div>
 
     <button type="submit" href="index.php?index=get_options" class="btn btn-primary pull-left">Valider</button>
