@@ -2,8 +2,8 @@
 <br>
 
 <form class="form-horizontal" method="POST" name="options_form" action="index.php?index=get_options">
-    <div class="input-group">
-        <input type="text" class="form-control" style="text-align:right;max-width=150px;" name="addmail" placeholder="Nouvelle adresse mail">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?>
+    <div class="form-group">
+        <input type="text" class="form-control" style="text-align:right" name="addmail" placeholder="Nouvelle adresse mail">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?>
     </div>
     
     <div class="form-group">
