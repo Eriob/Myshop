@@ -20,7 +20,6 @@
                 <input type="email" name="email" class="form-control" value="<?php echo $informations['email']?>" readonly>
             </div>
 
-            <input type="hidden" name="pseudo" value="<?php echo $informations['pseudo'];?>">
             <input type="hidden" name="email" value="<?php echo $informations['email'];?>">
 
         <h3> Base de données </h3>
@@ -30,8 +29,8 @@
             </div>
 
             <div class="form-group">
-                <label for="pseudo" class="control-label">Nom d'utilisateur</label>
-                <input type="text" name="pseudo" id="pseudo" value="<?php echo $informations['pseudo']?>" class="form-control" readonly>
+                <label for="name" class="control-label">Nom d'utilisateur</label>
+                <input type="text" name="name" id="name" value="<?php echo $informations['name']?>" class="form-control" readonly>
             </div>
             
         <div class="informations-prestashop">

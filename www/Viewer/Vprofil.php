@@ -8,11 +8,6 @@ include('./Controller/Cgetprofile.php');
     <div class="row">
         <form class="form-horizontal" name="profile_update_form" method="POST" action="index.php?index=update_profile">
             
-            <div class="form-group">
-                <label for="name" class="control-label">Nouveau pseudo:</label> 
-                <input type="text" name="new_pseudo" id="new_pseudo" class="form-control" />
-				<?php if($profile['pseudo'] != NULL){echo "Votre pseudo actuel: ".$profile['pseudo'];}?>
-            </div>
 			
             <div class="form-group">
                 <label for="email" class="control-label">Nouvelle adresse mail</label>

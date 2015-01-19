@@ -11,9 +11,9 @@
         <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step1">
             
             <div class="form-group">
-                <label for="name" class="control-label">Votre Pseudo :</label> 
-                <input type="text" name="name" class="form-control" value="<?php if(isset($_SESSION['pseudo'])){
-                                                                                    echo $_SESSION['pseudo'];
+                <label for="name" class="control-label">Votre Boutique :</label> 
+                <input type="text" name="name" class="form-control" value="<?php if(isset($_SESSION['name'])){
+                                                                                    echo $_SESSION['name'];
                                                                                 }else{
                                                                                     echo "Non enregistré";
                                                                                 }?>" readonly>

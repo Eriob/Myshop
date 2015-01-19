@@ -63,7 +63,7 @@
                 ?>
                 
                 <li class="dropdown"> 
-                    <a data-toggle="dropdown" href="#"><?php echo $_SESSION['pseudo'];?><b class="caret"></b></a>
+                    <a data-toggle="dropdown" href="#"><?php echo $_SESSION['name'];?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       <li><a href="index.php?index=myProfil">Mon Profil</a></li>
                       <li><a href="index.php?index=show_mywebsite" target="_blank">Mon Site</a></li>
