@@ -7,7 +7,7 @@
     <form class="form-horizontal" name="options_form" method="POST" action="index.php?index=get_options">
         <div class="input-group">
             <label for="addmail" class="control-label">Ajouter une adresse mail : </label> 
-            <input type="text" name="addmail" class="form-control" style="text-align:right" placeholder="Nouvelle adresse">
+            <input type="text" name="addmail" class="form-control" placeholder="Nouvelle adresse">
             <span class="input-group-addon">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?></span> 
          </div>
 
