@@ -31,7 +31,7 @@ if(isset($_SESSION['pseudo'])){
                 include('./Controller/Cdisconnect.php');
                 break;
             case "update_profile":
-                include('./Controller/Cupdate_profile.php');
+                include('./Controller/Cupdate_profil.php');
                 break;
             case "get_profile":
                 include('./Controller/Cget_profile.php');
@@ -47,6 +47,15 @@ if(isset($_SESSION['pseudo'])){
                 break;
             case "get_options":
                 include('./Controller/Cget_options.php');
+                break;
+			case "myProfil":
+                include('./Viewer/Vprofil.php');
+                break;
+			case "search_shop":
+                include('./Viewer/Vsearchmyshop.php');
+                break;
+			case "search_started":
+                include('./Viewer/Csearchmyshop.php');
                 break;
             default:
                 include('./Controller/Cindex.php');
