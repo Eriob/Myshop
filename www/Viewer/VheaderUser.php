@@ -63,12 +63,12 @@
                 ?>
                 
                 <li class="dropdown"> 
-                    <a data-toggle="dropdown" href="#"><?php echo $_SESSION['name'];?><b class="caret"></b></a>
+                    <a data-toggle="dropdown" href="index.php"><?php echo $_SESSION['name'];?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       <li><a href="index.php?index=myProfil">Mon Profil</a></li>
                       <li><a href="index.php?index=show_mywebsite" target="_blank">Mon Site</a></li>
                       <li><a href="index.php?index=get_informations">Mes informations</a></li>
-                      <li><a href="index.php?index=myOptions">Mes options</a></li>
+                      <li><a href="index.php?index=get_options">Mes options</a></li>
                       <li class="divider"></li>
                       <li><a href="index.php?index=disconnect">Deconnexion</a></li>
                     </ul>
