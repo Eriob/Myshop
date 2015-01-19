@@ -3,9 +3,9 @@
 
 <form class="form-horizontal" method="POST" name="options_form" action="index.php?index=get_options">
     <div class="form-group">
-        <input type="text" class="form-control" style="text-align:right;margin-left:15px;" name="addmail" placeholder="Nouvelle adresse mail">
+        <input type="text" class="form-control" style="text-align:right;margin-left:15px;max-width:60px;" name="addmail" placeholder="Nouvelle adresse mail">
+        <?php echo "@".$_SESSION['name'].".myshop.itinet.fr";?>
     </div>
-    <?php echo "@".$_SESSION['name'].".myshop.itinet.fr";?>
     <br>
     <br>
     <button type="submit" href="index.php?index=get_options" class="btn btn-primary pull-left">Valider</button>
