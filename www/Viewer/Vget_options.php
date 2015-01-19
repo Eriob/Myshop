@@ -1,10 +1,9 @@
 <input type="hidden" name="name" value="<?php echo $options['name'];?>">
 <br>
 
-<form class="form-inline2" method="POST" name="options_form" action="index.php?index=get_options">
+<form class="form-horizontal" method="POST" name="options_form" action="index.php?index=get_options">
     <div class="input-group">
-        <input type="text" class="form-control" style="text-align:right" name="addmail" placeholder="Nouvelle adresse mail">
-        <span class="input-group-addon">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?></span> 
+        <input type="text" class="form-control" style="text-align:right;max-width=150px;" name="addmail" placeholder="Nouvelle adresse mail">@<?php echo $_SESSION['name'].".myshop.itinet.fr";?>
     </div>
     
     <div class="form-group">
