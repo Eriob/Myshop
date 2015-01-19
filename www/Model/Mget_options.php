@@ -22,11 +22,21 @@ function show_mails($name) {
 
 	$i = 0;
 
-	while($mails = mysql_fetch_array($request)){
+	echo '<div class ="options-navtab">';
+	echo '<div class="options-navtab-title">';
+	echo '<h1> Options sur ma boutique </h1>';
+	echo '</div>';
+	echo '<br>';
+	echo '</div>';
+	echo '<div class="options">';
+	echo '<div class="container">';
+	echo '<div class"row">';
 
+	while($mails = mysql_fetch_array($request)){
 		$i++;
+		echo '<form class="form-horizontal" name="options_form" method="POST" action="">';
 		echo '<div class="form-group">';
-        echo '<label for="email" class="control-label">Adresse Email'.$i.'</label>';
+        echo '<label for="email" class="control-label">Adresse Email '.$i.'</label>';
         echo '<input type="email" name="email" class="form-control" value="'.$mails['mail'].'" readonly></div>';
 	}
 }
