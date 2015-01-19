@@ -35,9 +35,9 @@ include('./Controller/Cgetprofile.php');
             </div>
 
             <div class="form-group">
-              <label for="phone" class="control-label">Numéro de téléphone</label>
+              <label for="phone" class="control-label">Num&eacute;ro de t&eacute;l&eacute;phone</label>
               <input class="form-control" type="tel" name="new_phone" id="new_phone" value="+33 "/>
-			  <?php if($profile['phone'] != NULL){echo "Votre numéro de téléphone actuel: 0".$profile['phone'];}?>
+			  <?php if($profile['phone'] != NULL){echo "Votre numéro de t&eacute;l&eacute;phone actuel: 0".$profile['phone'];}?>
             </div>
 
             <div class="form-group">
@@ -47,7 +47,7 @@ include('./Controller/Cgetprofile.php');
                 </div>
             </div>
 			
-			Les champs marqués d'un * sont obligatoires<br>
+			Les champs marqu&eacute;s d'un * sont obligatoires<br>
         
             <button type="submit" class="btn btn-primary pull-left">Valider</button>
             </form>
