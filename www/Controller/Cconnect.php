@@ -2,12 +2,12 @@
 	include ('./Model/Mconnect.php');
 
 	// On vérifie si la combinaison pseudo/pwd est correct
-	if (isset($_POST['pseudo'],$_POST['password'])) {		
+	if (isset($_POST['name'],$_POST['password'])) {		
 		$password = md5($_POST['password']);
-		$connect = connect($_POST['pseudo'],$password);
+		$connect = connect($_POST['name'],$password);
 	
 		if ($password == $connect['password']) {
-			$_SESSION['pseudo'] = $connect['pseudo'];
+			$_SESSION['name'] = $connect['name'];
 			$_SESSION['id'] = $connect['id'];
 				
 			sleep(1);

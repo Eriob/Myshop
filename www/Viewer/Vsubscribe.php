@@ -21,11 +21,6 @@
             </div>
 
             <div class="form-group">
-                <label for="pseudo" class="control-label">Votre pseudo</label>
-                <input type="text" name="pseudo" id="pseudo" class="form-control" autofocus="autofocus" required="required"/>
-            </div>
-
-            <div class="form-group">
                 <label for="email" class="control-label">Adresse Email</label>
                 <input type="email" name="email" id="email" class="form-control" required="required"/>
             </div>

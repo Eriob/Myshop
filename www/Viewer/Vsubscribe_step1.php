@@ -25,7 +25,6 @@
                 <input type="email" name="email" class="form-control" value="<?php echo $_POST['email']?>" readonly>
             </div>
 
-            <input type="hidden" name="pseudo" value="<?php echo $_POST['pseudo'];?>">
             <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
             <input type="hidden" name="email" value="<?php echo $_POST['email'];?>">
 
@@ -36,8 +35,8 @@
             </div>
 
             <div class="form-group">
-                <label for="pseudo" class="control-label">Nom d'utilisateur</label>
-                <input type="text" name="pseudo" id="pseudo" value="<?php echo $_POST['pseudo']?>" class="form-control" readonly>
+                <label for="name" class="control-label">Nom d'utilisateur</label>
+                <input type="text" name="name" id="name" value="<?php echo $_POST['name']?>" class="form-control" readonly>
             </div>
             
             <div class="form-group">
