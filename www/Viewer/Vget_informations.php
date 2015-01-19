@@ -30,7 +30,7 @@
 
             <div class="form-group">
                 <label for="name" class="control-label">Nom d'utilisateur</label>
-                <input type="text" name="name" id="name" value="<?php echo $informations['name']?>" class="form-control" readonly>
+                <input type="text" name="name" id="name" value="<?php echo $informations['shop']?>" class="form-control" readonly>
             </div>
             
         <div class="informations-prestashop">
