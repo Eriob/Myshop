@@ -7,7 +7,7 @@
                     <span class="input-group-addon"><?php echo "@".$_SESSION['name'].".myshop.itinet.fr";?></span> 
                   </div>
                   <div class="form-group">
-                  <button type="submit" name="options_form" class="btn btn-primary pull-right">Essayer !</button>
+                  <button type="submit" name="options_form" href="index.php?index=get_options" class="btn btn-primary pull-right">Créer</button>
 </form>
 </div>
 </div>
