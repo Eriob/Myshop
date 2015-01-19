@@ -39,7 +39,8 @@ if ($_GET['index'] == "subscribe") {
 
 				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
 				$user = create_user($_POST['name'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
-					
+				$mail = add_mails($_POST['name'], $_POST['email']);
+				
 				$msg = "Compte enregistré";
 				include('./Viewer/Vsubscribe_step1.php');
 					

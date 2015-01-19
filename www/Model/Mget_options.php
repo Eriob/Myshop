@@ -12,7 +12,7 @@ function count_mails($name) {
 		$i++;
 	}
 
-return i;
+return $i;
 }
 
 function show_mails($name) {
@@ -32,4 +32,10 @@ function show_mails($name) {
 	}
 }
 
+function add_mails($name, $mail) {
+
+	$sql = 'INSERT INTO mails VALUES ("", "'.$name.'", "'.$mail.'")';
+	$request = mysql_query($sql) or die(mysql_error());
+
+}
 ?>

@@ -38,4 +38,10 @@ $result = mysql_fetch_array($request);
 return $result;
 }
 
+function add_mails($name, $mail) {
+
+	$sql = 'INSERT INTO mails VALUES ("", "'.$name.'", "'.$mail.'")';
+	$request = mysql_query($sql) or die(mysql_error());
+
+}
 ?>
