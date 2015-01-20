@@ -31,7 +31,7 @@ function show_mails($name) {
 	echo '<div class="options">';
 	echo '<div class="container">';
 	echo '<div class"row">';
-	echo '<h3> Adresses mails </h3>'
+	echo '<h3> Adresses mails </h3>';
 
 	while($mails = mysql_fetch_array($request)){
 		$i++;
