@@ -41,7 +41,7 @@ else
 	$msg = "Veuillez saisir votre mot de passe actuel dans le champ prévu à cet effet";
 }
 
-include('./viewer/Vprofil.php');
+include('./Viewer/Vprofil.php');
 
 	
 
