@@ -33,7 +33,7 @@ function update_email($id, $new_email, $password)
 	$request = mysql_query($sql) or die (mysql_error());
 }
 
-function update_address($id, $new_address, $password)
+/* function update_address($id, $new_address, $password)
 {
 	
 	//CONNEXION A MYSQL
@@ -47,7 +47,7 @@ function update_address($id, $new_address, $password)
 	$sql = 'UPDATE users SET address = \''.$new_address.'\' WHERE id = \''.$id.'\' AND password = \''.$password.'\'';
 	
 	$request = mysql_query($sql) or die (mysql_error());
-}
+} */
 
 function update_zipcode($id, $new_zipcode, $password)
 {
