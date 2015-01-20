@@ -12,7 +12,6 @@ include('./Controller/Cgetprofile.php');
             <div class="form-group">
                 <label for="email" class="control-label">Nouvelle adresse mail</label>
                 <input type="email" name="new_email" id="new_email" class="form-control" placeholder="<?php if($profile['email'] != NULL){echo $profile['email'];}?>"/>
-				<?php if($profile['email'] != NULL){echo $profile['email'];}?>
             </div>
 
       <!--      <div class="form-group">
@@ -35,7 +34,7 @@ include('./Controller/Cgetprofile.php');
 
             <div class="form-group">
               <label for="phone" class="control-label">Num&eacute;ro de t&eacute;l&eacute;phone</label>
-              <input class="form-control" type="tel" name="new_phone" id="new_phone" value="+33 " placeholder="<?php if($profile['phone'] != NULL){echo $profile['phone'];}?>"/>
+              <input class="form-control" type="tel" name="new_phone" id="new_phone" placeholder="<?php if($profile['phone'] != NULL){echo $profile['phone'];}?>"/>
             </div>
 
             <div class="form-group">
