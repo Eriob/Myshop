@@ -73,19 +73,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="./Images/carré_bleu.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Modèle 1</h2>
           <p>Description du modèle 1</p>
           <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="./Images/carré_rouge.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Modèle 2</h2>
           <p>Description du modèle 2</p>
           <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="./Images/carré_vert.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Modèle 3</h2>
           <p>Description du modèle 3</p>
           <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
