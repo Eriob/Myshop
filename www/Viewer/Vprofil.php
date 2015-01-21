@@ -54,5 +54,4 @@ include('./Controller/Cgetprofile.php');
 <div class="container marketing">
 <br><br><br>
 <hr class="featurette-divider">
-</div>
-
+<button type="action" href="index.php?index=delete_shop" class="btn btn-danger pull-left">Supprimer mon compte</button>

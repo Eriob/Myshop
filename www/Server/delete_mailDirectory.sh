@@ -10,7 +10,6 @@
 
 #On prendra en entrée :
 #$1 : le nom de l'utilisateur
-#$2 : le password de l'utilisateur
 
 	if test -d "/var/mail/$1"; then
 		#On supprime le répertoire mail

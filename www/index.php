@@ -57,6 +57,9 @@ if(isset($_SESSION['name'])){
 			case "search_started":
                 include('./Viewer/Csearchmyshop.php');
                 break;
+            case "delete_shop":
+                include('./Controller/Cdelete_shop.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 break;
