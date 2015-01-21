@@ -3,7 +3,14 @@ if(!isset($_SESSION)) {session_start();}
 include('./Controller/Cgetprofile.php');
 ?>
 
-<div class ="profile">
+<div class ="profile-navtab">
+    <div class="profile-navtab-title">
+        <h1> Mon profil </h1>
+    </div>
+        <br>
+</div>
+
+<div class="profile">
     <div class="container">
     <div class="row">
         <form class="form-horizontal" name="profile_update_form" method="POST" action="index.php?index=update_profile">
@@ -50,8 +57,11 @@ include('./Controller/Cgetprofile.php');
             </form>
         </div>
     </div>
+     <form class="form-horizontal" name="profile_delete" method="POST" action="index.php?index=delete_shop">
+        <input type="hidden" name="name" value="<?php S_SESSION['name'];?>">
+        <button type="submit" href="index.php?index=delete_shop" class="btn btn-danger pull-left">Supprimer mon compte</button>
+    </form>
 </div>
 <div class="container marketing">
 <br><br><br>
 <hr class="featurette-divider">
-<button type="action" href="index.php?index=delete_shop" class="btn btn-danger pull-left">Supprimer mon compte</button>
