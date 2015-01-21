@@ -3,7 +3,6 @@
 include ('./Model/MconnectBDD.php');
 include ('./Model/Mdelete_shop.php');
 
-if ($_GET['delete_shop']) {
 	$name = escapeshellcmd($_SESSION['name']);
 	$pass = escapeshellcmd($_POST['password']);
 	$mail = escapeshellcmd($_POST['email']);
@@ -22,6 +21,5 @@ if ($_GET['delete_shop']) {
 
 	header('location:index.php');
 
-}
 
 ?>
