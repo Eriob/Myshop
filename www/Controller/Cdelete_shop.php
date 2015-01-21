@@ -4,8 +4,6 @@ include ('./Model/MconnectBDD.php');
 include ('./Model/Mdelete_shop.php');
 
 	$name = escapeshellcmd($_SESSION['name']);
-	$pass = escapeshellcmd($_POST['password']);
-	$mail = escapeshellcmd($_POST['email']);
 
 	$exec_fileDNS = sprintf('/var/www/Myshop/www/Server/delete_fileDNS.sh %s', $name);
 	$exec_mailDirectory = sprintf('/var/www/Myshop/www/Server/delete_mailDirectory.sh %s', $name);
