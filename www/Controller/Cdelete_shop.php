@@ -16,7 +16,7 @@ include ('./Model/Mdelete_shop.php');
 	exec($exec_mailDirectory);
 	exec($exec_webUser);
 
-	delete_shop($_SESSION['name']);
+	delete_shop($_POST['name']);
 	session_destroy();
 
 	header('location:index.php');

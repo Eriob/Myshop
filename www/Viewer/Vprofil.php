@@ -14,18 +14,12 @@ include('./Controller/Cgetprofile.php');
     <div class="container">
     <div class="row">
         <form class="form-horizontal" name="profile_update_form" method="POST" action="index.php?index=update_profile">
-            
 			
             <div class="form-group">
                 <label for="email" class="control-label">Nouvelle adresse mail</label>
                 <input type="email" name="new_email" id="new_email" class="form-control" placeholder="<?php if($profile['email'] != NULL){echo $profile['email'];}?>"/>
             </div>
 
-      <!--      <div class="form-group">
-                <label for="pseudo" class="control-label">Nouvelle adresse</label>
-                <input type="text" name="new_address" id="new_address" class="form-control"/>
-				<?php/* if($profile['address'] != NULL){echo "Votre adresse actuelle: ".$profile['address'];}*/?>
-           </div> -->
 
             <div class="form-group">
                 <label for="zip_code" class="control-label">Nouveau code postal</label>
@@ -57,6 +51,7 @@ include('./Controller/Cgetprofile.php');
             </form>
         </div>
     </div>
+    <br>
      <form class="form-horizontal" name="profile_delete" method="POST" action="index.php?index=delete_shop">
         <input type="hidden" name="name" value="<?php $_SESSION['name'];?>">
         <button type="submit" href="index.php?index=delete_shop" class="btn btn-danger pull-left">Supprimer mon compte</button>
