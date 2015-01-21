@@ -58,7 +58,7 @@ include('./Controller/Cgetprofile.php');
         </div>
     </div>
      <form class="form-horizontal" name="profile_delete" method="POST" action="index.php?index=delete_shop">
-        <input type="hidden" name="name" value="<?php S_SESSION['name'];?>">
+        <input type="hidden" name="name" value="<?php $_SESSION['name'];?>">
         <button type="submit" href="index.php?index=delete_shop" class="btn btn-danger pull-left">Supprimer mon compte</button>
     </form>
 </div>
