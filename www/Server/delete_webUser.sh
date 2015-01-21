@@ -14,7 +14,7 @@
 
 if test -d /var/sftp/$1 && test -f "/etc/apache2/sites-enabled/$1"; then
 	# On supprime le site $1
-	sudo /bin/rm /var/sftp/$1/www
+	sudo /bin/rm - R /var/sftp/$1/www
 	sudo /usr/bin/unlink /etc/apache2/sites-enabled/$1
 	sudo /bin/rm /etc/apache2/sites-available/$1
 	sudo /etc/init.d/apache2 restart
