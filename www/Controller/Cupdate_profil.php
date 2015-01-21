@@ -1,7 +1,7 @@
 <?php
 
 include('./Model/Mupdateprofil.php');
-$def = '';
+
 if(isset ($_POST['password']))
 {
 $password = md5($_POST['password']);
