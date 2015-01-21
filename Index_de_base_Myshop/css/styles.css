@@ -1,0 +1,157 @@
+
+/* Base styles
+---------------------------------------------------------------------- */
+
+body {
+ 	font-family:Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+	color:#333;
+	text-align: center;
+	background-color: #efb7a8;
+}
+
+.clearfix:after {
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+/* Layout 
+---------------------------------------------------------------------- */
+
+/* Header Styles
+---------------------------------------------------------------------- */
+header{
+	display: block;
+	position: relative;
+	background-color: #cf6d6d;
+	border-bottom: 1px solid #EEEEEE;
+	text-align: center;
+	font-style: italic;
+}
+
+header img.arrow {
+margin-bottom: -5px;
+
+}
+
+.title{
+	text-align: center;
+	border-bottom: 1px solid #EEEEEE;
+	display: block;
+	width: 500px;
+	margin-left: 500px
+}
+a{
+	text-decoration: none;
+	color: #bb5c2d;
+}
+
+a:active{
+ color:#cc5b2a;
+}
+
+p{
+	font-style: Palatino;
+}
+h1{
+	color: #bb5c2d;
+	border-bottom: 2px dotted #EEEEEE;
+}	
+
+.fine_guys{
+	display: inline-block;
+	height: 100px;
+	width: 350px;
+	margin-left: 10px;
+	position: relative;
+}
+
+.guy_data{
+	font-size: 10px;
+}
+
+.photo_guy{
+	display: inline-block;
+	height: 75px;
+	width: 75px;
+	float: left;
+}
+
+.photo_guy:hover{
+	height: 100px;
+	width: 100px;
+}
+
+.company{
+	display: inline-block;
+	height: 350px;
+	width: 200px;
+	border: 1px solid #efb7a8;
+	margin-left: 10px;
+	position: relative;
+
+}
+
+.company:hover{
+	background-color: #d46344;
+}
+
+.photo_company{
+	display: inline-block;
+	height: 60px;
+	width: 200px;
+	float: left;
+	background: #efb7a8;
+}
+
+.company_data{
+	display: inline-block;
+	font-size: 10px;
+	width: 200px;
+	height: 290px;
+}
+
+.logo{
+	display: block;
+	height: 200px;
+	width: 400px;
+	margin-left: 575px
+}
+
+
+/* Sélecteur de tous les "articles" enfants de "body" */
+body > article {
+
+padding-top:10px;
+padding-right:10px;
+padding-bottom:10px;
+padding-left:10px;
+
+/* version condensée */
+padding: 10px; /* applique 10px sur tous les côtés */
+padding: 1px 2px 3px 4px; /* applique la taille définie pour chaque côté dans le sens des aiguiles d'une montre */
+
+}
+
+.preview:hover  .suite{
+	display: block;
+}
+
+.suite {
+	display: none;
+}
+
+
+
+
+
+/* Announcement Styles
+---------------------------------------------------------------------- */
+
+/* Team Styles
+---------------------------------------------------------------------- */
+
+/* Project Styles
+---------------------------------------------------------------------- */
