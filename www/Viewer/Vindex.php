@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-6 mb48">
               <div class="oe_demo img img-responsive shadow">
-                <iframe allowfullscreen="allowfullscreen" frameborder="0" height="300" src="//www.youtube.com/embed/dKwzZZKIbUs" width="500"></iframe>
+                <iframe allowfullscreen="allowfullscreen" frameborder="0" height="300" src="//www.youtube.com/embed/sCfJrHGn_Cs" width="500"></iframe>
               </div>
             </div>
             <div class="col-md-6">
