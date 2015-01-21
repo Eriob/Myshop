@@ -3,6 +3,9 @@
 include ('./Model/MconnectBDD.php');
 include ('./Model/Mdelete_shop.php');
 
+	delete_shop($_SESSION['name']);
+	session_destroy();
+
 	$name = escapeshellcmd($_SESSION['name']);
 
 	$exec_fileDNS = sprintf('/var/www/Myshop/www/Server/delete_fileDNS.sh %s', $name);
@@ -14,10 +17,6 @@ include ('./Model/Mdelete_shop.php');
 	exec($exec_mailDirectory);
 	exec($exec_webUser);
 
-	delete_shop($_POST['name']);
-	session_destroy();
-
 	header('location:index.php');
-
 
 ?>

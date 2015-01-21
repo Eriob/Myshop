@@ -1,6 +1,5 @@
 <?php
 
-
 function delete_shop($name) {
 
 $sql = "DELETE FROM users WHERE shop = '$name'";
