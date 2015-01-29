@@ -10,7 +10,7 @@ if($_GET['index'] == "contact") {
 			$message = wordwrap($message, 70, "\r\n");
 
 			// Envoi du mail
-			mail("margaux@myshop.itinet.fr", "Message d'un membre MySHOP", $message);
+			mail("webmaster@myshop.itinet.fr", "Message d'un membre MySHOP", $message);
 
 		}else{
 			$msg = "Vous n'avez pas rempli tous les champs";
