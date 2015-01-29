@@ -18,7 +18,6 @@ if test -d "/var/mail/$2/$1"; then
 else
 	sudo /bin/mkdir /var/mail/$2/$1
 
-	#PAS BESOIN CAR ON ENVOI UN MAIL
 	sudo /usr/bin/maildirmake /var/mail/$2/$1/Maildir
 
 	sudo /bin/chown -R vmail.vmail /var/mail/$2/$1
