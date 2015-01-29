@@ -8,7 +8,7 @@
 <div class ="contact">
     <div class="container">
     <div class="row">
-        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=subscribe_step1">
+        <form class="form-horizontal" name="register_form" method="POST" action="index.php?index=valid_contact">
             
             <div class="form-group">
                 <label for="name" class="control-label">Votre Boutique :</label> 
@@ -39,7 +39,7 @@
                 <textarea name="message" id="message" class="form-control" rows="8" cols="60" required="required"/></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary pull-left">Soumettre le message</button>
+            <button type="submit" href="index.php?index=valid_contact" class="btn btn-primary pull-left">Soumettre le message</button>
             </form>
         </div>
         </div>
