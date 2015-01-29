@@ -69,6 +69,8 @@
                       <li><a href="index.php?index=show_mywebsite" target="_blank">Mon Site</a></li>
                       <li><a href="index.php?index=get_informations">Mes informations</a></li>
                       <li><a href="index.php?index=get_options">Mes options</a></li>
+                      <li><a href="webmail.myshop.itinet.fr" target="_blank">Ma boite mail</a></li>
+                      <li><a href="phpmyadmin.myshop.itinet.fr" target="_blank">Ma base de données</a></li>
                       <li class="divider"></li>
                       <li><a href="index.php?index=disconnect">Deconnexion</a></li>
                     </ul>
