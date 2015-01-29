@@ -60,6 +60,12 @@ if(isset($_SESSION['name'])){
             case "delete_shop":
                 include('./Controller/Cdelete_shop.php');
                 break;
+            case "show_myMail":
+                include('./Controller/Cshow_myMail.php');
+                break;
+            case "show_myBDD":
+                include('./Controller/Cshow_myBDD.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 break;
