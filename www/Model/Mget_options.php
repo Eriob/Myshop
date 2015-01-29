@@ -45,12 +45,5 @@ function add_mails($name, $mail) {
 
 	$sql = 'INSERT INTO mails VALUES ("", "'.$name.'", "'.$mail.'")';
 	$request = mysql_query($sql) or die(mysql_error());
-
-	$sql2 = "SELECT password FROM users WHERE shop = '".$name."'";
-	$request2 = mysql_query($sql2) or die(mysql_error());
-
-	$result = mysql_fetch_assoc($request2);
-
-	return $result['password'];
 }
 ?>
