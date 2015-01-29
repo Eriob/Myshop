@@ -31,8 +31,9 @@ if ($_GET['index'] == "subscribe") {
 				$_POST['name'] = $name[0];
 				include('./Viewer/Vsubscribe.php');
 			}else{
-				
 				$msg = "Compte enregistré";
+				$name = explode(".", $_POST['name']);
+				$_POST['name'] = $name[0];
 				include('./Viewer/Vsubscribe_step1.php');
 			}
 		}else{
