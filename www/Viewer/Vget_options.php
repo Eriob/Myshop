@@ -6,6 +6,9 @@
                     <input type="text" class="form-control" style="text-align:right" name="addmail" placeholder="Nouvelle adresse">
                     <span class="input-group-addon"><?php echo "@".$_SESSION['name'].".myshop.itinet.fr";?></span> 
                   </div>
+                  <div class="input-group">
+                    <input type="text" class="form-control" style="text-align:right" name="password" placeholder="Nouveau Mot de passe">
+                  </div>
                   <div class="form-group">
                   <button type="submit" name="options_form" href="index.php?index=get_options" class="btn btn-primary pull-right">Créer</button>
 </form>
