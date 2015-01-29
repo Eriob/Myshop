@@ -27,37 +27,14 @@ if ($_GET['index'] == "subscribe") {
 				
 			if ($_POST['password'] != $_POST['password2']) {
 				$msg = "Votre mot de passe n'est pas identique dans les deux champs";
-				include('./Viewer/Vsubscribe.php');
-			}else{
-				include('./Model/Msubscribe.php');
-				/*SCRIPTS SHELLS*/
-					
-				$mdp=md5($_POST['password']);
-					
 				$name = explode(".", $_POST['name']);
 				$_POST['name'] = $name[0];
-				$create_mailuser = $_POST['name']."@myshop.itinet.fr";
-
-				/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
-				$user = create_user($_POST['name'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
-				$mail = add_mails($_POST['name'], $create_mailuser);
-
+				include('./Viewer/Vsubscribe.php');
+			}else{
 				$msg = "Compte enregistré";
+				$name = explode(".", $_POST['name']);
+				$_POST['name'] = $name[0];
 				include('./Viewer/Vsubscribe_step1.php');
-					
-				/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
-				$name = escapeshellcmd($_POST['name']);
-				$pass = escapeshellcmd($_POST['password']);
-				$mail = escapeshellcmd($_POST['email']);
-
-				$exec_fileDNS = sprintf('/var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
-				$exec_mailDirectory = sprintf('/var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $name, $pass);
-				$exec_webUser = sprintf('/var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $name, $pass, $name);
-					
-				// Execution des commande
-				exec($exec_fileDNS);
-				exec($exec_mailDirectory);
-				exec($exec_webUser);
 			}
 		}else{
 			$msg = "Vous n'avez pas rempli tous les champs";
@@ -72,37 +49,59 @@ if ($_GET['index'] == "subscribe") {
 	
 	$msg = "Base de données enregistré";
 
+	include('./Model/Msubscribe.php');					
+		
+		$mdp=md5($_POST['password']);
+					
+		$name = explode(".", $_POST['name']);
+		$_POST['name'] = $name[0];
+		$create_mailuser = $_POST['name']."@myshop.itinet.fr";
+
+		/*CREATION DU MEMBRE DANS LA BASE DE DONNEES */
+		$user = create_user($_POST['name'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $mdp, $_POST['phone']);
+		$mail = add_mails($_POST['name'], $create_mailuser);
+	
+		include('./Viewer/Vsubscribe_step2.php');
+
+		/*CREATION DE L'UTILISATEUR SUR LE SERVEUR */
+		$name = escapeshellcmd($_POST['name']);
+		$pass = escapeshellcmd($_POST['password']);
+		$mail = escapeshellcmd($_POST['email']);
+
+		$exec_fileDNS = sprintf('/var/www/Myshop/www/Server/add_fileDNS.sh %s', $name);
+		$exec_mailDirectory = sprintf('/var/www/Myshop/www/Server/add_mailDirectory.sh %s %s', $name, $pass);
+		$exec_webUser = sprintf('/var/www/Myshop/www/Server/add_webUser.sh %s %s %s', $name, $pass, $name);
+		$exec_BDD = sprintf('/var/www/Myshop/www/Server/add_BDD.sh %s %s %s', $name, $pass, $mail);
+					
+		// Execution des commande
+		exec($exec_fileDNS);
+		exec($exec_mailDirectory);
+		exec($exec_webUser);
+		exec($exec_BDD);
+
+		// Le message
+		$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\n";
+
+		// Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
+		$message = wordwrap($message, 70, "\r\n");
+
+		// Envoi du mail
+		mail($_POST['email'], 'Bienvenue sur MySHOP', $message);
+		mail($_POST['name'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
+
+}elseif ($_GET['index'] == "valid_subscribe") {
+	include ("./Model/Mconnect.php");
+
 	$name = explode(".", $_POST['name']);
 	$_POST['name'] = $name[0];
 	$_POST['email'] = $_POST['email'];
 	$_POST['password'] = $_POST['password'];
 
-	include('./Viewer/Vsubscribe_step2.php');
-
-	$name = escapeshellcmd($_POST['name']);
-	$pass = escapeshellcmd($_POST['password']);
-	$mail = escapeshellcmd($_POST['email']);
-
-	$exec_BDD = sprintf('/var/www/Myshop/www/Server/add_BDD.sh %s %s %s', $name, $pass, $mail);
-	exec($exec_BDD);
-
-	// Le message
-	$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\n";
-
-	// Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
-	$message = wordwrap($message, 70, "\r\n");
-
-	// Envoi du mail
-	mail($_POST['email'], 'Bienvenue sur MySHOP', $message);
-	mail($_POST['name'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
-
-}elseif ($_GET['index'] == "valid_subscribe") {
-	include ("./Model/Mconnect.php");
-	
-	if (isset($_POST['name'],$_POST['password'])) {
+	if (isset($_POST['name'],$_POST['password'])) {  
 	$password = md5($_POST['password']);
 	$name = $_POST['name'];
-	$connect = connect($_POST['name'],$password);
+	
+	$connect = connect($name,$password);
 			
 		if ($password == $connect['password']) {
 			$_SESSION['name'] = $connect['shop'];
