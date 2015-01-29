@@ -1,6 +1,6 @@
 <?php
 
-if($_GET['index'] == "contact") {
+if($_GET['index'] == "valid_contact") {
 	if (isset($_POST['lastname']) || isset($_POST['firstname']) || isset($_POST['email']) || isset($_POST['message'])) {
 		if (!empty($_POST['lastname']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['message'])) {
 	 // Plusieurs destinataires
