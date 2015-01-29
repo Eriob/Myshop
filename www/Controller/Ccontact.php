@@ -3,19 +3,43 @@
 if($_GET['index'] == "contact") {
 	if (isset($_POST['lastname']) || isset($_POST['firstname']) || isset($_POST['email']) || isset($_POST['message'])) {
 		if (!empty($_POST['lastname']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['message'])) {
-			// Le message
-			$message = $_POST['firstname']." vous envoi un message sur MySHOP,\r\n".$_POST['message']."\r\n";
+	 // Plusieurs destinataires
+     $to  = 'webmaster@myshop.itinet.fr';
 
-			// Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
-			$message = wordwrap($message, 70, "\r\n");
+     // Sujet
+     if (isset($_POST['firstname'])) {
+     	$subject = "Message de ".$_POST['firstname'];
+     }else {
+     	$subject = "Message d'un membre";
+     }
 
-			// Envoi du mail
-			mail("webmaster@myshop.itinet.fr", "Message d'un membre MySHOP", $message);
+     // message
+     $message = '
+     <html>
+      <head>
+       <title>Un utilisateur a un message pour vous</title>
+      </head>
+      <body>
+       <p>'.$_POST['message'].'</p>
+      </body>
+     </html>
+     ';
 
-		}else{
-			$msg = "Vous n'avez pas rempli tous les champs";
-			header('location: index.php');
-		}
+     // Pour envoyer un mail HTML, l'en-tête Content-type doit être défini
+     $headers  = 'MIME-Version: 1.0' . "\r\n";
+     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+     // En-têtes additionnels
+     $headers .= 'To: webmaster <webmaster@myshop.itinet.fr>' . "\r\n";
+     $headers .= 'From: form_contact <webmaster@myshop.itinet.fr>' . "\r\n";
+
+     // Envoi
+     mail($to, $subject, $message, $headers);
+	
+	}else{
+		$msg = "Vous n'avez pas rempli tous les champs";
+		header('location: index.php');
+	}
 
 		$msg = "Erreur d'envoi";
 		header('location: index.php');
