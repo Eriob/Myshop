@@ -23,9 +23,14 @@ if isset($_POST['new_avatar']){
 	} */
 }
 
-if (isset($_POST['new_password'])&& ($_POST['new_password']!= '')){
-	$new_password = md5($_POST['new_password']);
-	update_password($_SESSION['id'], $new_password, $password);
+if (isset($_POST['new_password']) && isset($_POST['new_pass_confirm']) && ($_POST['new_password']!= '')){
+	if ($_POST['new_password'] == $_POST['new_pass_confirm']){
+		$new_password = md5($_POST['new_password']);
+		update_password($_SESSION['id'], $new_password, $password);
+		}
+	else{
+		$msg = "Veuillez saisir deux nouveaux mots de passe identiques";
+		}
 	}
 
 else
