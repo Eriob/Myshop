@@ -94,7 +94,6 @@ if ($_GET['index'] == "subscribe") {
 
 	$name = explode(".", $_POST['name']);
 	$_POST['name'] = $name[0];
-	$_POST['email'] = $_POST['email'];
 	$_POST['password'] = $_POST['password'];
 
 	if (isset($_POST['name'],$_POST['password'])) {  

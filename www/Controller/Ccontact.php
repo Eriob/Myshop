@@ -30,8 +30,8 @@ if($_GET['index'] == "valid_contact") {
 		     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 		     // En-têtes additionnels
-		     $headers .= 'To: webmaster <webmaster@myshop.itinet.fr>' . "\r\n";
-		     $headers .= 'From: form_contact <webmaster@myshop.itinet.fr>' . "\r\n";
+		     //$headers .= 'To: webmaster <webmaster@myshop.itinet.fr>' . "\r\n";
+		     //$headers .= 'From: form_contact <webmaster@myshop.itinet.fr>' . "\r\n";
 
 		     // Envoi
 		     mail($to, $subject, $message, $headers);
