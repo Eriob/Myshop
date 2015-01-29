@@ -67,6 +67,7 @@ if ($_GET['index'] == "subscribe") {
 		$msg = "Erreur d'inscription";
 		header('location: index.php');
 	}
+
 }elseif ($_GET['index'] == "subscribe_step2") {
 	
 	$msg = "Base de données enregistré";
