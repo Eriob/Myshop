@@ -32,7 +32,7 @@ else
 	EOF
 	)
 
-	sudo /usr/sbin/userdb $1@myshop.itinet.fr set uid=5000 gid=5000 home=/var/mail/$1 mail=/var/mail/$1/Maildir imappw=$2
-	#sudo /bin/echo "$2" | /usr/sbin/userdbpw -md5 | /usr/sbin/userdb $1@myshop.itinet.fr set systempw
+	sudo /usr/sbin/userdb $1@myshop.itinet.fr set uid=5000 gid=5000 home=/var/mail/$1 mail=/var/mail/$1/Maildir
+	sudo /bin/echo "$2" | sudo /usr/sbin/userdbpw -md5 | sudo /usr/sbin/userdb $1@myshop.itinet.fr set systempw
 	sudo /usr/sbin/makeuserdb
 fi
