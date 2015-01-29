@@ -24,9 +24,18 @@ include('./Controller/Cgetprofile.php');
             <div class="form-group">
                 <label for="password" class="control-label">Nouveau mot de passe</label>
                 <div class="input-group">
-                    <input type="password" name="new_password" id="new_password" class="form-control"/>
+					<input type="password" name="new_password" id="new_password" class="form-control"/>
                 </div>
             </div>
+			
+			<div class="form-group">
+                <label for="password" class="control-label">Confirmation du nouveau mot de passe</label>
+                <div class="input-group">
+					<input type="password" name="new_pass_confirm" id="new_pass_confirm" class="form-control"/>
+                </div>
+            </div>
+			
+			
 
             <div class="form-group">
               <label for="phone" class="control-label">Num&eacute;ro de t&eacute;l&eacute;phone</label>
@@ -34,7 +43,7 @@ include('./Controller/Cgetprofile.php');
             </div>
 
             <div class="form-group">
-                <label for="password2" class="control-label">Confirmation du mot de passe*</label>
+                <label for="password2" class="control-label">Confirmation du mot de passe actuel*</label>
                 <div class="input-group">
                     <input type="password" name="password" id="password" class="form-control" required="required"/>
                 </div>
