@@ -6,7 +6,7 @@ body {
  	font-family:Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 	color:#333;
 	text-align: center;
-	background-color: #efb7a8;
+	background-color: #fff0f0;
 }
 
 .clearfix:after {
@@ -25,8 +25,8 @@ body {
 header{
 	display: block;
 	position: relative;
-	background-color: #cf6d6d;
-	border-bottom: 1px solid #EEEEEE;
+	background-color: #dc6464;
+	border: 1px solid #870d0d;
 	text-align: center;
 	font-style: italic;
 }
@@ -45,7 +45,7 @@ margin-bottom: -5px;
 }
 a{
 	text-decoration: none;
-	color: #bb5c2d;
+	color: #870d0d;
 }
 
 a:active{
@@ -56,7 +56,7 @@ p{
 	font-style: Palatino;
 }
 h1{
-	color: #bb5c2d;
+	color: #870d0d;
 	border-bottom: 2px dotted #EEEEEE;
 }	
 
@@ -64,8 +64,8 @@ h1{
 	display: inline-block;
 	height: 100px;
 	width: 350px;
-	margin-left: 10px;
 	position: relative;
+	margin-top: 25px;
 }
 
 .guy_data{
@@ -74,28 +74,38 @@ h1{
 
 .photo_guy{
 	display: inline-block;
-	height: 75px;
-	width: 75px;
+	height: 100px;
+	width: 100px;
 	float: left;
 }
 
-.photo_guy:hover{
+.fine_guys:hover{
+	background-color: #dc6464;
+	border: 1px solid #870d0d;
+	height: 99px;
+	width: 349px;
+	margin-top: 24px;
+	
+	
+}
+
+/* .photo_guy:hover{
 	height: 100px;
 	width: 100px;
-}
+} */
 
 .company{
 	display: inline-block;
 	height: 350px;
 	width: 200px;
-	border: 1px solid #efb7a8;
+	border: 1px solid #ffb4b4;
 	margin-left: 10px;
 	position: relative;
 
 }
 
 .company:hover{
-	background-color: #d46344;
+	background-color: #dc6464;
 }
 
 .photo_company{

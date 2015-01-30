@@ -79,15 +79,19 @@ if ($_GET['index'] == "subscribe") {
 		exec($exec_webUser);
 		exec($exec_BDD);
 
+
+		// le sujet
+		$subject = "Bienvenue sur MySHOP";
+
 		// Le message
-		$message = "Bienvenue sur MySHOP,\r\nVous êtes inscris sur le site MySHOP.\r\n";
+		$message = "Bienvenue sur MySHOP".$_POST['name'].",\r\nVous êtes inscris sur le site MySHOP.\r\n";
 
 		// Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
 		$message = wordwrap($message, 70, "\r\n");
 
 		// Envoi du mail
-		mail($_POST['email'], 'Bienvenue sur MySHOP', $message);
-		mail($_POST['name'].'myshop.itinet.fr', 'Bienvenue sur MySHOP', $message);
+		mail($_POST['email'], $subject, $message);
+		mail($_POST['name'].'@myshop.itinet.fr', $subject, $message);
 
 }elseif ($_GET['index'] == "valid_subscribe") {
 	include ("./Model/Mconnect.php");
